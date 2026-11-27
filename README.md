@@ -121,8 +121,9 @@ thinks it starts RetroArch, but Orbitals Together starts instead. Your friends t
 
 ### Each time you play
 
-1. Start the game **from Steam**: RetroArch's **Play** button. Started from its folder, the game can invite, but
-   Steam does not hand your friend's controller to it.
+1. Start the game, from its folder (`orbitals-together.exe`) or with RetroArch's **Play** button in Steam. Steam
+   must be running, and RetroArch's launch options (step 2 of the setup) must be in place: without them, your friend's
+   controller does not reach the game.
 2. In the game's menu, choose **Online play**. Steam's invite list opens: **invite your friend**. (You can also use
    the F1 menu > Game > **Invite friends**, or **Copy guest link** for a friend without Steam.)
 3. Once your friend has joined and pressed a button on their controller, start a **Local play** game for 2 players:

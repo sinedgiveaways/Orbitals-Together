@@ -122,8 +122,9 @@ Steam pense lancer RetroArch, mais c'est Orbitals Together qui démarre. Vos ami
 
 ### À chaque partie
 
-1. Lancez le jeu **depuis Steam** : bouton **Jouer** de RetroArch. Lancé depuis son dossier, le jeu peut inviter mais
-   Steam ne lui transmet pas la manette de votre ami.
+1. Lancez le jeu, depuis son dossier (`orbitals-together.exe`) ou par le bouton **Jouer** de RetroArch dans Steam.
+   Steam doit être ouvert, et les options de lancement de RetroArch (étape 2 de la configuration) doivent être en
+   place : sans elles, la manette de votre ami n'arrive pas au jeu.
 2. Dans le menu du jeu, choisissez **Partie en ligne**. La liste d'invitation Steam s'ouvre : **invitez votre ami**.
    (Vous pouvez aussi passer par le menu F1 > Jeu > **Inviter des amis**, ou **Copier le lien invité** pour un ami
    sans Steam.)
