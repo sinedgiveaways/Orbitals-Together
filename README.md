@@ -13,7 +13,7 @@ and no game file in this repository.
 - System: Windows 10 or 11, 64-bit
 
 This repository holds the builds considered final and the full source code of each version: anyone can fork it to
-make it better (see part 8). Day-to-day development and test builds happen on
+make it better (see part 7). Day-to-day development and test builds happen on
 [sinedgiveaways/pmocer-latibro](https://github.com/sinedgiveaways/pmocer-latibro).
 
 ---
@@ -25,9 +25,8 @@ make it better (see part 8). Day-to-day development and test builds happen on
 3. [Install and recompile the game](#3-install-and-recompile-the-game)
 4. [Play two players locally](#4-play-two-players-locally)
 5. [Play remotely with Steam Remote Play Together](#5-play-remotely-with-steam-remote-play-together)
-6. [Updating](#6-updating)
-7. [If something goes wrong](#7-if-something-goes-wrong)
-8. [Fork and improve the project](#8-fork-and-improve-the-project)
+6. [If something goes wrong](#6-if-something-goes-wrong)
+7. [Fork and improve the project](#7-fork-and-improve-the-project)
 
 ---
 
@@ -135,12 +134,7 @@ PC, there is no room left for your friend. Unplug the second one before inviting
 **With a single controller in Local play**, the game also offers a choice between "Local players" and "Steam Remote
 Play Together (invite friends)".
 
-## 6. Updating
-
-When a new version is published here, the launcher offers it (**Update to …**): it downloads it, checks it, replaces
-the program and redoes only the setup steps that changed.
-
-## 7. If something goes wrong
+## 6. If something goes wrong
 
 Open an [issue](https://github.com/sinedgiveaways/Orbitals-Together/issues) and attach the logs from the game folder:
 
@@ -149,7 +143,7 @@ Open an [issue](https://github.com/sinedgiveaways/Orbitals-Together/issues) and 
 
 Say what you were doing, and add a screenshot or a video if you can.
 
-## 8. Fork and improve the project
+## 7. Fork and improve the project
 
 Anyone can **fork** this repository (the **Fork** button at the top of the page), change the code and publish their
 own version, under the terms of the GPL-3.0.

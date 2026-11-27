@@ -13,7 +13,7 @@ du jeu est recompilé pour PC à partir de **votre propre copie du jeu**, et le 
 - Système : Windows 10 ou 11, 64 bits
 
 Ce dépôt contient les builds considérés comme définitifs et le code source complet de chaque version : tout le monde
-peut le forker pour l'améliorer (voir la partie 8). Le développement quotidien et les builds de test se font sur
+peut le forker pour l'améliorer (voir la partie 7). Le développement quotidien et les builds de test se font sur
 [sinedgiveaways/pmocer-latibro](https://github.com/sinedgiveaways/pmocer-latibro).
 
 ---
@@ -25,9 +25,8 @@ peut le forker pour l'améliorer (voir la partie 8). Le développement quotidien
 3. [Installer et recompiler le jeu](#3-installer-et-recompiler-le-jeu)
 4. [Jouer à deux en local](#4-jouer-à-deux-en-local)
 5. [Jouer à distance avec Steam Remote Play Together](#5-jouer-à-distance-avec-steam-remote-play-together)
-6. [Mettre à jour](#6-mettre-à-jour)
-7. [En cas de problème](#7-en-cas-de-problème)
-8. [Forker et améliorer le projet](#8-forker-et-améliorer-le-projet)
+6. [En cas de problème](#6-en-cas-de-problème)
+7. [Forker et améliorer le projet](#7-forker-et-améliorer-le-projet)
 
 ---
 
@@ -137,12 +136,7 @@ PC, il ne reste pas de place pour votre ami. Débranchez la deuxième avant de l
 **Avec une seule manette en Partie locale**, le jeu vous propose aussi de choisir entre « Joueurs locaux » et
 « Steam Remote Play Together (inviter des amis) ».
 
-## 6. Mettre à jour
-
-Quand une nouvelle version est publiée ici, le lanceur la propose (**Mettre à jour vers …**) : il la télécharge, la vérifie,
-remplace le programme et ne refait que les étapes de préparation qui ont changé.
-
-## 7. En cas de problème
+## 6. En cas de problème
 
 Ouvrez une [issue](https://github.com/sinedgiveaways/Orbitals-Together/issues) et joignez les journaux du dossier du
 jeu :
@@ -152,7 +146,7 @@ jeu :
 
 Dites ce que vous faisiez, et ajoutez une capture ou une vidéo si possible.
 
-## 8. Forker et améliorer le projet
+## 7. Forker et améliorer le projet
 
 Tout le monde peut **forker** ce dépôt (bouton **Fork** en haut de la page), modifier le code et publier sa propre
 version, dans le respect de la licence GPL-3.0.
