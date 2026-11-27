@@ -130,6 +130,8 @@ Steam pense lancer RetroArch, mais c'est Orbitals Together qui démarre. Vos ami
 3. Quand votre ami a rejoint et appuyé sur un bouton de sa manette, lancez une **Partie locale** à 2 joueurs : votre
    ami est le joueur 2.
 
+   ![Partie locale avec une manette : le choix entre joueurs locaux et Steam Remote Play Together](images/remote-play-fr.jpg)
+
 **Une seule manette branchée chez vous.** Le jeu est limité à 2 joueurs : si deux manettes sont branchées sur votre
 PC, il ne reste pas de place pour votre ami. Débranchez la deuxième avant de l'inviter.
 

@@ -128,6 +128,8 @@ thinks it starts RetroArch, but Orbitals Together starts instead. Your friends t
 3. Once your friend has joined and pressed a button on their controller, start a **Local play** game for 2 players:
    your friend is player 2.
 
+   ![Local play with one controller: the choice between local players and Steam Remote Play Together](images/remote-play-en.jpg)
+
 **One controller plugged in on your side.** The game is limited to 2 players: with two controllers plugged into your
 PC, there is no room left for your friend. Unplug the second one before inviting them.
 
