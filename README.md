@@ -47,7 +47,7 @@ make it better (see part 8). Day-to-day development and test builds happen on
 
 ## 2. Download the build
 
-1. Open the releases page: **[Releases](https://github.com/sinedgiveaways/Obitals-Together/releases/latest)**.
+1. Open the releases page: **[Releases](https://github.com/sinedgiveaways/Orbitals-Together/releases/latest)**.
 2. Download **`orbitals-together-0.3.0-windows-x64.zip`**.
 3. Unzip it, for example into `C:\Users\<you>\Downloads\`. The zip creates an **`orbitals-together`** folder, which
    becomes the game folder. Avoid `C:\Program Files`: the program writes its files into its own folder.
@@ -141,7 +141,7 @@ the program and redoes only the setup steps that changed.
 
 ## 7. If something goes wrong
 
-Open an [issue](https://github.com/sinedgiveaways/Obitals-Together/issues) and attach the logs from the game folder:
+Open an [issue](https://github.com/sinedgiveaways/Orbitals-Together/issues) and attach the logs from the game folder:
 
 - `logs\orbitals.log` (the game and the launcher);
 - `logs\setup.log` (the setup).

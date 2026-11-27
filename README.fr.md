@@ -47,7 +47,7 @@ peut le forker pour l'améliorer (voir la partie 8). Le développement quotidien
 
 ## 2. Télécharger le build
 
-1. Ouvrez la page des versions : **[Releases](https://github.com/sinedgiveaways/Obitals-Together/releases/latest)**.
+1. Ouvrez la page des versions : **[Releases](https://github.com/sinedgiveaways/Orbitals-Together/releases/latest)**.
 2. Téléchargez le fichier **`orbitals-together-0.3.0-windows-x64.zip`**.
 3. Décompressez-le, par exemple dans `C:\Users\<vous>\Downloads\`. Le zip crée un dossier
    **`orbitals-together`**, qui sera le dossier du jeu. Évitez `C:\Program Files` : le programme écrit ses fichiers
@@ -143,7 +143,7 @@ remplace le programme et ne refait que les étapes de préparation qui ont chang
 
 ## 7. En cas de problème
 
-Ouvrez une [issue](https://github.com/sinedgiveaways/Obitals-Together/issues) et joignez les journaux du dossier du
+Ouvrez une [issue](https://github.com/sinedgiveaways/Orbitals-Together/issues) et joignez les journaux du dossier du
 jeu :
 
 - `logs\orbitals.log` (le jeu et le lanceur) ;
