@@ -1,0 +1,95 @@
+# Code patches for Orbitals 0.2.0 (main d6efcc0a51c1c792).
+#
+# rec-null-guard: the record walk in f_7001759b20 (main+0x1759b20) reads a per-record sub-table
+# pointer that is null while the record is still being initialized (sub-record race, seen in the
+# 22/11 crash log: the load ldr w9, [x25, #0x5c] faults at 0x104 from a null base, and in the
+# 23/11 build-278 log a wild (2 - w8) * 0x38 index walked out of the patch page). The guard clamps
+# the address instead: when the base is null, the load reads [x27] itself (0), and the function's
+# own cbz then skips the empty element, the same skip the SDK code applies to the -1 state
+# elsewhere (main+0x175a22c). When the base is valid, the computed address passes untouched. On
+# the console the pointer is never null, so the switch stays on by default.
+#
+#   main+0x175a01c: 69 03 40 f9   ldr  x9, [x27]        ; sub-table pointer
+#   main+0x175a030: 29 5f 40 b9   ldr  w9, [x25, #0x5c] ; faulted when [x27] = 0
+#   main+0x175a034: 69 eb ff 34   cbz  w9, #0x1759da0   ; skips a zero word
+#
+# Replacement at main+0x175a030 (the faulting load; x9 still holds the base there):
+#   neg  x13, x9          ; -base
+#   orr  x13, x13, x9     ; base | -base: 0 only when the base is null
+#   lsr  x13, x13, #63    ; x13 = 1 when the base is valid, else 0
+#   sub  x13, x13, #1     ; the run-time mask: 0 (valid base) or ~0 (null base)
+#   sub  x14, x27, #0x5c  ; SAFE: reading [x14 + 0x5c] reads [x27] itself, mapped by definition
+#   bic  x16, x25, x13    ; the computed address when the base is valid
+#   and  x17, x14, x13    ; SAFE when the base is null
+#   orr  x25, x16, x17    ; the address the load below actually uses
+#   ldr  w9, [x25, #0x5c] ; the original load, now safe
+# x13, x14 and x16/x17 are scratch on this stretch (nothing between the load and the cbz reads them).
+#
+# 25/11/2026 fix: the words had `asr x13, x13, #63` (937ffdad) instead of `lsr` (d37ffdad) and
+# `orr x25, x17, x16, lsl #8` (aa102239) instead of the plain orr (aa100239). With a valid base the
+# mask came out as ~1 instead of 0, so the load used x27 - 0x5c (and the low bit of x25) instead of the
+# computed address: the walker read the bytes before the record array and crashed on an unmapped page
+# (orbitals.4.log, reading 0xffc1effd8 at orbitalgame+0x1b5a90f1) or, on a mapped page, took garbage
+# (the stack-address Free and the 86 MB memcpy). Decoded with Capstone ARM64.
+#
+# rec-null-guard-vector: the second record helper f_700175dbd0 (main+0x175dbd0) computes
+# x11 = [x0] + (2 - w1) * 0x38 and, at main+0x175dc04, reads ldr d17, [x11, #0x28]. When [x0] is null
+# the host faults reading 0x98 (23/11 22:58 crash, and 25/11 on build b1bcbf4: orbitals.log, record on
+# the thread's stack with its first 0x40 bytes zero). Same fallback as rec-null-guard: a null base becomes
+# the runtime-owned zero page, a valid base passes untouched. x14/x15 are unused in the whole helper
+# (checked in the lifted function: no access to Cpu.x[14]/x[15]). First written in PR #19 (edcd7c0, not merged).
+#
+#   main+0x175dbec: 08 00 40 f9   ldr x8, [x0]
+#   main+0x175dc04: 71 15 40 fd   ldr d17, [x11, #0x28]
+#
+# orbitals-vcall-probe: replace the indirect call at main+0x1d761d0 with a host probe that records
+# the selected receiver, its vptr/slot+8 target, the object rooted at [x21+8], and the callback/
+# alternate fields at +0x30/+0x58. It then restores x8 and calls the original virtual target via
+# rt_call, preserving the guest call's ABI/return path. First 32 invocations are logged.
+# Patch-page slot +0x100 contains the registered host-function address.
+#
+#   main+0x1d761c8: ldr x8, [x0]       ; vptr
+#   main+0x1d761cc: ldr x8, [x8, #8]  ; replaced with:
+#       ldr x16, [x8, #8]             ; save original target
+#       adrp x8, patch_page
+#       ldr x8, [x8, #0x100]
+#   main+0x1d761d0: blr x8             ; calls probe (or original target when disabled)
+
+
+# orbitals-record-source-probe: observe the pointer chain feeding the bad load in f_7001759b20.
+# At main+0x1750524, X25 is loaded from [X22+8]. The caller then sets X19=0x3810,
+# computes X0=X25+X19 at +0x1750630, passes it through main+0x17508e0, and calls
+# f_7001759b20 at +0x1750b84. In that function X25 is preserved until the faulting
+# main+0x1759d8c: ldur w8,[x25,#0x34].
+# Intercept the two existing indirect calls at +0x17505bc/+0x17505e4: save the
+# original vtable target in x16, load the probe, and leave the original BLR intact.
+# The probe logs the live X22/X25 chain, then calls the original target via rt_call.
+# Patch-page slot +0x108 contains the registered host-function address; first 32 calls.
+#
+#   main+0x17505b8 / +0x17505e0: ldr x8,[x8,#8] ; replaced with:
+#       ldr x16,[x8,#8]
+#       adrp x8, patch_page
+#       ldr x8,[x8,#0x108]
+#   following original BLR x8 calls the probe.
+
+# orbitals-readback-probe: the GPU readback buffer the record walk reads (runtime/core/boot/patches.c
+# orbitals_readback_probe). main+0x1583dc0 locks it with a tail call through the RHI's vtable:
+#   main+0x1583df0: f9408106  ldr x6, [x8, #0x100]   ; replaced with:
+#       ldr x16, [x8, #0x100]                         ; the lock, kept for the probe
+#       adrp x6, patch_page
+#       ldr x6, [x6, #0x110]                          ; the probe
+#   main+0x1583df4: d61f00c0  br x6                   ; unchanged: jumps to the probe, which calls the lock
+# Words read from the 25/11 minidump's guest memory and decoded with Capstone.
+
+set  rec-null-guard     ORBITALS_PATCH_REC_NULL_GUARD  1
+set  rec-null-guard-vector ORBITALS_PATCH_REC_NULL_GUARD_VECTOR 1
+set  orbitals-vcall-probe ORBITALS_TRACE_VCALL          1
+set  orbitals-record-source-probe ORBITALS_TRACE_RECORD_SOURCE 1
+set  orbitals-readback-probe ORBITALS_TRACE_READBACK 1
+
+site rec-null-guard main 0x175a030 b9405f29 cb0903ed aa0901ad d37ffdad d10005ad d101736e 8a2d0330 8a0d01d1 aa100239 b9405f29
+site rec-null-guard-vector main 0x175dbec f9400008 f9400008 cb0803ee aa0801ce d37ffdce d10005ce @page:x15 8a0e01ef aa0f0108
+site orbitals-vcall-probe main 0x1d761cc f9400508 f9400510 @page:x8 f9408108
+site orbitals-record-source-probe main 0x17505b8 f9400508 f9400510 @page:x8 f9408508
+site orbitals-record-source-probe main 0x17505e0 f9400508 f9400510 @page:x8 f9408508
+site orbitals-readback-probe main 0x1583df0 f9408106 f9408110 @page:x6 f94088c6

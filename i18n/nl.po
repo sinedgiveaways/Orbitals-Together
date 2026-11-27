@@ -1,0 +1,2264 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: orbitals-together\nLanguage: nl\nMIME-Version: 1.0\nContent-Type: text/plain; "
+"charset=UTF-8\nContent-Transfer-Encoding: 8bit\n"
+
+#. The software keyboard's starting text: at most 9 UTF-16 units, no '@' '%' '\'.
+msgctxt "UI_SWKBD_DEFAULT_NAME"
+msgid "Player"
+msgstr "Speler"
+
+msgctxt "UI_MENU_TITLE"
+msgid "Settings"
+msgstr "Instellingen"
+
+msgctxt "UI_MENU_TAB_SCREEN"
+msgid "Screen"
+msgstr "Scherm"
+
+msgctxt "UI_MENU_TAB_GAME"
+msgid "Game"
+msgstr "Spel"
+
+msgctxt "UI_MENU_TAB_SOUND"
+msgid "Sound"
+msgstr "Geluid"
+
+msgctxt "UI_MENU_TAB_CONTROLS"
+msgid "Controls"
+msgstr "Besturing"
+
+msgctxt "UI_MENU_TAB_MENU"
+msgid "Menu"
+msgstr "Menu"
+
+msgctxt "UI_MENU_TAB_ADVANCED"
+msgid "Advanced"
+msgstr "Geavanceerd"
+
+msgctxt "UI_MENU_TAB_GRAPHICS"
+msgid "Graphics"
+msgstr "Beeld"
+
+msgctxt "UI_MENU_TAB_HACKS"
+msgid "Hacks"
+msgstr "Hacks"
+
+msgctxt "UI_MENU_HACKS_WARNING"
+msgid ""
+"Experimental: shortcuts the console does not have, for playing and testing faster. They can "
+"change how the game behaves."
+msgstr ""
+"Experimenteel: snelkoppelingen die de console niet heeft, om sneller te spelen en te testen. Ze "
+"kunnen het gedrag van het spel veranderen."
+
+msgctxt "UI_MENU_TURBO"
+msgid "Turbo"
+msgstr "Turbo"
+
+msgctxt "UI_MENU_TURBO_DESC"
+msgid ""
+"The whole game runs faster: menus, movies, loads and races. Hold or press F2. The screen shows at "
+"most 60 frames a second."
+msgstr ""
+"Het hele spel gaat sneller: menu's, filmpjes, laadtijden en races. Houd F2 ingedrukt of druk "
+"erop. Het scherm toont maximaal 60 beelden per seconde."
+
+msgctxt "UI_MENU_TURBO_HOLD"
+msgid "Hold F2"
+msgstr "F2 ingedrukt houden"
+
+msgctxt "UI_MENU_TURBO_TOGGLE"
+msgid "F2 on/off"
+msgstr "F2 aan/uit"
+
+msgctxt "UI_MENU_TURBO_SPEED"
+msgid "Turbo speed"
+msgstr "Turbosnelheid"
+
+msgctxt "UI_MENU_TURBO_SPEED_DESC"
+msgid "How many times faster. A slow PC may not reach it."
+msgstr "Hoeveel keer sneller. Een trage pc haalt dat misschien niet."
+
+msgctxt "UI_MENU_SEED"
+msgid "Same randomness every time"
+msgstr "Elke keer hetzelfde toeval"
+
+msgctxt "UI_MENU_SEED_DESC"
+msgid ""
+"The game draws the same random numbers in every session: the same title course, the same items. "
+"For testing."
+msgstr ""
+"Het spel trekt in elke sessie dezelfde willekeurige getallen: dezelfde titelbaan, dezelfde "
+"voorwerpen. Om te testen."
+
+msgctxt "UI_MENU_FREEZE_KEYS"
+msgid "Freeze keys"
+msgstr "Pauzetoetsen"
+
+msgctxt "UI_MENU_FREEZE_KEYS_DESC"
+msgid ""
+"F3 stops the game on the frame on screen and starts it again; F4 moves it on by one frame. To "
+"look at a moment closely."
+msgstr ""
+"F3 zet het spel stil op het beeld op het scherm en laat het weer doorgaan; F4 gaat één beeld "
+"verder. Om een moment van dichtbij te bekijken."
+
+msgctxt "UI_MENU_ANISO"
+msgid "Texture filtering"
+msgstr "Texturefilter"
+
+msgctxt "UI_MENU_ANISO_DESC"
+msgid ""
+"Sharpness of textures seen far away or at a low angle, such as the road ahead. Game uses what "
+"each texture asks for. Impact on frame rate: low."
+msgstr ""
+"Scherpte van texturen die ver weg of onder een lage hoek te zien zijn, zoals de weg voor je. Spel "
+"gebruikt wat elke textuur vraagt. Invloed op de framerate: laag."
+
+msgctxt "UI_MENU_ANISO_GAME"
+msgid "Game"
+msgstr "Spel"
+
+msgctxt "UI_MENU_TEX_QUALITY"
+msgid "Texture quality"
+msgstr "Texturekwaliteit"
+
+msgctxt "UI_MENU_TEX_QUALITY_DESC"
+msgid ""
+"Detail of the game's own textures. Half and Quarter skip their finest levels: less memory traffic "
+"on the graphics card, blurrier surfaces up close. Impact on frame rate: low."
+msgstr ""
+"Detail van de eigen texturen van het spel. Half en Kwart slaan de fijnste niveaus over: minder "
+"geheugenverkeer op de grafische kaart, vager oppervlak van dichtbij. Invloed op de framerate: "
+"laag."
+
+msgctxt "UI_MENU_TEX_QUALITY_FULL"
+msgid "Full"
+msgstr "Volledig"
+
+msgctxt "UI_MENU_TEX_QUALITY_HALF"
+msgid "Half"
+msgstr "Half"
+
+msgctxt "UI_MENU_TEX_QUALITY_QUARTER"
+msgid "Quarter"
+msgstr "Kwart"
+
+msgctxt "UI_MENU_DETAIL_LOW"
+msgid "Low"
+msgstr "Laag"
+
+msgctxt "UI_MENU_DETAIL_MEDIUM"
+msgid "Medium"
+msgstr "Gemiddeld"
+
+msgctxt "UI_MENU_DETAIL_CONSOLE"
+msgid "Console"
+msgstr "Console"
+
+msgctxt "UI_MENU_DETAIL_HIGH"
+msgid "High"
+msgstr "Hoog"
+
+msgctxt "UI_MENU_DETAIL_ULTRA"
+msgid "Very high"
+msgstr "Zeer hoog"
+
+msgctxt "UI_MENU_CONTINUE"
+msgid "Continue"
+msgstr "Verdergaan"
+
+msgctxt "UI_MENU_QUIT"
+msgid "Quit game"
+msgstr "Spel stoppen"
+
+msgctxt "UI_MENU_ON"
+msgid "On"
+msgstr "Aan"
+
+msgctxt "UI_MENU_OFF"
+msgid "Off"
+msgstr "Uit"
+
+msgctxt "UI_MENU_AUTO"
+msgid "Automatic"
+msgstr "Automatisch"
+
+msgctxt "UI_MENU_DEFAULT_MARK"
+msgid "default"
+msgstr "standaard"
+
+msgctxt "UI_MENU_AFTER_RESTART"
+msgid "after restart"
+msgstr "na herstart"
+
+msgctxt "UI_MENU_SET_BY_ENV"
+msgid "set by environment variable"
+msgstr "ingesteld via omgevingsvariabele"
+
+msgctxt "UI_MENU_SAVE_FAILED"
+msgid "could not save settings"
+msgstr "instellingen opslaan mislukt"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_MENU_VERSION"
+msgid "Orbitals Together %s, game %s"
+msgstr "Orbitals Together %s, spel %s"
+
+msgctxt "UI_MENU_FULLSCREEN"
+msgid "Fullscreen"
+msgstr "Volledig scherm"
+
+msgctxt "UI_MENU_FULLSCREEN_DESC"
+msgid "Fills the screen with the game; F11 toggles it."
+msgstr "Vult het scherm met het spel; F11 schakelt het om."
+
+msgctxt "UI_MENU_WINDOW_SIZE"
+msgid "Window size"
+msgstr "Venstergrootte"
+
+msgctxt "UI_MENU_WINDOW_SIZE_DESC"
+msgid "Size of the game window when not fullscreen."
+msgstr "Grootte van het spelvenster als het niet op volledig scherm staat."
+
+msgctxt "UI_MENU_QUALITY"
+msgid "Quality"
+msgstr "Kwaliteit"
+
+msgctxt "UI_MENU_QUALITY_DESC"
+msgid ""
+"Sets the rows below at once. Console looks like the Switch 2; Low and Medium are lighter for the "
+"graphics card, High and Very high sharper. Changing a row makes it Custom. The internal "
+"resolution is what changes the frame rate most."
+msgstr ""
+"Stelt de regels hieronder in één keer in. Console lijkt op de Switch 2; Laag en Gemiddeld zijn "
+"lichter voor de grafische kaart, Hoog en Zeer hoog scherper. Een regel aanpassen maakt het "
+"Aangepast. De interne resolutie verandert de framerate het meest."
+
+msgctxt "UI_MENU_QUALITY_CUSTOM"
+msgid "Custom"
+msgstr "Aangepast"
+
+msgctxt "UI_MENU_PRESENT"
+msgid "Presentation"
+msgstr "Weergave"
+
+msgctxt "UI_MENU_PRESENT_DESC"
+msgid "How finished frames reach the screen."
+msgstr "Hoe voltooide beelden op het scherm komen."
+
+msgctxt "UI_MENU_PRESENT_MAILBOX"
+msgid "Mailbox"
+msgstr "Mailbox"
+
+msgctxt "UI_MENU_PRESENT_VSYNC"
+msgid "VSync"
+msgstr "VSync"
+
+msgctxt "UI_MENU_PRESENT_IMMEDIATE"
+msgid "Immediate"
+msgstr "Direct"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_MENU_PRESENT_IN_USE"
+msgid "in use: %s"
+msgstr "in gebruik: %s"
+
+msgctxt "UI_MENU_GPU"
+msgid "Graphics card"
+msgstr "Grafische kaart"
+
+msgctxt "UI_MENU_GPU_DESC"
+msgid "The Vulkan device that draws the game."
+msgstr "Het Vulkan-apparaat dat het spel tekent."
+
+msgctxt "UI_MENU_GPU_AUTO"
+msgid "Automatic"
+msgstr "Automatisch"
+
+msgctxt "UI_MENU_PERF_OVERLAY"
+msgid "Performance overlay"
+msgstr "Prestatie-overlay"
+
+msgctxt "UI_MENU_PERF_OVERLAY_DESC"
+msgid ""
+"Frame rate in the top right corner. Full adds frame times with a graph, CPU, GPU and memory load, "
+"temperatures and the render thread's waits. F10 cycles the modes."
+msgstr ""
+"Framerate rechtsboven. Volledig voegt frametijden met een grafiek toe, cpu-, gpu- en "
+"geheugenbelasting, temperaturen en de wachttijden van de renderthread. F10 wisselt tussen de "
+"standen."
+
+msgctxt "UI_MENU_PERF_OFF"
+msgid "Off"
+msgstr "Uit"
+
+msgctxt "UI_MENU_PERF_FPS"
+msgid "FPS"
+msgstr "FPS"
+
+msgctxt "UI_MENU_PERF_FULL"
+msgid "Full"
+msgstr "Volledig"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_PERF_LINE_FPS"
+msgid "%.0f fps"
+msgstr "%.0f fps"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_PERF_LINE_FPS_FG"
+msgid "%.0f/%.0f fps"
+msgstr "%.0f/%.0f fps"
+
+msgctxt "UI_MENU_FPS_AUTO"
+msgid "Automatic"
+msgstr "Automatisch"
+
+msgctxt "UI_MENU_FRAMEGEN"
+msgid "Frame generation"
+msgstr "Framegeneratie"
+
+msgctxt "UI_MENU_FRAMEGEN_DESC"
+msgid ""
+"Shows frames made between the game's own: 2x turns 30 fps into 60. Automatic makes as many as "
+"your monitor's refresh rate has room for. Adds up to one frame of delay, and fast motion can "
+"smear. Not on the console."
+msgstr ""
+"Toont beelden die tussen die van het spel zelf worden gemaakt: 2x maakt van 30 fps 60. "
+"Automatisch maakt er zoveel als de vernieuwingsfrequentie van je monitor toelaat. Voegt tot één "
+"beeld vertraging toe en snelle beweging kan uitsmeren. Niet op de console."
+
+msgctxt "UI_MENU_GRAPHICS"
+msgid "Picture"
+msgstr "Beeld"
+
+msgctxt "UI_MENU_UPSCALER"
+msgid "Scaling to the window"
+msgstr "Schalen naar venster"
+
+msgctxt "UI_MENU_UPSCALER_DESC"
+msgid ""
+"How the picture is scaled when the window is larger than the game resolution. FSR keeps edges and "
+"detail sharper than bilinear."
+msgstr ""
+"Hoe het beeld wordt geschaald als het venster groter is dan de spelresolutie. FSR houdt randen en "
+"details scherper dan bilineair."
+
+msgctxt "UI_MENU_UPSCALER_FSR"
+msgid "AMD FSR 1"
+msgstr "AMD FSR 1"
+
+msgctxt "UI_MENU_UPSCALER_BILINEAR"
+msgid "Bilinear"
+msgstr "Bilineair"
+
+msgctxt "UI_MENU_PICTURE_FIT"
+msgid "Picture shape"
+msgstr "Beeldvorm"
+
+msgctxt "UI_MENU_PICTURE_FIT_DESC"
+msgid ""
+"When the window's shape differs from the game resolution's (a 16:9 game on the Steam Deck's 16:10 "
+"screen), keep the picture's proportions with black bars, or stretch it over the whole window."
+msgstr ""
+"Als de vorm van het venster afwijkt van die van de spelresolutie (een 16:9-spel op het "
+"16:10-scherm van de Steam Deck), blijven de verhoudingen behouden met zwarte balken, of wordt het "
+"beeld over het hele venster uitgerekt."
+
+msgctxt "UI_MENU_PICTURE_FIT_KEEP"
+msgid "Keep (bars)"
+msgstr "Behouden (balken)"
+
+msgctxt "UI_MENU_PICTURE_FIT_STRETCH"
+msgid "Stretch"
+msgstr "Uitrekken"
+
+msgctxt "UI_MENU_HDR"
+msgid "HDR"
+msgstr "HDR"
+
+msgctxt "UI_MENU_HDR_DESC"
+msgid ""
+"Automatic shows the game's own HDR picture when the display is in HDR (on Windows, Settings > "
+"Display > Use HDR), as the console does; its brightness follows the system's HDR settings. Off "
+"always shows the standard picture. Applies at once."
+msgstr ""
+"Automatisch toont het eigen HDR-beeld van het spel als het scherm in HDR staat (op Windows: "
+"Instellingen > Beeldscherm > HDR gebruiken), zoals de console; de helderheid volgt de "
+"HDR-instellingen van het systeem. Uit toont altijd het standaardbeeld. Werkt direct."
+
+msgctxt "UI_MENU_SHARPNESS"
+msgid "FSR sharpness"
+msgstr "FSR-scherpte"
+
+msgctxt "UI_MENU_SHARPNESS_DESC"
+msgid "Sharpening after FSR scaling; 0 turns it off."
+msgstr "Verscherping na FSR-schaling; 0 zet het uit."
+
+msgctxt "UI_MENU_GAME_LANG"
+msgid "Game language"
+msgstr "Spelertaal"
+
+msgctxt "UI_MENU_GAME_LANG_DESC"
+msgid "Language of the game's text and voices."
+msgstr "Taal van de teksten en stemmen van het spel."
+
+msgctxt "UI_MENU_GAME_LANG_AUTO"
+msgid "Automatic"
+msgstr "Automatisch"
+
+msgctxt "UI_MENU_OPERATION_MODE"
+msgid "Console mode"
+msgstr "Consolemodus"
+
+msgctxt "UI_MENU_OPERATION_MODE_DESC"
+msgid ""
+"Whether the game thinks it runs docked or handheld. Docked, it draws the scene smaller and "
+"enlarges it with its own scaler; handheld, at the full internal resolution with smaller shadows: "
+"sharper, but more work for the graphics card."
+msgstr ""
+"Of het spel denkt dat het in tv- of handheldmodus draait. In tv-modus tekent het de scène kleiner "
+"en vergroot die met zijn eigen scaler; in handheldmodus op de volledige interne resolutie met "
+"kleinere schaduwen: scherper, maar meer werk voor de grafische kaart."
+
+msgctxt "UI_MENU_MODE_DOCKED"
+msgid "Docked"
+msgstr "Tv-modus"
+
+msgctxt "UI_MENU_MODE_HANDHELD"
+msgid "Handheld"
+msgstr "Handheld"
+
+msgctxt "UI_MENU_LAN"
+msgid "LAN play"
+msgstr "LAN-spel"
+
+msgctxt "UI_MENU_LAN_DESC"
+msgid ""
+"Lets the game reach other PCs on the same local network when it asks for a local network "
+"connection, for local network play. It only reaches local network addresses, never the internet. "
+"Applies at the next start."
+msgstr ""
+"Laat het spel andere pc's in hetzelfde lokale netwerk bereiken wanneer het om een lokale "
+"netwerkverbinding vraagt, om in een lokaal netwerk te spelen. Het bereikt alleen adressen in het "
+"lokale netwerk, nooit internet. Geldt vanaf de volgende start."
+
+msgctxt "UI_MENU_VOLUME"
+msgid "Volume"
+msgstr "Volume"
+
+msgctxt "UI_MENU_VOLUME_DESC"
+msgid "Master volume of the game."
+msgstr "Hoofdvolume van het spel."
+
+msgctxt "UI_MENU_SPEAKERS"
+msgid "Speakers"
+msgstr "Luidsprekers"
+
+msgctxt "UI_MENU_SPEAKERS_STEREO"
+msgid "Stereo"
+msgstr "Stereo"
+
+msgctxt "UI_MENU_SPEAKERS_51"
+msgid "5.1 surround"
+msgstr "5.1 surround"
+
+msgctxt "UI_MENU_BACKGROUND_MUTE"
+msgid "Mute in background"
+msgstr "Dempen op de achtergrond"
+
+msgctxt "UI_MENU_BACKGROUND_MUTE_DESC"
+msgid "No sound while the game window is not in front."
+msgstr "Geen geluid zolang het spelvenster niet op de voorgrond staat."
+
+msgctxt "UI_MENU_SPEAKERS_DESC"
+msgid ""
+"Automatic gives the game's 5.1 surround mix when the system's sound output has 6 channels or "
+"more, and stereo otherwise. Applies at the next start."
+msgstr ""
+"Automatisch geeft de 5.1-surroundmix van het spel als de geluidsuitvoer van het systeem 6 of meer "
+"kanalen heeft, anders stereo. Werkt bij de volgende start."
+
+msgctxt "UI_MENU_MOTION"
+msgid "Motion controls"
+msgstr "Bewegingsbesturing"
+
+msgctxt "UI_MENU_MOTION_DESC"
+msgid "Steering by tilting the controller."
+msgstr "Sturen door de controller te kantelen."
+
+msgctxt "UI_MENU_RUMBLE_STRENGTH"
+msgid "Vibration strength"
+msgstr "Trillingssterkte"
+
+msgctxt "UI_MENU_RUMBLE_STRENGTH_DESC"
+msgid "How strong the controller vibrates."
+msgstr "Hoe sterk de controller trilt."
+
+msgctxt "UI_MENU_RUMBLE_CURVE"
+msgid "Vibration curve"
+msgstr "Trillingscurve"
+
+msgctxt "UI_MENU_RUMBLE_CURVE_DESC"
+msgid "Lower values make weak vibration stronger."
+msgstr "Lagere waarden maken zwakke trillingen sterker."
+
+msgctxt "UI_MENU_RUMBLE_TRIGGERS"
+msgid "Trigger vibration (Xbox)"
+msgstr "Triggertrilling (Xbox)"
+
+msgctxt "UI_MENU_RUMBLE_TRIGGERS_DESC"
+msgid "Vibrates the triggers of an Xbox controller too."
+msgstr "Laat ook de triggers van een Xbox-controller trillen."
+
+msgctxt "UI_MENU_PAD_LAYOUT"
+msgid "Button layout"
+msgstr "Knoppenindeling"
+
+msgctxt "UI_MENU_PAD_LAYOUT_DESC"
+msgid ""
+"Which button is A. Nintendo: the right one, as on a Switch. Xbox: the bottom one, as labelled on "
+"an Xbox controller (cross on a PlayStation controller). Automatic picks Nintendo for controllers "
+"with Nintendo labels and Xbox for the others."
+msgstr ""
+"Welke knop A is. Nintendo: de rechter, zoals op een Switch. Xbox: de onderste, zoals op een "
+"Xbox-controller staat (kruis op een PlayStation-controller). Automatisch kiest Nintendo voor "
+"controllers met Nintendo-opdruk en Xbox voor de rest."
+
+msgctxt "UI_MENU_PAD_LAYOUT_AUTO"
+msgid "Automatic"
+msgstr "Automatisch"
+
+msgctxt "UI_MENU_PAD_LAYOUT_NINTENDO"
+msgid "Nintendo (A right)"
+msgstr "Nintendo (A rechts)"
+
+msgctxt "UI_MENU_PAD_LAYOUT_XBOX"
+msgid "Xbox (A bottom)"
+msgstr "Xbox (A onder)"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_MENU_PAD_LAYOUT_IN_USE"
+msgid "in use: %s"
+msgstr "in gebruik: %s"
+
+msgctxt "UI_MENU_MOUSE_SENS"
+msgid "Mouse camera sensitivity"
+msgstr "Muisgevoeligheid camera"
+
+msgctxt "UI_MENU_MOUSE_SENS_DESC"
+msgid "How fast the mouse turns the camera."
+msgstr "Hoe snel de muis de camera draait."
+
+msgctxt "UI_MENU_SWITCH2"
+msgid "Switch 2 controllers (Bluetooth)"
+msgstr "Switch 2-controllers (Bluetooth)"
+
+msgctxt "UI_MENU_SWITCH2_DESC"
+msgid ""
+"Joy-Con 2 and Pro Controller 2 over Bluetooth. To pair one, hold its Sync button with the game "
+"open. Applies at the next start."
+msgstr ""
+"Joy-Con 2 en Pro Controller 2 via Bluetooth. Houd de Sync-knop ingedrukt met het spel open om er "
+"een te koppelen. Geldt vanaf de volgende start."
+
+msgctxt "UI_MENU_STICK_DEADZONE"
+msgid "Stick dead zone"
+msgstr "Dode zone van de stick"
+
+msgctxt "UI_MENU_STICK_DEADZONE_DESC"
+msgid ""
+"How far a stick must tilt before it counts. Raise it if the kart drifts with the stick at rest."
+msgstr ""
+"Hoe ver een stick moet kantelen voordat hij telt. Verhoog dit als de kart beweegt met de stick in "
+"rust."
+
+msgctxt "UI_MENU_BUTTON_ICONS"
+msgid "Button icons"
+msgstr "Knopicoontjes"
+
+msgctxt "UI_MENU_BUTTON_ICONS_DESC"
+msgid ""
+"Which buttons the game's prompts show. Automatic follows the device you used last: the "
+"controller's own buttons (Xbox or PlayStation), or your keys and mouse. The icons follow your "
+"remapped buttons."
+msgstr ""
+"Welke knoppen de aanwijzingen van het spel tonen. Automatisch volgt het apparaat dat je als "
+"laatste gebruikte: de knoppen van de controller (Xbox of PlayStation), of je toetsen en muis. De "
+"icoontjes volgen je aangepaste knoppen."
+
+msgctxt "UI_MENU_ICONS_NINTENDO"
+msgid "Nintendo"
+msgstr "Nintendo"
+
+msgctxt "UI_MENU_ICONS_XBOX"
+msgid "Xbox"
+msgstr "Xbox"
+
+msgctxt "UI_MENU_ICONS_PLAYSTATION"
+msgid "PlayStation"
+msgstr "PlayStation"
+
+msgctxt "UI_MENU_ICONS_KEYBOARD"
+msgid "Keyboard"
+msgstr "Toetsenbord"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_MENU_ICONS_IN_USE"
+msgid "in use: %s"
+msgstr "in gebruik: %s"
+
+msgctxt "UI_BINDS_HELP"
+msgid ""
+"Select a cell and press A or Enter, then the key, mouse button or controller button. Delete or X "
+"clears a cell. A key in use moves here; a controller button swaps with the one it replaces."
+msgstr ""
+"Kies een cel en druk op A of Enter, dan op de toets, muisknop of controllerknop. Delete of X wist "
+"een cel. Een toets die al in gebruik is, verhuist hierheen; een controllerknop wisselt met degene "
+"die hij vervangt."
+
+msgctxt "UI_BINDS_COL_KEY1"
+msgid "Key 1"
+msgstr "Toets 1"
+
+msgctxt "UI_BINDS_COL_KEY2"
+msgid "Key 2"
+msgstr "Toets 2"
+
+msgctxt "UI_BINDS_COL_PAD"
+msgid "Controller"
+msgstr "Controller"
+
+msgctxt "UI_BINDS_GROUP_BUTTONS"
+msgid "Buttons"
+msgstr "Knoppen"
+
+msgctxt "UI_BINDS_GROUP_MOVE"
+msgid "Movement"
+msgstr "Beweging"
+
+msgctxt "UI_BINDS_GROUP_CAMERA"
+msgid "Camera"
+msgstr "Camera"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_BINDS_PRESS_KEY"
+msgid "Press a key or mouse button for %s"
+msgstr "Druk op een toets of muisknop voor %s"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_BINDS_PRESS_PAD"
+msgid "Press a controller button for %s"
+msgstr "Druk op een controllerknop voor %s"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_BINDS_CANCEL_HINT"
+msgid "Esc cancels, or wait %d s"
+msgstr "Esc annuleert, of wacht %d s"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_BINDS_TAKEN"
+msgid "%s was taken from %s"
+msgstr "%s is overgenomen van %s"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_BINDS_SWAPPED"
+msgid "%s swapped with %s"
+msgstr "%s gewisseld met %s"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_NOTICE_PADS_MISSING"
+msgid "%d players need a controller each: %d connected. The keyboard only counts for player 1."
+msgstr ""
+"%d spelers hebben elk een controller nodig: %d aangesloten. Het toetsenbord telt alleen voor "
+"speler 1."
+
+msgctxt "UI_BINDS_RESET"
+msgid "Reset all buttons"
+msgstr "Alle knoppen herstellen"
+
+msgctxt "UI_BINDS_RESET_DESC"
+msgid ""
+"Back to the default keys and controller buttons. The button layout above applies again: remapped "
+"controller buttons stay where you put them until this reset."
+msgstr ""
+"Terug naar de standaardtoetsen en controllerknoppen. De knoppenindeling hierboven geldt weer: "
+"aangepaste controllerknoppen blijven staan waar je ze hebt gezet tot deze reset."
+
+msgctxt "UI_BIND_A"
+msgid "A"
+msgstr "A"
+
+msgctxt "UI_BIND_B"
+msgid "B"
+msgstr "B"
+
+msgctxt "UI_BIND_X"
+msgid "X"
+msgstr "X"
+
+msgctxt "UI_BIND_Y"
+msgid "Y"
+msgstr "Y"
+
+msgctxt "UI_BIND_LCLICK"
+msgid "Left stick click"
+msgstr "Linkerstick indrukken"
+
+msgctxt "UI_BIND_RCLICK"
+msgid "Right stick click"
+msgstr "Rechterstick indrukken"
+
+msgctxt "UI_BIND_L"
+msgid "L"
+msgstr "L"
+
+msgctxt "UI_BIND_R"
+msgid "R"
+msgstr "R"
+
+msgctxt "UI_BIND_ZL"
+msgid "ZL"
+msgstr "ZL"
+
+msgctxt "UI_BIND_ZR"
+msgid "ZR"
+msgstr "ZR"
+
+msgctxt "UI_BIND_PLUS"
+msgid "Plus"
+msgstr "Plus"
+
+msgctxt "UI_BIND_MINUS"
+msgid "Minus"
+msgstr "Min"
+
+msgctxt "UI_BIND_LEFT"
+msgid "D-pad left"
+msgstr "D-pad links"
+
+msgctxt "UI_BIND_UP"
+msgid "D-pad up"
+msgstr "D-pad omhoog"
+
+msgctxt "UI_BIND_RIGHT"
+msgid "D-pad right"
+msgstr "D-pad rechts"
+
+msgctxt "UI_BIND_DOWN"
+msgid "D-pad down"
+msgstr "D-pad omlaag"
+
+msgctxt "UI_BIND_LSTICK_LEFT"
+msgid "Steer left"
+msgstr "Naar links sturen"
+
+msgctxt "UI_BIND_LSTICK_UP"
+msgid "Stick up"
+msgstr "Stick omhoog"
+
+msgctxt "UI_BIND_LSTICK_RIGHT"
+msgid "Steer right"
+msgstr "Naar rechts sturen"
+
+msgctxt "UI_BIND_LSTICK_DOWN"
+msgid "Stick down"
+msgstr "Stick omlaag"
+
+msgctxt "UI_BIND_RSTICK_LEFT"
+msgid "Camera left"
+msgstr "Camera links"
+
+msgctxt "UI_BIND_RSTICK_UP"
+msgid "Camera up"
+msgstr "Camera omhoog"
+
+msgctxt "UI_BIND_RSTICK_RIGHT"
+msgid "Camera right"
+msgstr "Camera rechts"
+
+msgctxt "UI_BIND_RSTICK_DOWN"
+msgid "Camera down"
+msgstr "Camera omlaag"
+
+msgctxt "UI_BIND_DESC_A"
+msgid "Accelerate; confirm in menus."
+msgstr "Gas geven; bevestigen in menu's."
+
+msgctxt "UI_BIND_DESC_B"
+msgid "Brake, reverse; back in menus."
+msgstr "Remmen, achteruit; terug in menu's."
+
+msgctxt "UI_BIND_DESC_X"
+msgid "Rear view."
+msgstr "Achteruitkijken."
+
+msgctxt "UI_BIND_DESC_Y"
+msgid "World map (free roam)."
+msgstr "Wereldkaart (rondrijden)."
+
+msgctxt "UI_BIND_DESC_LCLICK"
+msgid "No action in the game's control list."
+msgstr "Geen actie in de besturingslijst van het spel."
+
+msgctxt "UI_BIND_DESC_RCLICK"
+msgid "No action in the game's control list."
+msgstr "Geen actie in de besturingslijst van het spel."
+
+msgctxt "UI_BIND_DESC_L"
+msgid "Use an item."
+msgstr "Voorwerp gebruiken."
+
+msgctxt "UI_BIND_DESC_R"
+msgid "Hop, drift, charge jump, trick."
+msgstr "Hop, driften, oplaadsprong, truc."
+
+msgctxt "UI_BIND_DESC_ZL"
+msgid "Use an item."
+msgstr "Voorwerp gebruiken."
+
+msgctxt "UI_BIND_DESC_ZR"
+msgid "Hop, drift, charge jump, trick."
+msgstr "Hop, driften, oplaadsprong, truc."
+
+msgctxt "UI_BIND_DESC_PLUS"
+msgid "Pause, settings."
+msgstr "Pauze, instellingen."
+
+msgctxt "UI_BIND_DESC_MINUS"
+msgid "Photo mode."
+msgstr "Foto maken."
+
+msgctxt "UI_BIND_DESC_DPAD"
+msgid "Down rewinds; all four move in menus."
+msgstr "Omlaag spoelt terug; alle vier bewegen in menu's."
+
+msgctxt "UI_BIND_DESC_MOVE"
+msgid "Steers like the left stick. The controller's left stick always works too."
+msgstr "Stuurt zoals de linkerstick. De linkerstick van de controller werkt ook altijd."
+
+msgctxt "UI_BIND_DESC_CAMERA"
+msgid ""
+"Turns the camera like the right stick. The mouse and the controller's right stick always work too."
+msgstr ""
+"Draait de camera zoals de rechterstick. De muis en de rechterstick van de controller werken ook "
+"altijd."
+
+msgctxt "UI_KEY_SPACE"
+msgid "Space"
+msgstr "Spatiebalk"
+
+msgctxt "UI_KEY_TAB"
+msgid "Tab"
+msgstr "Tab"
+
+msgctxt "UI_KEY_LSHIFT"
+msgid "Left Shift"
+msgstr "Linker Shift"
+
+msgctxt "UI_KEY_LCTRL"
+msgid "Left Ctrl"
+msgstr "Linker Ctrl"
+
+msgctxt "UI_KEY_UP"
+msgid "Up arrow"
+msgstr "Pijl omhoog"
+
+msgctxt "UI_KEY_DOWN"
+msgid "Down arrow"
+msgstr "Pijl omlaag"
+
+msgctxt "UI_KEY_LEFT"
+msgid "Left arrow"
+msgstr "Pijl links"
+
+msgctxt "UI_KEY_RIGHT"
+msgid "Right arrow"
+msgstr "Pijl rechts"
+
+msgctxt "UI_KEY_MOUSE_L"
+msgid "Left mouse"
+msgstr "Linkermuisknop"
+
+msgctxt "UI_KEY_MOUSE_R"
+msgid "Right mouse"
+msgstr "Rechtermuisknop"
+
+msgctxt "UI_KEY_MOUSE_M"
+msgid "Middle mouse"
+msgstr "Middelste muisknop"
+
+msgctxt "UI_KEY_MOUSE_X1"
+msgid "Mouse 4"
+msgstr "Muis 4"
+
+msgctxt "UI_KEY_MOUSE_X2"
+msgid "Mouse 5"
+msgstr "Muis 5"
+
+msgctxt "UI_KEY_ENTER"
+msgid "Enter"
+msgstr "Enter"
+
+msgctxt "UI_KEY_BACKSPACE"
+msgid "Backspace"
+msgstr "Backspace"
+
+msgctxt "UI_KEY_RSHIFT"
+msgid "Right Shift"
+msgstr "Rechter Shift"
+
+msgctxt "UI_KEY_RCTRL"
+msgid "Right Ctrl"
+msgstr "Rechter Ctrl"
+
+msgctxt "UI_KEY_LALT"
+msgid "Alt"
+msgstr "Alt"
+
+msgctxt "UI_KEY_CAPSLOCK"
+msgid "Caps Lock"
+msgstr "Caps Lock"
+
+msgctxt "UI_KEY_INSERT"
+msgid "Insert"
+msgstr "Insert"
+
+msgctxt "UI_KEY_DELETE"
+msgid "Delete"
+msgstr "Delete"
+
+msgctxt "UI_KEY_HOME"
+msgid "Home"
+msgstr "Home"
+
+msgctxt "UI_KEY_END"
+msgid "End"
+msgstr "End"
+
+msgctxt "UI_KEY_PAGEUP"
+msgid "Page Up"
+msgstr "Page Up"
+
+msgctxt "UI_KEY_PAGEDOWN"
+msgid "Page Down"
+msgstr "Page Down"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_KEY_NUM_FMT"
+msgid "Num %s"
+msgstr "Num %s"
+
+msgctxt "UI_PAD_SOUTH"
+msgid "Bottom button"
+msgstr "Onderste knop"
+
+msgctxt "UI_PAD_EAST"
+msgid "Right button"
+msgstr "Rechterknop"
+
+msgctxt "UI_PAD_WEST"
+msgid "Left button"
+msgstr "Linkerknop"
+
+msgctxt "UI_PAD_NORTH"
+msgid "Top button"
+msgstr "Bovenste knop"
+
+msgctxt "UI_PAD_LSTICK"
+msgid "Left stick"
+msgstr "Linkerstick"
+
+msgctxt "UI_PAD_RSTICK"
+msgid "Right stick"
+msgstr "Rechterstick"
+
+msgctxt "UI_PAD_L"
+msgid "Left bumper"
+msgstr "Linkerschouderknop"
+
+msgctxt "UI_PAD_R"
+msgid "Right bumper"
+msgstr "Rechterschouderknop"
+
+msgctxt "UI_PAD_START"
+msgid "Start"
+msgstr "Start"
+
+msgctxt "UI_PAD_BACK"
+msgid "Back"
+msgstr "Terug"
+
+msgctxt "UI_PAD_DPAD_LEFT"
+msgid "D-pad left"
+msgstr "D-pad links"
+
+msgctxt "UI_PAD_DPAD_UP"
+msgid "D-pad up"
+msgstr "D-pad omhoog"
+
+msgctxt "UI_PAD_DPAD_RIGHT"
+msgid "D-pad right"
+msgstr "D-pad rechts"
+
+msgctxt "UI_PAD_DPAD_DOWN"
+msgid "D-pad down"
+msgstr "D-pad omlaag"
+
+msgctxt "UI_PAD_ZL"
+msgid "Left trigger"
+msgstr "Linkertrigger"
+
+msgctxt "UI_PAD_ZR"
+msgid "Right trigger"
+msgstr "Rechtertrigger"
+
+msgctxt "UI_PAD_CROSS"
+msgid "Cross"
+msgstr "Kruis"
+
+msgctxt "UI_PAD_CIRCLE"
+msgid "Circle"
+msgstr "Cirkel"
+
+msgctxt "UI_PAD_SQUARE"
+msgid "Square"
+msgstr "Vierkant"
+
+msgctxt "UI_PAD_TRIANGLE"
+msgid "Triangle"
+msgstr "Driehoek"
+
+msgctxt "UI_MENU_MENU_LANG"
+msgid "Menu language"
+msgstr "Menutaal"
+
+msgctxt "UI_MENU_MENU_LANG_DESC"
+msgid "Language of this menu and the overlay."
+msgstr "Taal van dit menu en de overlay."
+
+msgctxt "UI_MENU_MENU_LANG_AUTO"
+msgid "Automatic (from the system)"
+msgstr "Automatisch (van het systeem)"
+
+msgctxt "UI_MENU_ADV_WARNING"
+msgid "These settings are for testing and troubleshooting. Change them only when you know why."
+msgstr ""
+"Deze instellingen zijn bedoeld voor testen en het oplossen van problemen. Wijzig ze alleen als je "
+"weet waarom."
+
+msgctxt "UI_MENU_GROUP_SCHED"
+msgid "Scheduling"
+msgstr "Scheduling"
+
+msgctxt "UI_MENU_GROUP_SHADERS"
+msgid "Shaders and pipelines"
+msgstr "Shaders en pipelines"
+
+msgctxt "UI_MENU_GROUP_TEXMEM"
+msgid "Textures and memory"
+msgstr "Texturen en geheugen"
+
+msgctxt "UI_MENU_GROUP_FIXES"
+msgid "Render fixes"
+msgstr "Renderfixes"
+
+msgctxt "UI_MENU_GROUP_VULKAN"
+msgid "Vulkan"
+msgstr "Vulkan"
+
+msgctxt "UI_MENU_GROUP_DIAG"
+msgid "Diagnostics"
+msgstr "Diagnostiek"
+
+msgctxt "UI_MENU_ASYNC_PREEMPT"
+msgid "Virtual core preemption"
+msgstr "Virtuele kernen onderbreken"
+
+msgctxt "UI_MENU_ASYNC_PREEMPT_DESC"
+msgid "Lets a game thread interrupt another one on the same virtual core."
+msgstr "Laat een spelthread een andere thread op dezelfde virtuele kern onderbreken."
+
+msgctxt "UI_MENU_PREEMPT_OFF"
+msgid "Off"
+msgstr "Uit"
+
+msgctxt "UI_MENU_PREEMPT_ON"
+msgid "On"
+msgstr "Aan"
+
+msgctxt "UI_MENU_PREEMPT_INHERIT"
+msgid "Inheritance only"
+msgstr "Alleen overerving"
+
+msgctxt "UI_MENU_REPLAY_ASYNC"
+msgid "GPU frame prep on its own thread"
+msgstr "GPU-voorbereiding op eigen thread"
+
+msgctxt "UI_MENU_REPLAY_ASYNC_DESC"
+msgid ""
+"Prepares frames for the GPU on a separate thread instead of the game thread. Adds up to one frame "
+"of latency."
+msgstr ""
+"Bereidt beelden voor de GPU voor op een aparte thread in plaats van op de spelthread. Voegt tot "
+"één beeld latentie toe."
+
+msgctxt "UI_MENU_FREE_CORES"
+msgid "Virtual core gate"
+msgstr "Virtuele-kernenpoort"
+
+msgctxt "UI_MENU_FREE_CORES_DESC"
+msgid "Lets only one thread run per virtual core, as on the console."
+msgstr "Laat per virtuele kern maar één thread draaien, zoals op de console."
+
+msgctxt "UI_MENU_TIMER_1MS"
+msgid "1 ms Windows timer"
+msgstr "1-ms-Windows-timer"
+
+msgctxt "UI_MENU_TIMER_1MS_DESC"
+msgid "Raises the system timer resolution to 1 ms for steadier frame pacing."
+msgstr "Zet de timerresolutie van het systeem op 1 ms voor een gelijkmatiger beeldritme."
+
+msgctxt "UI_MENU_PIPE_WAIT"
+msgid "Waiting draw handling"
+msgstr "Afhandeling wachtende draws"
+
+msgctxt "UI_MENU_PIPE_WAIT_DESC"
+msgid ""
+"Default keeps the current scheduling with a reserved worker for waiting draws; Old (draw) uses "
+"the previous scheduling."
+msgstr ""
+"Standaard houdt de huidige scheduling aan met een gereserveerde worker voor wachtende draws; Oud "
+"(draw) gebruikt de vorige scheduling."
+
+msgctxt "UI_MENU_PIPE_WAIT_DEFAULT"
+msgid "Default"
+msgstr "Standaard"
+
+msgctxt "UI_MENU_PIPE_WAIT_DRAW"
+msgid "Old (draw)"
+msgstr "Oud (draw)"
+
+msgctxt "UI_MENU_PIPE_SKIP"
+msgid "Draws skipped while a pipeline builds"
+msgstr "Draws overgeslagen tijdens pipeline-opbouw"
+
+msgctxt "UI_MENU_PIPE_SKIP_DESC"
+msgid "Which draws are dropped instead of waiting for their pipeline."
+msgstr "Welke draws worden weggegooid in plaats van op hun pipeline te wachten."
+
+msgctxt "UI_MENU_PIPE_SKIP_STRICT"
+msgid "Strict"
+msgstr "Strikt"
+
+msgctxt "UI_MENU_PIPE_SKIP_ANY"
+msgid "Any"
+msgstr "Alle"
+
+msgctxt "UI_MENU_PIPE_SKIP_FULLSCREEN"
+msgid "Fullscreen passes"
+msgstr "Passes op volledig scherm"
+
+msgctxt "UI_MENU_PIPE_PREBUILD"
+msgid "Pipeline prebuild"
+msgstr "Pipelines vooraf bouwen"
+
+msgctxt "UI_MENU_PIPE_PREBUILD_DESC"
+msgid "Builds known pipelines ahead of time."
+msgstr "Bouwt bekende pipelines van tevoren."
+
+msgctxt "UI_MENU_GPL"
+msgid "Graphics pipeline library"
+msgstr "Graphics pipeline library"
+
+msgctxt "UI_MENU_GPL_DESC"
+msgid "Uses the Vulkan pipeline library extension; turn off if your driver misbehaves with it."
+msgstr ""
+"Gebruikt de Vulkan-extensie voor pipelinebibliotheken; zet uit als je driver er problemen mee "
+"heeft."
+
+msgctxt "UI_MENU_ASTC"
+msgid "ASTC texture decoding"
+msgstr "ASTC-textureontcijfering"
+
+msgctxt "UI_MENU_ASTC_DESC"
+msgid "Where compressed ASTC textures are decoded."
+msgstr "Waar gecomprimeerde ASTC-texturen worden gedecodeerd."
+
+msgctxt "UI_MENU_ASTC_AUTO"
+msgid "Automatic"
+msgstr "Automatisch"
+
+msgctxt "UI_MENU_ASTC_GPU"
+msgid "GPU shader"
+msgstr "GPU-shader"
+
+msgctxt "UI_MENU_ASTC_NATIVE"
+msgid "Native"
+msgstr "Native"
+
+msgctxt "UI_MENU_ASTC_CPU"
+msgid "CPU"
+msgstr "CPU"
+
+msgctxt "UI_MENU_MEMORY"
+msgid "GPU memory mode"
+msgstr "GPU-geheugenmodus"
+
+msgctxt "UI_MENU_MEMORY_DESC"
+msgid "How game memory is shared with the GPU."
+msgstr "Hoe het spelgeheugen met de GPU wordt gedeeld."
+
+msgctxt "UI_MENU_MEMORY_AUTO"
+msgid "Automatic"
+msgstr "Automatisch"
+
+msgctxt "UI_MENU_MEMORY_IMPORT"
+msgid "Import"
+msgstr "Importeren"
+
+msgctxt "UI_MENU_MEMORY_MIRROR"
+msgid "Mirror"
+msgstr "Spiegelen"
+
+msgctxt "UI_MENU_MEMORY_VERIFY"
+msgid "Verify"
+msgstr "Controleren"
+
+msgctxt "UI_MENU_TEX_ALIAS"
+msgid "Texture aliasing"
+msgstr "Texture-aliasing"
+
+msgctxt "UI_MENU_TEX_ALIAS_DESC"
+msgid ""
+"A new texture created over a live texture's memory starts with that content instead of empty."
+msgstr ""
+"Een nieuwe textuur boven het geheugen van een actieve textuur begint met die inhoud in plaats van "
+"leeg."
+
+msgctxt "UI_MENU_FIX_C0"
+msgid "Constant buffer fix"
+msgstr "Constantebuffer-fix"
+
+msgctxt "UI_MENU_FIX_C0_DESC"
+msgid ""
+"Fills the driver-reserved constant bank c0 (storage sizes, dispatch size, point size, base "
+"instance) instead of reading zeros."
+msgstr ""
+"Vult de door de driver gereserveerde constantenbank c0 (opslaggroottes, dispatchgrootte, "
+"puntgrootte, basisinstantie) in plaats van nullen te lezen."
+
+msgctxt "UI_MENU_FIX_ZERO"
+msgid "Zero new GPU memory"
+msgstr "Nieuw GPU-geheugen nullen"
+
+msgctxt "UI_MENU_FIX_ZERO_DESC"
+msgid "New GPU memory pools start zero-filled, as Switch memory does."
+msgstr "Nieuwe GPU-geheugenpools beginnen met nullen gevuld, zoals het geheugen van de Switch."
+
+msgctxt "UI_MENU_BIND_SKIP"
+msgid "Skip repeated binds"
+msgstr "Herhaalde binds overslaan"
+
+msgctxt "UI_MENU_BIND_SKIP_DESC"
+msgid "Optimisation: skips bindings that did not change."
+msgstr "Optimalisatie: slaat bindingen over die niet zijn veranderd."
+
+msgctxt "UI_MENU_SHADER_MEMO"
+msgid "Shader memo"
+msgstr "Shader-memo"
+
+msgctxt "UI_MENU_SHADER_MEMO_DESC"
+msgid "Optimisation: remembers shader lookups."
+msgstr "Optimalisatie: onthoudt shaderopzoekingen."
+
+msgctxt "UI_MENU_PIPE_MEMO"
+msgid "Pipeline memo"
+msgstr "Pipeline-memo"
+
+msgctxt "UI_MENU_PIPE_MEMO_DESC"
+msgid "Optimisation: reuses the previous draw's pipeline when its state repeats."
+msgstr "Optimalisatie: hergebruikt de pipeline van de vorige draw als de status zich herhaalt."
+
+msgctxt "UI_MENU_TEX_MEMO"
+msgid "Texture binding memo"
+msgstr "Texturebinding-memo"
+
+msgctxt "UI_MENU_TEX_MEMO_DESC"
+msgid "Optimisation: remembers texture descriptors between draws."
+msgstr "Optimalisatie: onthoudt texturedescriptors tussen draws."
+
+msgctxt "UI_MENU_DESC_TEMPLATE"
+msgid "Descriptor templates"
+msgstr "Descriptortemplates"
+
+msgctxt "UI_MENU_DESC_TEMPLATE_DESC"
+msgid "Optimisation: updates descriptors in bulk."
+msgstr "Optimalisatie: werkt descriptors in bulk bij."
+
+msgctxt "UI_MENU_PUSH_SKIP"
+msgid "Skip repeated push constants"
+msgstr "Herhaalde pushconstanten overslaan"
+
+msgctxt "UI_MENU_PUSH_SKIP_DESC"
+msgid "Optimisation: skips push constants that did not change."
+msgstr "Optimalisatie: slaat pushconstanten over die niet zijn veranderd."
+
+msgctxt "UI_MENU_SPLIT_DRAWS"
+msgid "Early GPU submission"
+msgstr "Vroege GPU-indiening"
+
+msgctxt "UI_MENU_SPLIT_DRAWS_DESC"
+msgid ""
+"Submits GPU work in parts every N draws between passes so the GPU starts earlier; 0 turns it off."
+msgstr ""
+"Dient GPU-werk in delen in om de N draws tussen passes, zodat de GPU eerder begint; 0 zet het uit."
+
+msgctxt "UI_MENU_VK_VALIDATION"
+msgid "Validation layer"
+msgstr "Validatielaag"
+
+msgctxt "UI_MENU_VK_VALIDATION_DESC"
+msgid "Checks every Vulkan call and slows the game down a lot."
+msgstr "Controleert elke Vulkan-aanroep en vertraagt het spel enorm."
+
+msgctxt "UI_MENU_VK_VALIDATION_MISSING"
+msgid "The validation layer is not installed."
+msgstr "De validatielaag is niet geïnstalleerd."
+
+msgctxt "UI_MENU_VK_DYN_VERTEX"
+msgid "Dynamic vertex state"
+msgstr "Dynamische vertexstatus"
+
+msgctxt "UI_MENU_VK_DYN_VERTEX_DESC"
+msgid "Forces dynamic vertex input on or off; the default depends on the GPU."
+msgstr "Dwingt dynamische vertexinvoer aan of uit; de standaard hangt van de GPU af."
+
+msgctxt "UI_MENU_VK_SUBGROUP_PIN"
+msgid "Pin subgroup size"
+msgstr "Subgroepgrootte vastzetten"
+
+msgctxt "UI_MENU_VK_SUBGROUP_PIN_DESC"
+msgid "Fixes the shader subgroup size."
+msgstr "Zet de subgroepgrootte van de shaders vast."
+
+msgctxt "UI_MENU_TRACE"
+msgid "Performance log"
+msgstr "Prestatielog"
+
+msgctxt "UI_MENU_TRACE_DESC"
+msgid "Writes frame timings to a file."
+msgstr "Schrijft frametijden naar een bestand."
+
+msgctxt "UI_MENU_FLIGHT"
+msgid "Flight recorder"
+msgstr "Flight recorder"
+
+msgctxt "UI_MENU_FLIGHT_DESC"
+msgid "Keeps a short history and saves it when a frame freezes."
+msgstr "Bewaart een korte geschiedenis en slaat die op als een beeld vastloopt."
+
+msgctxt "UI_MENU_FLIGHT_SPIKE_MS"
+msgid "Freeze threshold (ms)"
+msgstr "Vastloopdrempel (ms)"
+
+msgctxt "UI_MENU_FLIGHT_SPIKE_MS_DESC"
+msgid "Frame time that counts as a freeze."
+msgstr "Frametijd die als vastlopen telt."
+
+msgctxt "UI_MENU_INPUT_RECORD"
+msgid "Input recording"
+msgstr "Invoer opnemen"
+
+msgctxt "UI_MENU_INPUT_RECORD_DESC"
+msgid "Writes your inputs to a file for bug reports."
+msgstr "Schrijft je invoer naar een bestand voor bugrapporten."
+
+msgctxt "UI_MENU_OPEN_LOG"
+msgid "Open log folder"
+msgstr "Logmap openen"
+
+msgctxt "UI_MENU_OPEN_LOG_DESC"
+msgid "Shows the folder with the log files."
+msgstr "Toont de map met de logbestanden."
+
+msgctxt "UI_MENU_COPY_INFO"
+msgid "Copy system info"
+msgstr "Systeeminfo kopiëren"
+
+msgctxt "UI_MENU_COPY_INFO_DESC"
+msgid "Copies GPU, driver, CPU, RAM and changed settings to the clipboard."
+msgstr "Kopieert gpu, driver, cpu, ram en gewijzigde instellingen naar het klembord."
+
+msgctxt "UI_MENU_COPY_INFO_DONE"
+msgid "Copied"
+msgstr "Gekopieerd"
+
+msgctxt "UI_MENU_ACTION_FAILED"
+msgid "did not work"
+msgstr "werkte niet"
+
+msgctxt "UI_MENU_RESET"
+msgid "Reset all settings to defaults"
+msgstr "Alle instellingen herstellen"
+
+msgctxt "UI_MENU_RESET_DESC"
+msgid "Applies to every tab."
+msgstr "Geldt voor elk tabblad."
+
+msgctxt "UI_MENU_RESET_CONFIRM"
+msgid "Reset every setting to its default?"
+msgstr "Elke instelling terugzetten naar de standaardwaarde?"
+
+msgctxt "UI_MENU_RESET_YES"
+msgid "Reset"
+msgstr "Herstellen"
+
+msgctxt "UI_MENU_RESET_NO"
+msgid "Cancel"
+msgstr "Annuleren"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_MENU_OV_FPS"
+msgid "%.0f FPS"
+msgstr "%.0f FPS"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_MENU_OV_FRAME_MS"
+msgid "%.1f ms"
+msgstr "%.1f ms"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_MENU_OV_GAME_PCT"
+msgid "game %.0f%%"
+msgstr "spel %.0f%%"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_MENU_OV_MAX_MS"
+msgid "max %.1f ms"
+msgstr "max. %.1f ms"
+
+msgctxt "UI_MENU_OV_GPU"
+msgid "GPU"
+msgstr "GPU"
+
+msgctxt "UI_MENU_OV_CPU"
+msgid "CPU"
+msgstr "CPU"
+
+msgctxt "UI_MENU_OV_RAM"
+msgid "RAM"
+msgstr "RAM"
+
+msgctxt "UI_MENU_OV_VRAM"
+msgid "VRAM"
+msgstr "VRAM"
+
+msgctxt "UI_MENU_OV_NONE"
+msgid "-"
+msgstr "-"
+
+msgctxt "UI_MENU_OV_REPLAY"
+msgid "GPU frame prep"
+msgstr "GPU-voorbereiding"
+
+msgctxt "UI_MENU_OV_GPU_TIME"
+msgid "GPU busy per frame"
+msgstr "GPU bezig per beeld"
+
+msgctxt "UI_MENU_OV_PIPE_WAIT"
+msgid "Pipeline waits"
+msgstr "Pipeline-wachttijden"
+
+msgctxt "UI_MENU_OV_TEX_UPLOADS"
+msgid "Texture uploads"
+msgstr "Textureuploads"
+
+msgctxt "UI_MENU_OV_MAIN_CPU"
+msgid "Game main thread CPU"
+msgstr "CPU hoofdthread spel"
+
+msgctxt "UI_MENU_OV_RENDER_CPU"
+msgid "Render thread CPU"
+msgstr "CPU renderthread"
+
+msgctxt "UI_MENU_OV_SLOW"
+msgid "Frames over 33 ms"
+msgstr "Beelden boven 33 ms"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_MENU_OV_PER_MIN"
+msgid "%.0f last minute"
+msgstr "%.0f laatste minuut"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_MENU_OV_FMT_PCT"
+msgid "%.0f%%"
+msgstr "%.0f%%"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_MENU_OV_FMT_TEMP"
+msgid "%.0f °C"
+msgstr "%.0f °C"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_MENU_OV_FMT_POWER"
+msgid "%.0f W"
+msgstr "%.0f W"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_MENU_OV_FMT_MHZ"
+msgid "%.0f MHz"
+msgstr "%.0f MHz"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_MENU_OV_FMT_GB"
+msgid "%.1f GB"
+msgstr "%.1f GB"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_MENU_OV_FMT_GB_OF"
+msgid "/ %.1f GB"
+msgstr "/ %.1f GB"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_MENU_OV_GAME_GB"
+msgid "game %.1f GB"
+msgstr "spel %.1f GB"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_MENU_OV_FMT_MS"
+msgid "%.2f ms"
+msgstr "%.2f ms"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_MENU_OV_PER_FRAME"
+msgid "%.1f per frame"
+msgstr "%.1f per beeld"
+
+msgctxt "UI_MENU_OV_WINDOW"
+msgid "Window"
+msgstr "Venster"
+
+msgctxt "UI_MENU_OV_OUTPUT"
+msgid "Game image"
+msgstr "Spelbeeld"
+
+msgctxt "UI_MENU_OV_SCALING"
+msgid "Scaling"
+msgstr "Schaling"
+
+msgctxt "UI_MENU_OV_PRESENT"
+msgid "Presentation"
+msgstr "Weergave"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_MENU_OV_FMT_SIZE"
+msgid "%ux%u"
+msgstr "%ux%u"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_MENU_OV_FMT_FSR"
+msgid "AMD FSR 1, sharpness %d%%"
+msgstr "AMD FSR 1, scherpte %d%%"
+
+msgctxt "UI_MENU_OV_SCALE_NONE"
+msgid "none (1:1)"
+msgstr "geen (1:1)"
+
+msgctxt "UI_MENU_OV_SCALE_BILINEAR"
+msgid "bilinear"
+msgstr "bilineair"
+
+msgctxt "UI_LAUNCH_SUBTITLE"
+msgid "Static recompilation for PC"
+msgstr "Statische hercompilatie voor pc"
+
+msgctxt "UI_LAUNCH_PLAY"
+msgid "Play"
+msgstr "Spelen"
+
+msgctxt "UI_LAUNCH_SETTINGS"
+msgid "Settings"
+msgstr "Instellingen"
+
+msgctxt "UI_LAUNCH_FILES"
+msgid "Game files"
+msgstr "Spelbestanden"
+
+msgctxt "UI_LAUNCH_QUIT"
+msgid "Quit"
+msgstr "Stoppen"
+
+msgctxt "UI_LAUNCH_BACK"
+msgid "Back"
+msgstr "Terug"
+
+msgctxt "UI_LAUNCH_FILES_READY"
+msgid "Game files ready (Orbitals Deluxe Edition 1.0.5)"
+msgstr "Spelbestanden klaar (Orbitals Deluxe Edition 1.0.5)"
+
+msgctxt "UI_LAUNCH_FILES_MISSING"
+msgid "Game files not set up"
+msgstr "Spelbestanden niet ingesteld"
+
+msgctxt "UI_LAUNCH_FILES_FOLDER"
+msgid "Game folder"
+msgstr "Spelmap"
+
+msgctxt "UI_LAUNCH_PICK_GAME_DIR"
+msgid "Choose game folder"
+msgstr "Spelmap kiezen"
+
+msgctxt "UI_LAUNCH_GAME_DIR_HELP"
+msgid ""
+"Choose where to install the game, or select an existing installation. The launcher reopens with "
+"that folder. Existing files are kept where they are."
+msgstr ""
+"Kies waar het spel geïnstalleerd wordt, of selecteer een bestaande installatie. De launcher opent "
+"opnieuw met die map. Bestaande bestanden blijven waar ze zijn."
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_LAUNCH_GAME_DIR_INVALID"
+msgid ""
+"This game folder could not be selected. Choose a folder whose full path is at most %d UTF-8 bytes "
+"and contains no line breaks."
+msgstr ""
+"Deze spelmap kon niet worden geselecteerd. Kies een map waarvan het volledige pad hoogstens %d "
+"UTF-8-bytes is en geen regeleinden bevat."
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_LAUNCH_GAME_DIR_INVALID_WIN32"
+msgid ""
+"This game folder could not be selected. On Windows, choose a folder without line breaks whose "
+"full path is at most %d UTF-16 units to leave room for the game's files."
+msgstr ""
+"Deze spelmap kon niet worden geselecteerd. Kies op Windows een map zonder regeleinden waarvan het "
+"volledige pad hoogstens %d UTF-16-eenheden is, zodat er ruimte blijft voor de spelbestanden."
+
+msgctxt "UI_LAUNCH_FILES_HELP"
+msgid ""
+"The game does not come with the port: it needs your own copy of Orbitals with its update, dumped "
+"from your console (a .nup package, or the exefs and romfs folders). The setup checks its build "
+"and builds the game code on this computer."
+msgstr ""
+"Het spel zit niet bij de port: je hebt je eigen kopie van Orbitals met de update nodig, gedumpt "
+"van je console (een .nup-pakket, of de mappen exefs en romfs). De installatie controleert de "
+"build en bouwt de spelcode op deze computer."
+
+msgctxt "UI_LAUNCH_NO_TOOLS"
+msgid "The setup tools are missing: the setup/ folder that comes with the program."
+msgstr "De installatietools ontbreken: de map setup/ die bij het programma zit."
+
+msgctxt "UI_LAUNCH_SOURCE"
+msgid "Your copy"
+msgstr "Jouw kopie"
+
+msgctxt "UI_LAUNCH_PICK"
+msgid "Choose folder"
+msgstr "Map kiezen"
+
+msgctxt "UI_LAUNCH_PICK_NUP"
+msgid "Choose .nup or .nx file"
+msgstr ".nup- of .nx-bestand kiezen"
+
+msgctxt "UI_LAUNCH_ROMFS_MODE"
+msgid "RomFS (23 GB)"
+msgstr "RomFS (23 GB)"
+
+msgctxt "UI_LAUNCH_ROMFS_COPY"
+msgid "Copy into the game folder"
+msgstr "Kopiëren naar de spelmap"
+
+msgctxt "UI_LAUNCH_ROMFS_LINK"
+msgid "Use it where it is"
+msgstr "Gebruiken waar het staat"
+
+msgctxt "UI_LAUNCH_SETUP"
+msgid "Set up"
+msgstr "Installeren"
+
+msgctxt "UI_LAUNCH_SETUP_AGAIN"
+msgid "Set up again"
+msgstr "Opnieuw installeren"
+
+msgctxt "UI_LAUNCH_CANCEL"
+msgid "Cancel"
+msgstr "Annuleren"
+
+msgctxt "UI_LAUNCH_SETUP_DONE"
+msgid "Set up finished: the game is ready."
+msgstr "Installatie voltooid: het spel is klaar."
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_LAUNCH_SETUP_FAILED"
+msgid "Set up failed: %s"
+msgstr "Installatie mislukt: %s"
+
+#. No %s: the detail is not shown.
+msgctxt "UI_SETUP_ERR_SOURCE"
+msgid "there is no earlier setup in this folder: choose the folder of your copy"
+msgstr "er is geen eerdere installatie in deze map: kies de map met jouw kopie"
+
+#. %s: the folder the player chose.
+msgctxt "UI_SETUP_ERR_NOGAME"
+msgid "no exefs/main and romfs/ in %s: choose the folder of your copy of the game"
+msgstr "geen exefs/main en romfs/ in %s: kies de map met jouw kopie van het spel"
+
+#. %s: the path of the exefs/main file.
+msgctxt "UI_SETUP_ERR_ENCRYPTED"
+msgid "%s is encrypted: the game's exefs must be decrypted"
+msgstr "%s is versleuteld: de exefs van het spel moet ontsleuteld zijn"
+
+#. %s: the build id of the player's exefs/main (hexadecimal).
+msgctxt "UI_SETUP_ERR_VERSION"
+msgid "the game is not a supported build of Orbitals (build id %s)"
+msgstr "het spel is geen ondersteunde build van Orbitals (build-id %s)"
+
+#. %s: how many files the player's RomFS has.
+msgctxt "UI_SETUP_ERR_ROMFS"
+msgid "the RomFS has only %s files: the copy is incomplete, copy it again"
+msgstr "de RomFS heeft maar %s bestanden: de kopie is onvolledig, kopieer opnieuw"
+
+#. %s: the failing tool's message, in English. logs/setup.log is a file name: keep it.
+msgctxt "UI_SETUP_ERR_FAILED"
+msgid "%s (more in logs/setup.log)"
+msgstr "%s (meer in logs/setup.log)"
+
+#. %s: the system's error message, in English. logs/setup.log is a file name: keep it.
+msgctxt "UI_SETUP_ERR_IO"
+msgid "file error: %s (more in logs/setup.log)"
+msgstr "bestandsfout: %s (meer in logs/setup.log)"
+
+msgctxt "UI_SETUP_ERR_STOPPED"
+msgid "the setup stopped (more in logs/setup.log)"
+msgstr "de installatie is gestopt (meer in logs/setup.log)"
+
+msgctxt "UI_SETUP_ERR_CANCELLED"
+msgid "cancelled"
+msgstr "geannuleerd"
+
+msgctxt "UI_SETUP_ERR_NO_SETUP"
+msgid "the setup tools are missing (setup/ next to the program): extract the release again"
+msgstr "de installatietools ontbreken (setup/ naast het programma): pak de release opnieuw uit"
+
+#. %s: the folder of the last setup's game files, which no longer exists.
+msgctxt "UI_SETUP_ERR_MOVED"
+msgid "your game files are no longer in %s: if you moved or renamed that folder, choose it again"
+msgstr ""
+"je spelbestanden staan niet meer in %s: als je die map hebt verplaatst of hernoemd, kies hem "
+"opnieuw"
+
+#. %s: the two versions, e.g. "RomFS 1.8.0, exefs/main 1.0.0".
+msgctxt "UI_SETUP_ERR_MISMATCH"
+msgid ""
+"the game files and the program are from different versions (%s): take exefs and romfs from the "
+"same dump, with the update applied to both"
+msgstr ""
+"de spelbestanden en het programma zijn van verschillende versies (%s): neem exefs en romfs uit "
+"dezelfde dump, met de update op beide toegepast"
+
+msgctxt "UI_LAUNCH_STEP_CHECK"
+msgid "Check the copy"
+msgstr "Kopie controleren"
+
+msgctxt "UI_LAUNCH_STEP_EXEFS"
+msgid "Copy exefs"
+msgstr "exefs kopiëren"
+
+msgctxt "UI_LAUNCH_STEP_ROMFS"
+msgid "RomFS"
+msgstr "RomFS"
+
+msgctxt "UI_LAUNCH_STEP_GENERATE"
+msgid "Generate the game code"
+msgstr "Spelcode genereren"
+
+msgctxt "UI_LAUNCH_STEP_COMPILE"
+msgid "Compile the game code"
+msgstr "Spelcode compileren"
+
+msgctxt "UI_LAUNCH_STEP_SHADERS"
+msgid "Translate the shaders"
+msgstr "Shaders vertalen"
+
+msgctxt "UI_LAUNCH_STEP_WARM"
+msgid "Warm up the graphics (one minute)"
+msgstr "Graphics opwarmen (één minuut)"
+
+msgctxt "UI_LAUNCH_STEP_CLEANUP"
+msgid "Clean up"
+msgstr "Opruimen"
+
+msgctxt "UI_LAUNCH_STEP_KEPT"
+msgid "kept"
+msgstr "bewaard"
+
+msgctxt "UI_LAUNCH_SHORTCUT"
+msgid "Desktop shortcut"
+msgstr "Bureaubladsnelkoppeling"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_LAUNCH_SHORTCUT_DONE"
+msgid "Shortcut made: %s"
+msgstr "Snelkoppeling gemaakt: %s"
+
+msgctxt "UI_LAUNCH_SHORTCUT_FAILED"
+msgid "Could not make the shortcut"
+msgstr "Snelkoppeling maken mislukt"
+
+msgctxt "UI_LAUNCH_MODS"
+msgid "Mods"
+msgstr "Mods"
+
+msgctxt "UI_LAUNCH_MODS_EMPTY"
+msgid "No mods yet: import a zip or a folder below"
+msgstr "Nog geen mods: importeer hieronder een zip of een map"
+
+msgctxt "UI_MOD_IMPORT_ZIP"
+msgid "Import zip..."
+msgstr "Zip importeren..."
+
+msgctxt "UI_MOD_IMPORT_FOLDER"
+msgid "Import folder..."
+msgstr "Map importeren..."
+
+msgctxt "UI_MOD_NAME"
+msgid "Name"
+msgstr "Naam"
+
+msgctxt "UI_MOD_IMPORT"
+msgid "Import"
+msgstr "Importeren"
+
+msgctxt "UI_MOD_DELETE"
+msgid "Delete"
+msgstr "Verwijderen"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_MOD_CONFIRM"
+msgid "Delete %s?"
+msgstr "%s verwijderen?"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_MOD_ROMFS"
+msgid "%d files"
+msgstr "%d bestanden"
+
+msgctxt "UI_MOD_ROMFS_1"
+msgid "1 file"
+msgstr "1 bestand"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_MOD_CODE_BUILD"
+msgid "code: built for %s"
+msgstr "code: gebouwd voor %s"
+
+msgctxt "UI_MOD_CODE_PORT"
+msgid "code: needs a ported build"
+msgstr "code: moet nog geport worden"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_MOD_CODE_SWITCHES"
+msgid "code: %d switches"
+msgstr "code: %d schakelaars"
+
+msgctxt "UI_MOD_CODE_SWITCH_1"
+msgid "code: 1 switch"
+msgstr "code: 1 schakelaar"
+
+msgctxt "UI_MOD_MERGING"
+msgid "Merging mods..."
+msgstr "Mods samenvoegen..."
+
+msgctxt "UI_MOD_CONFLICTS"
+msgid "Conflicts: click the winner to change it"
+msgstr "Conflicten: klik op de winnaar om deze te wijzigen"
+
+msgctxt "UI_MOD_VANILLA"
+msgid "Vanilla"
+msgstr "Origineel"
+
+msgctxt "UI_MOD_IMPORTED"
+msgid "Imported %s"
+msgstr "%s geïmporteerd"
+
+msgctxt "UI_MOD_RESOLVE"
+msgid "Resolve conflicts"
+msgstr "Conflicten oplossen"
+
+msgctxt "UI_MOD_OK"
+msgid "OK"
+msgstr "OK"
+
+msgctxt "UI_MOD_ERR_LAYOUT"
+msgid "Not a mod: no romfs/ or exefs/ inside"
+msgstr "Geen mod: geen romfs/ of exefs/ erin"
+
+msgctxt "UI_MOD_ERR_NAME"
+msgid "That name is taken or empty"
+msgstr "Die naam is bezet of leeg"
+
+msgctxt "UI_MOD_ERR_IO"
+msgid "Could not copy the files"
+msgstr "Bestanden konden niet worden gekopieerd"
+
+msgctxt "UI_MOD_ERR_NOPORT"
+msgid "Not ported yet: no code patches for this game"
+msgstr "Nog niet geport: geen codepatches voor dit spel"
+
+msgctxt "UI_MOD_ERR_NOGAME"
+msgid "Game files not set up: do that on the Files page first"
+msgstr "Spelbestanden ontbreken: stel ze eerst in op de pagina Bestanden"
+
+#. Above one button per mod found in the archive (its folder inside the archive).
+msgctxt "UI_MOD_VARIANTS"
+msgid "This archive holds several mods: pick the one to import"
+msgstr "Dit archief bevat meerdere mods: kies welke je wilt importeren"
+
+msgctxt "UI_MOD_ERR_BIG"
+msgid "Too large to be a mod (over 4 GB or 50000 files)"
+msgstr "Te groot voor een mod (meer dan 4 GB of 50000 bestanden)"
+
+msgctxt "UI_MOD_ERR_UNPACK"
+msgid "Cannot open this archive: .rar and .7z need bsdtar (libarchive) installed"
+msgstr "Kan dit archief niet openen: .rar en .7z hebben bsdtar (libarchive) nodig"
+
+#. Under an installed mod that replaces the game's graphics settings archive (general_format).
+msgctxt "UI_MOD_WARN_GRAPHICS"
+msgid ""
+"Changes the game's graphics settings: the port's own settings (resolution, quality) go on top, so "
+"this mod may do less than on a console, look worse or misbehave"
+msgstr ""
+"Wijzigt de grafische instellingen van het spel: de eigen instellingen van de port (resolutie, "
+"kwaliteit) gelden erbovenop, dus deze mod doet mogelijk minder dan op een console, ziet er "
+"slechter uit of werkt niet goed"
+
+#. Above every mod install and import.
+msgctxt "UI_MOD_RISK"
+msgid ""
+"Mods are made by other people and are not tested by this project. A mod can crash the game or "
+"damage your save: read its page first, keep a copy of your save, and report a mod's problems to "
+"its author."
+msgstr ""
+"Mods zijn gemaakt door anderen en worden door dit project niet getest. Een mod kan het spel laten "
+"crashen of je savegame beschadigen: lees eerst de pagina, bewaar een kopie van je savegame en "
+"meld problemen met een mod bij de auteur."
+
+msgctxt "UI_MOD_RISK_ACK"
+msgid "I understand"
+msgstr "Ik begrijp het"
+
+#. Under a mod that changes the game's code (its .ips): the game code is built with it.
+msgctxt "UI_MOD_CODE_REBUILD"
+msgid "code: turning it on or off builds the game code again before you play (a few minutes)"
+msgstr "code: in- of uitschakelen bouwt de spelcode opnieuw op voor je speelt (een paar minuten)"
+
+#. Under an installed mod that ships shaders (Shader/ files).
+msgctxt "UI_MOD_WARN_SHADERS"
+msgid ""
+"Replaces shaders: the port translates the game's shaders during the setup, so this mod may not "
+"show, or may break the picture"
+msgstr ""
+"Vervangt shaders: de port vertaalt de shaders van het spel tijdens de installatie, dus deze mod "
+"wordt mogelijk niet getoond of verstoort het beeld"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_LAUNCH_UPDATE"
+msgid "Update to %s (%d MB)"
+msgstr "Bijwerken naar %s (%d MB)"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_LAUNCH_UPDATE_FETCHING"
+msgid "Downloading %s"
+msgstr "%s downloaden"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_LAUNCH_UPDATE_FAILED"
+msgid "Update failed: %s"
+msgstr "Bijwerken mislukt: %s"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_LAUNCH_UPDATED"
+msgid "Updated to %s: setting up again what it changed"
+msgstr "Bijgewerkt naar %s: wat veranderd is wordt opnieuw ingesteld"
+
+msgctxt "UI_LAUNCH_NO_GAME_DATA"
+msgid "Your own copy of the game · No game data included"
+msgstr "Je eigen kopie van het spel · Geen speldata inbegrepen"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_LAUNCH_LASTRUN_KNOWN"
+msgid ""
+"The last game stopped with a known problem, followed in issue #%d. No need to report it again."
+msgstr ""
+"Het laatste spel stopte door een bekend probleem, gevolgd in issue #%d. Je hoeft het niet opnieuw "
+"te melden."
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_LAUNCH_LASTRUN_FIXED"
+msgid "The last game stopped with a problem that %s fixes. Update to get the fix."
+msgstr ""
+"Het laatste spel stopte door een probleem dat %s oplost. Werk bij om de oplossing te krijgen."
+
+msgctxt "UI_LAUNCH_LASTRUN_CRASH"
+msgid ""
+"The last game stopped with an error. Reporting it with logs/orbitals.log attached helps to fix it."
+msgstr ""
+"Het laatste spel stopte door een fout. Melden met logs/orbitals.log als bijlage helpt om het op "
+"te lossen."
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_LAUNCH_LASTRUN_OPEN"
+msgid "Open issue #%d"
+msgstr "Issue #%d openen"
+
+msgctxt "UI_LAUNCH_LASTRUN_REPORT"
+msgid "Report it"
+msgstr "Melden"
+
+msgctxt "UI_LAUNCH_LASTRUN_DISMISS"
+msgid "Close"
+msgstr "Sluiten"
+
+msgctxt "UI_MENU_UPDATE_CHECK"
+msgid "Check for updates"
+msgstr "Op updates controleren"
+
+msgctxt "UI_MENU_UPDATE_CHECK_DESC"
+msgid ""
+"At start, ask GitHub for a newer release of the port and offer it on the start screen (a few "
+"seconds at most, nothing offline)."
+msgstr ""
+"Vraagt bij het starten aan GitHub of er een nieuwere versie van de port is en biedt die aan op "
+"het startscherm (hooguit een paar seconden, offline niets)."
+
+msgctxt "UI_LAUNCH_PLAYERS"
+msgid "Profiles"
+msgstr "Profielen"
+
+msgctxt "UI_LAUNCH_PLAYER"
+msgid "Profile: %s"
+msgstr "Profiel: %s"
+
+msgctxt "UI_PLAYER_NOTE"
+msgid ""
+"Each profile has its own name and save, like the users of a console. The game shows the name, and "
+"so do the other players' screens in LAN play."
+msgstr ""
+"Elk profiel heeft een eigen naam en opgeslagen voortgang, zoals de gebruikers van een console. "
+"Het spel toont de naam, ook op de schermen van andere spelers via LAN."
+
+msgctxt "UI_PLAYER_NAME_HINT"
+msgid "Name (up to 10 characters)"
+msgstr "Naam (max. 10 tekens)"
+
+msgctxt "UI_PLAYER_CHOOSE"
+msgid "Play as"
+msgstr "Hiermee spelen"
+
+msgctxt "UI_PLAYER_CHOSEN"
+msgid "Playing"
+msgstr "Actief"
+
+msgctxt "UI_PLAYER_NEW"
+msgid "New profile"
+msgstr "Nieuw profiel"
+
+msgctxt "UI_PLAYER_REMOVE"
+msgid "Remove"
+msgstr "Verwijderen"
+
+msgctxt "UI_PLAYER_CONFIRM"
+msgid ""
+"Remove the profile %s? It leaves the list; its save is kept in the folder profile/players/deleted."
+msgstr ""
+"Profiel %s verwijderen? Het verdwijnt uit de lijst; de voortgang blijft bewaard in de map "
+"profile/players/deleted."
+
+msgctxt "UI_PLAYER_FAILED"
+msgid "The profile could not be saved (the log says why)."
+msgstr "Het profiel kon niet worden opgeslagen (het logboek zegt waarom)."
+
+#. A product name: keep it as Steam shows it in your language.
+msgctxt "UI_MENU_GROUP_RPT"
+msgid "Steam Remote Play Together"
+msgstr "Steam Remote Play Together"
+
+msgctxt "UI_MENU_RPT_INVITE"
+msgid "Invite friends"
+msgstr "Vrienden uitnodigen"
+
+msgctxt "UI_MENU_RPT_INVITE_DESC"
+msgid ""
+"Opens Remote Play Together in the Steam overlay. Friends who join see and hear the game; each "
+"one's controller, or keyboard, becomes the next free player."
+msgstr ""
+"Opent Remote Play Together in de Steam-overlay. Vrienden die meedoen zien en horen het spel; "
+"ieders controller of toetsenbord wordt de volgende vrije speler."
+
+msgctxt "UI_MENU_RPT_LINK"
+msgid "Copy guest link"
+msgstr "Gastlink kopiëren"
+
+msgctxt "UI_MENU_RPT_LINK_DESC"
+msgid ""
+"Copies a link that lets anyone join from a browser or the Steam Link app, without being your "
+"Steam friend."
+msgstr ""
+"Kopieert een link waarmee iedereen kan meedoen via een browser of de Steam Link-app, zonder je "
+"Steam-vriend te zijn."
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_MENU_RPT_CONNECTED"
+msgid "%d connected"
+msgstr "%d verbonden"
+
+msgctxt "UI_MENU_RPT_NO_OVERLAY"
+msgid "no Steam overlay"
+msgstr "geen Steam-overlay"
+
+msgctxt "UI_MENU_RPT_WAITING"
+msgid "waiting for Steam"
+msgstr "wachten op Steam"
+
+#. steam_appid and orbitals.ini are a setting and a file name: keep them.
+msgctxt "UI_MENU_RPT_NEED_APPID"
+msgid "Needs steam_appid in orbitals.ini"
+msgstr "Vereist steam_appid in orbitals.ini"
+
+msgctxt "UI_MENU_RPT_AT_START"
+msgid "Starts with the game"
+msgstr "Start met het spel"
+
+msgctxt "UI_MENU_RPT_FAILED"
+msgid "Steam is not available: see the log"
+msgstr "Steam is niet beschikbaar: zie het logboek"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_NOTICE_RPT_JOINED"
+msgid "%s joined Remote Play Together"
+msgstr "%s doet mee met Remote Play Together"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_NOTICE_RPT_LEFT"
+msgid "%s left Remote Play Together"
+msgstr "%s heeft Remote Play Together verlaten"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_NOTICE_RPT_PAD"
+msgid "A Remote Play guest's controller is player %d"
+msgstr "De controller van een Remote Play-gast is speler %d"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_NOTICE_RPT_KEYBOARD"
+msgid "%s plays on the keyboard as player %d"
+msgstr "%s speelt op het toetsenbord als speler %d"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_NOTICE_RPT_FULL"
+msgid "%s: no free player for the keyboard"
+msgstr "%s: geen vrije speler voor het toetsenbord"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_NOTICE_RPT_FAILED"
+msgid "Remote Play Together is off: %s"
+msgstr "Remote Play Together staat uit: %s"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_NOTICE_RPT_INVITE"
+msgid ""
+"%d players need a controller each: %d connected. Steam's invite list is open: once your friends' "
+"controllers are in, pick the mode again."
+msgstr ""
+"%d spelers hebben elk een controller nodig: %d verbonden. De uitnodigingslijst van Steam is open: "
+"zodra de controllers van je vrienden er zijn, kies je de modus opnieuw."
+
+msgctxt "UI_NOTICE_RPT_NO_OVERLAY"
+msgid ""
+"The Steam overlay did not open: start the game from Steam, or send a guest link (menu > Game)."
+msgstr ""
+"De Steam-overlay ging niet open: start het spel vanuit Steam of stuur een gastlink (menu > Spel)."
+
+msgctxt "UI_NOTICE_RPT_ONLINE"
+msgid ""
+"Online play goes through Steam Remote Play Together: invite your friend from the list that just "
+"opened. Once they have joined and pressed a button, start a local game for 2 players."
+msgstr ""
+"Online spelen gaat via Steam Remote Play Together: nodig je vriend uit vanuit de lijst die net is "
+"geopend. Zodra hij is toegetreden en op een knop heeft gedrukt, start je een lokaal spel voor 2 "
+"spelers."
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_NOTICE_RPT_ONLINE_OFF"
+msgid ""
+"Online play goes through Steam Remote Play Together, which is off: %s. Set it up in menu > Game "
+"(docs/remote-play.md)."
+msgstr ""
+"Online spelen gaat via Steam Remote Play Together, dat uit staat: %s. Stel het in via menu > Spel "
+"(docs/remote-play.md)."
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_MENU_RPT_CHOICE"
+msgid "Local multiplayer for %d players: %d controllers connected. How do the other players join?"
+msgstr ""
+"Lokale multiplayer voor %d spelers: %d controllers verbonden. Hoe doen de andere spelers mee?"
+
+msgctxt "UI_MENU_RPT_CHOICE_LOCAL"
+msgid "Local players (connect more controllers)"
+msgstr "Lokale spelers (meer controllers verbinden)"
+
+msgctxt "UI_MENU_RPT_CHOICE_STEAM"
+msgid "Steam Remote Play Together (invite friends)"
+msgstr "Steam Remote Play Together (vrienden uitnodigen)"
+
+msgctxt "UI_MENU_RPT_APPID"
+msgid "Steam App ID"
+msgstr "Steam-app-ID"
+
+msgctxt "UI_MENU_RPT_APPID_DESC"
+msgid ""
+"The Steam game orbitals-together runs as for Remote Play Together. Automatic: the game whose "
+"launch options start orbitals-together (\"C:\\...\\orbitals-together.exe\" %command%), so any "
+"Steam game you own with Remote Play Together works. Another number: steam_appid in orbitals.ini. "
+"Takes effect at the next start."
+msgstr ""
+"Het Steam-spel waarals orbitals-together draait voor Remote Play Together. Automatisch: het spel "
+"waarvan de startopties orbitals-together starten (\"C:\\...\\orbitals-together.exe\" %command%), "
+"dus elk eigen Steam-spel met Remote Play Together werkt. Een ander nummer: steam_appid in "
+"orbitals.ini. Geldt vanaf de volgende start."
+
+msgctxt "UI_MENU_RPT_APPID_OFF"
+msgid "Off"
+msgstr "Uit"
+
+msgctxt "UI_MENU_RPT_APPID_AUTO"
+msgid "Automatic (the game Steam started)"
+msgstr "Automatisch (het spel dat Steam startte)"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_MENU_RPT_APPID_CUSTOM"
+msgid "%s (orbitals.ini)"
+msgstr "%s (orbitals.ini)"
+
+msgctxt "UI_MENU_RPT_APPID_ADD"
+msgid "Enter a Steam App ID"
+msgstr "Steam-app-ID invoeren"
+
+msgctxt "UI_MENU_RPT_APPID_ADD_DESC"
+msgid ""
+"Type the App ID of a Steam game you own that has Remote Play Together, with the keyboard's number "
+"keys (it is the number in the game's store address, store.steampowered.com/app/<number>/), then "
+"press Enter or A. orbitals-together runs as that game from the next start, and the Steam App ID "
+"row above keeps it in its list (steam_appids in orbitals.ini). Backspace deletes a digit."
+msgstr ""
+"Typ met de cijfertoetsen de app-ID van een eigen Steam-spel met Remote Play Together (het nummer "
+"in het winkeladres van het spel, store.steampowered.com/app/<number>/) en druk op Enter of A. "
+"Vanaf de volgende start draait orbitals-together als dat spel, en de rij Steam-app-ID hierboven "
+"houdt het in zijn lijst (steam_appids in orbitals.ini). Backspace wist een cijfer."
+
+msgctxt "UI_MENU_RPT_APPID_ADD_HINT"
+msgid "type the number"
+msgstr "typ het nummer"

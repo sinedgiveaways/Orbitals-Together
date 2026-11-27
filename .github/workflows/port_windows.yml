@@ -1,0 +1,68 @@
+# The Windows package (the start screen, orbitals-together.exe, and the setup tools that build the game from the player's
+# own dump): a tag port-* builds it and puts the zip in a pre-release of that tag. Nothing of any game goes in.
+name: Port Windows package
+
+on:
+  push:
+    tags: ["port-*"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  # vk_mem_alloc.h 3.4.0 and its sha256 (tools/build/README.md)
+  VMA_URL: https://raw.githubusercontent.com/GPUOpen-LibrariesAndSDKs/VulkanMemoryAllocator/v3.4.0/include/vk_mem_alloc.h
+  VMA_SHA256: 8487b7995ad3b263eb73bc5b9a77d71aa69b6bef5d58a715c02d2663afd81f1a
+
+jobs:
+  windows:
+    runs-on: ubuntu-latest
+    container: archlinux:latest
+    steps:
+      - name: Tools
+        run: pacman -Syu --noconfirm --needed git ccache ninja cmake binutils uv python github-cli
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: ccache in the checkout, kept between runs (build.py compiles through it when installed)
+        run: echo "CCACHE_DIR=$PWD/.ccache" >> "$GITHUB_ENV"
+      - uses: actions/cache@v4
+        with:
+          path: .ccache
+          key: ccache-${{ github.job }}-${{ github.sha }}
+          restore-keys: ccache-${{ github.job }}-
+      - name: Git trusts the checkout (build.py's version comes from git describe)
+        run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+      - uses: actions/cache@v4
+        with:
+          path: build/win
+          key: windeps-${{ hashFiles('tools/build/windeps.py') }}
+      - uses: actions/cache@v4   # the setup's downloads (checked by sha256) and zig's build of the Windows C runtime
+        with:
+          path: build/dist/dl
+          key: dist-dl-windows-${{ hashFiles('tools/build/dist.py') }}
+      - name: llvm-mingw and the Windows libraries
+        run: uv run tools/build/windeps.py
+      - name: orbitals-together.exe
+        run: uv run tools/build/build.py --target windows --dist --runtime-only
+      - name: Setup tools
+        run: uv run tools/build/dist.py --target windows
+      - name: Steam's steam_api64.dll for Remote Play Together (pinned sha256, docs/remote-play.md)
+        run: uv run tools/build/steamlib.py --target windows
+      - name: Zip
+        run: uv run tools/build/release.py --target windows --version "${GITHUB_REF_NAME#port-}"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: windows
+          path: build/release/*.zip
+          retention-days: 7
+      - name: Pre-release
+        if: startsWith(github.ref, 'refs/tags/port-')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view "$GITHUB_REF_NAME" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1 ||
+            gh release create "$GITHUB_REF_NAME" --repo "$GITHUB_REPOSITORY" --prerelease --title "$GITHUB_REF_NAME" \
+              --notes "The start screen and setup of the orbitals-port branch, for Windows. Unzip, run orbitals-together.exe, Game files > choose your .nup > Set up, then Play, and send logs/setup.log and logs/orbitals.log."
+          gh release upload "$GITHUB_REF_NAME" build/release/*.zip --repo "$GITHUB_REPOSITORY" --clobber

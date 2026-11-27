@@ -1,0 +1,303 @@
+// Windows implementation of platform.h, virtual memory and the write watch (the parts: win32_int.h).
+#include <io.h>
+#include <stdio.h>
+#include <windows.h>
+#include <bcrypt.h>
+#include <pdh.h>
+#include <pdhmsg.h>
+#include <psapi.h>
+#include <shellapi.h>
+#include <shlobj.h>
+#include <shobjidl.h>
+#include <timeapi.h>
+#include <stdlib.h>
+#include <string.h>
+#include <wchar.h>
+#include <wctype.h>
+
+#include "platform.h"
+
+#include "win32_int.h"
+
+// ---- virtual memory: VirtualAlloc reservations, MEM_WRITE_WATCH for the watched ones.
+
+int plat_mem_reserve(uint64_t addr, uint64_t n, int watch) {
+    void *p = VirtualAlloc((void *)(uintptr_t)addr, n, MEM_RESERVE | (watch ? MEM_WRITE_WATCH : 0), PAGE_NOACCESS);
+    if (p && p != (void *)(uintptr_t)addr) {
+        VirtualFree(p, 0, MEM_RELEASE);
+        p = NULL;
+    }
+    return p != NULL;
+}
+
+void *plat_mem_alloc(size_t n) { return VirtualAlloc(NULL, n, MEM_RESERVE | MEM_COMMIT, PAGE_READWRITE); }
+
+int plat_mem_commit(uint64_t addr, size_t n) {
+    return VirtualAlloc((void *)(uintptr_t)addr, n, MEM_COMMIT, PAGE_READWRITE) != NULL;
+}
+
+// Decommitted pages come back zeroed when committed again.
+int plat_mem_decommit(uint64_t addr, uint64_t n) { return VirtualFree((void *)(uintptr_t)addr, n, MEM_DECOMMIT) != 0; }
+
+int plat_mem_protect(uint64_t addr, uint64_t n, int prot) {
+    DWORD old;
+    DWORD p = prot == PLAT_PROT_RW ? PAGE_READWRITE : prot == PLAT_PROT_READ ? PAGE_READONLY : PAGE_NOACCESS;
+    return VirtualProtect((void *)(uintptr_t)addr, n, p, &old) != 0;
+}
+
+int plat_mem_poke(uint64_t addr, const void *src, size_t n) { return (void)addr, (void)src, (void)n, 0; }
+int plat_mem_peek(void *dst, uint64_t addr, size_t n) { return memcpy(dst, (const void *)(uintptr_t)addr, n), 1; }   // no read traps here
+
+int plat_mem_state(uint64_t addr, uint64_t limit, uint64_t *end) {
+    MEMORY_BASIC_INFORMATION mbi;
+    if (!VirtualQuery((void *)(uintptr_t)addr, &mbi, sizeof mbi)) {
+        *end = limit;
+        return PLAT_MEM_FREE;
+    }
+    uint64_t e = (uint64_t)(uintptr_t)mbi.BaseAddress + mbi.RegionSize;
+    *end = e < limit ? e : limit;
+    if (mbi.State == MEM_RESERVE) return PLAT_MEM_RESERVED;
+    if (mbi.State != MEM_COMMIT) return PLAT_MEM_FREE;
+    DWORD p = mbi.Protect & 0xff;
+    return p == PAGE_READWRITE ? PLAT_PROT_RW : p == PAGE_READONLY ? PLAT_PROT_READ : PLAT_PROT_NONE;
+}
+
+// Adapted from LAS Recomp runtime/platform/windows.c:40-63 @ da35b83 (MIT, Copyright (c) 2026 Peiikai): GetWriteWatch
+// with the reset flag.
+uint64_t plat_mem_populated(uint64_t addr, uint64_t n, uint64_t (*runs)[2], uint64_t max) {
+    (void)addr, (void)n, (void)runs, (void)max;
+    return UINT64_MAX;
+}
+
+uint64_t plat_mem_written(uint64_t addr, uint64_t n, uint64_t *pages, uint64_t max, int reset) {
+    if (!max || !n) return 0;
+    ULONG_PTR got = (ULONG_PTR)max;
+    DWORD gran;
+    _Static_assert(sizeof(PVOID) == sizeof(uint64_t), "page addresses are written straight into a uint64_t array");
+    if (GetWriteWatch(reset ? WRITE_WATCH_FLAG_RESET : 0, (void *)(uintptr_t)addr, (SIZE_T)n, (PVOID *)pages, &got,
+                      &gran))
+        return UINT64_MAX;
+    return got;
+}
+
+static int (*fault_hook)(uint64_t addr);
+static int (*lazy_hook)(uint64_t addr);   // plat_mem_lazy_hook: reads too
+static int (*watch_fn)(uint64_t addr, uint64_t rip);   // plat_mem_watch_hook: write watches set for diagnostics
+
+// A write access violation (ExceptionInformation[0] == 1) goes to the watch hook, then to the fault hook; registered
+// first, before the crash handler. Reads are not trapped here (plat_mem_poke cannot, so memory.c sets no read traps).
+static LONG CALLBACK fault_veh(EXCEPTION_POINTERS *ep) {
+    const EXCEPTION_RECORD *er = ep->ExceptionRecord;
+    if (er->ExceptionCode != EXCEPTION_ACCESS_VIOLATION || er->NumberParameters < 2) return EXCEPTION_CONTINUE_SEARCH;
+    uint64_t addr = (uint64_t)er->ExceptionInformation[1];
+    if (er->ExceptionInformation[0] <= 1 && lazy_hook && lazy_hook(addr)) return EXCEPTION_CONTINUE_EXECUTION;
+    if (er->ExceptionInformation[0] != 1) return EXCEPTION_CONTINUE_SEARCH;
+    if (watch_fn && watch_fn(addr, (uint64_t)ep->ContextRecord->Rip)) return EXCEPTION_CONTINUE_EXECUTION;
+    return fault_hook && fault_hook(addr) ? EXCEPTION_CONTINUE_EXECUTION : EXCEPTION_CONTINUE_SEARCH;
+}
+
+static void fault_install(void) {
+    static volatile LONG done;
+    if (!InterlockedExchange(&done, 1)) AddVectoredExceptionHandler(1, fault_veh);
+}
+
+_Thread_local int plat_fault_write;   // platform.h: not set here (no read traps on Windows)
+_Thread_local uint64_t plat_fault_pc, plat_fault_ret;
+
+void plat_mem_lazy_hook(int (*fn)(uint64_t addr)) {
+    lazy_hook = fn;
+    fault_install();
+}
+
+void plat_mem_fault_hook(int (*fn)(uint64_t addr)) {
+    fault_hook = fn;
+    fault_install();
+}
+
+void plat_mem_watch_hook(int (*fn)(uint64_t addr, uint64_t rip)) {
+    watch_fn = fn;
+    fault_install();
+}
+
+static void (*crash_fn)(const PlatCrash *c);
+static void (*foreign_fn)(const char *line);
+static volatile LONG foreign_n;
+
+// One line for a fault in another module (plat_foreign_fault_hook): where, what, and the first frame of ours below it.
+static void foreign_fault(EXCEPTION_POINTERS *ep, const char *what, HMODULE at, HMODULE exe, HMODULE game) {
+    if (!foreign_fn || InterlockedIncrement(&foreign_n) > 16) return;
+    uintptr_t rip = (uintptr_t)ep->ContextRecord->Rip;
+    char name[64] = "?";
+    MODULEINFO mi = {0};
+    GetModuleBaseNameA(GetCurrentProcess(), at, name, sizeof name);
+    GetModuleInformation(GetCurrentProcess(), at, &mi, sizeof mi);
+    char acc[64] = "";
+    if (ep->ExceptionRecord->ExceptionCode == EXCEPTION_ACCESS_VIOLATION && ep->ExceptionRecord->NumberParameters >= 2)
+        snprintf(acc, sizeof acc, ", %s %#llx", ep->ExceptionRecord->ExceptionInformation[0] ? "writing" : "reading",
+                 (unsigned long long)ep->ExceptionRecord->ExceptionInformation[1]);
+    // our first frame: the dispatcher's frames, then the faulting one and its callers (x64 unwinds through
+    // KiUserExceptionDispatcher)
+    void *frames[48];
+    USHORT n = RtlCaptureStackBackTrace(0, 48, frames, NULL);
+    char ours[96] = "none";
+    for (USHORT i = 0; i < n; i++) {
+        HMODULE m = NULL;
+        uintptr_t pc = (uintptr_t)frames[i];
+        if (pc == rip || !GetModuleHandleExW(GET_MODULE_HANDLE_EX_FLAG_FROM_ADDRESS |
+                                             GET_MODULE_HANDLE_EX_FLAG_UNCHANGED_REFCOUNT, (LPCWSTR)pc, &m))
+            continue;
+        if (m != exe && m != game) continue;
+        MODULEINFO om = {0};
+        GetModuleInformation(GetCurrentProcess(), m, &om, sizeof om);
+        snprintf(ours, sizeof ours, "%s+%#llx", m == exe ? "orbitals-together" : "orbitalgame",
+                 (unsigned long long)(pc - (uintptr_t)om.lpBaseOfDll));
+        if (m == game) break;   // the game code's frame names the lifted function; an exe frame may be the VEH's
+    }
+    char line[320];
+    snprintf(line, sizeof line, "crash: %s (%#lx) in %s+%#llx%s, thread %lu; first frame of ours %s (left to that "
+             "module's handler: a process that ends here was this)", what, ep->ExceptionRecord->ExceptionCode, name,
+             (unsigned long long)(rip - (uintptr_t)mi.lpBaseOfDll), acc, GetCurrentThreadId(), ours);
+    foreign_fn(line);
+}
+
+void plat_foreign_fault_hook(void (*fn)(const char *line)) { foreign_fn = fn; }
+
+// The VEH copies the faulting host context before calling runtime code. Keep it thread-local: the crash
+// reporter runs synchronously on the faulting thread and must not inspect a CONTEXT after the VEH returns.
+static _Thread_local uint64_t crash_host_regs[16];
+static _Thread_local uint8_t crash_host_insn[16];
+static _Thread_local uint32_t crash_host_insn_n;
+static _Thread_local uint64_t crash_host_stack[32];
+static _Thread_local uint32_t crash_host_stack_n;
+static _Thread_local int crash_host_context_valid;
+
+int plat_crash_host_context(uint64_t regs[16], uint8_t insn[16], uint32_t *insn_n,
+                            uint64_t stack[32], uint32_t *stack_n) {
+    if (!crash_host_context_valid) return 0;
+    memcpy(regs, crash_host_regs, sizeof crash_host_regs);
+    memcpy(insn, crash_host_insn, sizeof crash_host_insn);
+    memcpy(stack, crash_host_stack, sizeof crash_host_stack);
+    *insn_n = crash_host_insn_n;
+    *stack_n = crash_host_stack_n;
+    return 1;
+}
+
+static LONG CALLBACK crash_veh(EXCEPTION_POINTERS *ep) {
+    DWORD code = ep->ExceptionRecord->ExceptionCode;
+    const char *what = code == EXCEPTION_ACCESS_VIOLATION ? "access violation"
+                     : code == EXCEPTION_ILLEGAL_INSTRUCTION ? "illegal instruction"
+                     : code == EXCEPTION_INT_DIVIDE_BY_ZERO ? "integer division by zero"
+                     : code == EXCEPTION_PRIV_INSTRUCTION ? "privileged instruction"
+                     : code == EXCEPTION_STACK_OVERFLOW ? "stack overflow"
+                     : code == EXCEPTION_IN_PAGE_ERROR ? "in-page error" : NULL;
+    if (!what) return EXCEPTION_CONTINUE_SEARCH;
+    uintptr_t rip = (uintptr_t)ep->ContextRecord->Rip;
+    CONTEXT *ctx = ep->ContextRecord;
+    crash_host_regs[0] = ctx->Rax; crash_host_regs[1] = ctx->Rcx;
+    crash_host_regs[2] = ctx->Rdx; crash_host_regs[3] = ctx->Rbx;
+    crash_host_regs[4] = ctx->Rsp; crash_host_regs[5] = ctx->Rbp;
+    crash_host_regs[6] = ctx->Rsi; crash_host_regs[7] = ctx->Rdi;
+    crash_host_regs[8] = ctx->R8;  crash_host_regs[9] = ctx->R9;
+    crash_host_regs[10] = ctx->R10; crash_host_regs[11] = ctx->R11;
+    crash_host_regs[12] = ctx->R12; crash_host_regs[13] = ctx->R13;
+    crash_host_regs[14] = ctx->R14; crash_host_regs[15] = ctx->R15;
+    crash_host_insn_n = 0;
+    SIZE_T insn_got = 0;
+    if (ReadProcessMemory(GetCurrentProcess(), (const void *)rip, crash_host_insn,
+                          sizeof crash_host_insn, &insn_got))
+        crash_host_insn_n = (uint32_t)insn_got;
+    crash_host_stack_n = 0;
+    SIZE_T stack_got = 0;
+    if (ctx->Rsp && !(ctx->Rsp & 7) &&
+        ReadProcessMemory(GetCurrentProcess(), (const void *)ctx->Rsp, crash_host_stack,
+                          sizeof crash_host_stack, &stack_got))
+        crash_host_stack_n = (uint32_t)(stack_got / sizeof(uint64_t));
+    crash_host_context_valid = 1;
+    // Ours: orbitals-together.exe, the game code library (orbitalgame.dll), or no module at all (a jump to a wild address). Faults in
+    // other modules (drivers) are left to the handler that expects them.
+    HMODULE at = NULL, exe = GetModuleHandleW(NULL), game = GetModuleHandleW(L"orbitalgame.dll");
+    int in_module = GetModuleHandleExW(GET_MODULE_HANDLE_EX_FLAG_FROM_ADDRESS | GET_MODULE_HANDLE_EX_FLAG_UNCHANGED_REFCOUNT,
+                                       (LPCWSTR)rip, &at);
+    if (in_module && at != exe && (!game || at != game)) {
+        foreign_fault(ep, what, at, exe, game);
+        return EXCEPTION_CONTINUE_SEARCH;
+    }
+    MODULEINFO mi = {0};
+    if (in_module) GetModuleInformation(GetCurrentProcess(), at, &mi, sizeof mi);
+    PlatCrash c = {what, (uint32_t)code, rip, in_module ? rip - (uintptr_t)mi.lpBaseOfDll : rip, -1, 0};
+    c.module = !in_module ? "no module" : at == exe ? "orbitals-together" : "orbitalgame";
+    uintptr_t sp = (uintptr_t)ep->ContextRecord->Rsp;   // a wild call left its return address there
+    if (!in_module && sp && !(sp & 7) && plat_mem_readable(sp, 8)) c.ret = *(const uintptr_t *)sp;
+    if (code == EXCEPTION_ACCESS_VIOLATION && ep->ExceptionRecord->NumberParameters >= 2)
+        c.access = (int)ep->ExceptionRecord->ExceptionInformation[0], c.addr = ep->ExceptionRecord->ExceptionInformation[1];
+    crash_fn(&c);
+    return EXCEPTION_CONTINUE_SEARCH;
+}
+
+// The C runtime's check of a call's arguments (a time out of localtime_s's range, a null stream...) ends the process
+// with 0xC0000409 and no exception the handler above sees: #310 died in ucrtbase.dll with an empty log while warming
+// up. Reported as a crash instead, at the first frame of ours on the stack (a release CRT passes no expression or
+// file), with the guest's frames.
+static void crt_invalid_parameter(const wchar_t *expr, const wchar_t *fn, const wchar_t *file, unsigned line,
+                                  uintptr_t reserved) {
+    (void)expr, (void)fn, (void)file, (void)line, (void)reserved;
+    void *frames[32];
+    USHORT n = RtlCaptureStackBackTrace(1, 32, frames, NULL);
+    HMODULE exe = GetModuleHandleW(NULL), game = GetModuleHandleW(L"orbitalgame.dll"), at = NULL;
+    PlatCrash c = {"C runtime invalid parameter", 0xC0000409u, 0, 0, -1, 0, "orbitals-together", 0};
+    for (USHORT i = 0; i < n && !c.rip; i++) {
+        uintptr_t pc = (uintptr_t)frames[i];
+        if (!GetModuleHandleExW(GET_MODULE_HANDLE_EX_FLAG_FROM_ADDRESS | GET_MODULE_HANDLE_EX_FLAG_UNCHANGED_REFCOUNT,
+                                (LPCWSTR)pc, &at) || (at != exe && at != game))
+            continue;
+        MODULEINFO mi = {0};
+        GetModuleInformation(GetCurrentProcess(), at, &mi, sizeof mi);
+        c.rip = pc, c.offset = pc - (uintptr_t)mi.lpBaseOfDll, c.module = at == exe ? "orbitals-together" : "orbitalgame";
+    }
+    crash_fn(&c);
+}
+
+void plat_crash_hook(void (*fn)(const PlatCrash *c)) {
+    crash_fn = fn;
+    AddVectoredExceptionHandler(0, crash_veh);
+    _set_invalid_parameter_handler(crt_invalid_parameter);
+}
+
+// A fresh process gets a fresh layout: Windows places DLLs, heaps and thread stacks at random addresses. The parent
+// waits and exits with the child's code.
+void plat_reexec(void) {
+    fflush(stdout);
+    fflush(stderr);
+    STARTUPINFOW si = {.cb = sizeof si};
+    PROCESS_INFORMATION pi;
+    wchar_t *cmd = _wcsdup(GetCommandLineW());   // CreateProcessW may write its command line
+    if (!cmd || !CreateProcessW(NULL, cmd, NULL, NULL, TRUE, 0, NULL, NULL, &si, &pi)) {
+        fprintf(stderr, "FATAL: re-running the process failed (error %lu)\n", GetLastError());
+        ExitProcess(70);
+    }
+    CloseHandle(pi.hThread);
+    WaitForSingleObject(pi.hProcess, INFINITE);
+    DWORD code = 70;
+    GetExitCodeProcess(pi.hProcess, &code);
+    ExitProcess(code);
+}
+
+int plat_mem_read(uint64_t addr, void *out, size_t n) {
+    SIZE_T got = 0;
+    return ReadProcessMemory(GetCurrentProcess(), (const void *)(uintptr_t)addr, out, n, &got) && got == n;
+}
+
+int plat_mem_readable(uint64_t addr, uint64_t n) {
+    for (uint64_t a = addr, end = addr + n; a < end || a == addr;) {
+        MEMORY_BASIC_INFORMATION mbi;
+        if (!VirtualQuery((void *)(uintptr_t)a, &mbi, sizeof mbi) || mbi.State != MEM_COMMIT) return 0;
+        if (mbi.Protect & (PAGE_NOACCESS | PAGE_GUARD)) return 0;
+        a = (uint64_t)(uintptr_t)mbi.BaseAddress + mbi.RegionSize;
+        if (a >= end) return 1;
+    }
+    return 1;
+}
+
+void *plat_aligned_alloc(size_t size, size_t align) { return _aligned_malloc(size, align); }
+void plat_aligned_free(void *p) { _aligned_free(p); }
+

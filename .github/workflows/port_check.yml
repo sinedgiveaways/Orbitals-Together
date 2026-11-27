@@ -1,0 +1,43 @@
+# port_check.exe: tools/analisis/port_check.py as one Windows executable (PyInstaller), for running the feasibility report
+# without installing Python or uv. The runtime's tables it compares against are read from runtime/ here and baked in
+# (--dump-data). Built on each push that changes the script, and by hand; the exe goes to the "port-check" release.
+name: port_check.exe
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [orbitals-port]
+    paths: [tools/analisis/port_check.py, tools/analisis/sdk_gaps.py, tools/prepare/nup.py, tools/gpu/nvn2_procs.py,
+            recomp/nso.py, recomp/versions.py, runtime/**, .github/workflows/port_check.yml]
+
+permissions:
+  contents: write
+
+jobs:
+  exe:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+      - name: Dependencies
+        run: python -m pip install lz4 numpy capstone pyinstaller   # numpy: nvn2_procs.py locate(); capstone: --disasm
+      - name: The runtime's tables
+        run: python tools/analisis/port_check.py --dump-data build/port_check_data.json
+      - name: Build
+        run: >
+          pyinstaller --onefile --console --name port_check --distpath build/exe --workpath build/pyi
+          --paths recomp --paths tools/prepare --paths tools/gpu --paths tools/analisis
+          --add-data "build/port_check_data.json;." tools/analisis/port_check.py
+      - name: Smoke test
+        shell: bash
+        run: build/exe/port_check.exe --help
+      - name: Release
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view port-check >/dev/null 2>&1 || gh release create port-check --target "$GITHUB_SHA" \
+            --title "port_check.exe" --notes "Drop your .nup on port_check.exe; the report (port_check.md) is written next to it. Built from ${GITHUB_SHA}."
+          gh release upload port-check build/exe/port_check.exe --clobber

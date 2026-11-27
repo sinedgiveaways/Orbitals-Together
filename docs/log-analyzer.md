@@ -1,0 +1,96 @@
+# Log analyzer (`shader_analyzer.exe`)
+
+Turns an `orbitals.log` into a report you can send back: what the run reached, how it ended, which shaders and SDK
+calls are missing. It reads the log, never changes it and sends nothing. Facts only: a pattern present or absent is
+reported as such; the report names no root cause.
+
+Source: `tools/run/shader_analyzer.py` (standard library only; the thread-dump reading is shared with
+`tools/run/analyze_timeout.py`). The Windows executable is built by `.github/workflows/log-analyzer.yml`; its name and
+the report's header carry the version (`VERSION` in the script), which is raised with every change to the patterns.
+
+## Use
+
+Get `shader_analyzer-<version>.exe` from the run's artifacts (Actions → the run → Artifacts) or, for versions built on
+`orbitals-port`, from the release `shader-analyzer-<version>`.
+
+- **Double-click**: it looks for `logs\orbitals.log` (the current folder, its own folder, the parent), else asks for the
+  file. It writes `orbitals-report-<version>.md` next to the log, opens it, and waits for Enter.
+- **Command line** (PowerShell):
+
+  ```powershell
+  .\shader_analyzer-0.1.0.exe --input .\logs\orbitals.log --output report.md
+  .\shader_analyzer-0.1.0.exe --input .\logs\orbitals.log --output report.json --format json
+  ```
+
+  Options: `--input/-i`, `--output/-o` (stdout when absent), `--format md|json`, `--context N` (lines around each
+  excerpt, default 3), `--version`.
+- Without Python: `python tools/run/shader_analyzer.py --input logs/orbitals.log`.
+
+Send the `.md` file. Say which version made it (it is in the file name and the first line).
+
+## Making a log worth analysing
+
+`ORBITALS_TRACE` takes a comma-separated list of `svc, host, fs, gfx, perf, sched, audio, present, draw, all`
+(`runtime/core/boot/main.c`). `ORBITALS_TRACE=1` is not a valid item; the host logs "unknown item". For the stall
+diagnosis use `ORBITALS_TRACE=host` (the "host call" lines, which give the NVN call sites the report lists):
+
+```powershell
+$env:ORBITALS_TRACE = "host"; .\orbitals-together.exe
+```
+
+The log is `logs\orbitals.log` next to the program. `crit.bin` (`ORBITALS_CRIT`, `tools/run/crit_path.py`) is **not** read
+by this version.
+
+## What the report contains
+
+| Section | From |
+|---|---|
+| header: input, size, sha256, runtime version, program/build id, GPU | `log:`, `version:`, `vk: using gpu` lines |
+| Findings: one line each, level `info`, `warn` or `error` | rules in `findings()` |
+| Key threads at the abort: state and top frames of GameThread, Render, RHI, Viewport, FrameFlip, FrameOffset | the abort's thread dump |
+| Shaders without prepared SPIR-V: the hashes and the (stage, program) pairs | `no prepared SPIR-V`, `a stage N shader of program P` |
+| NVN sync / event / present call sites | `host call nvn:nvn…Sync/Event/Fence/Finish/Flush/Present/Acquire/Submit` |
+| SDK functions without a host override | `imports: … (no host override)` and its per-namespace summary |
+| NVN2 calls ignored or dropped | `nvn2: … ignored/dropped`, numbers folded |
+| Excerpts: lines around the first matches of a pattern | the table below |
+| Counted, not listed: guest page allocations (count, MiB, failures), SDK-call census lines, RomFS lookups, decoder set-up | noise filtered out before context is taken |
+
+## Patterns (`RULES`)
+
+| Name | Matches | Excerpts kept |
+|---|---|---|
+| `abort` | `FATAL: svc #0x26 Break at` | 2 |
+| `fatal` | any other `FATAL` | 4 |
+| `watchdog` | the abort's stack text `GameThread timed out waiting for …` | counted only |
+| `shader_missing` | `no prepared SPIR-V <sha256>` | 1 |
+| `shader_stage` | `a stage N shader of program P has no prepared SPIR-V` | counted only |
+| `draw_skipped` | `a draw … skipped` | 1 |
+| `pipeline_error` | `vk:` / `vk_pipeline:` lines with fail, error, VK_ERROR, device lost | 3 |
+| `problem` | unsupported, unimplemented, not implemented, trap, fault, crash (the generic "Break is not implemented" tail, import and thread lines excluded) | 4 |
+
+Not in this version, because the log does not carry it yet: a line per fence or event signalled or waited
+(`ORBITALS_DIAG_FENCE`, step 1 of the roadmap's first section). Until then the report cannot say which fence is never
+signalled; it says which NVN sync call sites the game used and whether the threads that should render were all waiting.
+
+## Reading it correctly
+
+- The abort's thread dump is taken while the GameThread handles the abort; its stack is not the stack it waited on.
+- "Running or ready" is a scheduler label, not proof of progress.
+- The dump lists guest threads only; replay, recorder, present and submit threads (host threads) are not in it.
+- `written back … at fence N` lines are capped at 16 by the host (`log_limited`), so the highest fence in them is a lower
+  bound, not the last fence.
+- Draws without a shader are logged once per cause; the number of skipped draws is unknown.
+
+## Adding a pattern
+
+1. Add a regex to `RULES` (name → regex, excerpts kept), or a `RE_…` regex and a field in `_facts()` for a number or a
+   list. A line the log repeats thousands of times belongs in `NOISE`.
+2. Say what it means in `findings()` in words that state what the log shows, not why.
+3. Add the line to `tools/run/testdata/sample-orbitals.log` and, if it is a finding, a `grep` to the workflow's smoke test.
+4. Raise `VERSION` (patch for a pattern, minor for a new section), and list the change here.
+
+## Versions
+
+- **0.1.0**: first version: end of run (abort, watchdog text, wait target, runtime, memory), thread states and key
+  threads, missing shaders, skipped draws, present lines, fences seen, NVN sync call sites, SDK imports without override,
+  NVN2 ignored calls, allocation counts, excerpts, Markdown and JSON.

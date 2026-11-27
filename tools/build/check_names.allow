@@ -1,0 +1,23 @@
+# Paths (globs relative to the scanned root, or bare file names) that may keep the old names (tools/build/check_names.py).
+# Only two reasons are valid: a legal notice, or a document about the removal itself. Nothing the runtime loads.
+LICENSE
+LICENSE.*
+THIRD_PARTY_NOTICES*
+docs/mkw-removal.md
+docs/mkw-removal-plan.md
+docs/mkw-inventory.tsv
+# The former names, as a historical reference (tools/run/envs.py --markdown).
+docs/environment-variables.md
+# Documents of the removal itself, and the sources page: third-party projects named with their own names and links.
+docs/romfs-res-audit.md
+docs/research.md
+# The first game's performance reports, kept as history with links to where they were filed.
+docs/performance.md
+# The 0.2.0 release notes name the former variable prefix, to tell players what to migrate.
+CHANGELOG.md
+docs/audit-current-state.md
+tools/migrate/*
+tools/migrate_config.py
+# The scanner itself names what it looks for.
+tools/build/check_names.py
+tools/build/check_names.allow

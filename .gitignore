@@ -1,0 +1,25 @@
+# Generated from the user's game copy: never versioned
+/build/
+/game
+generated/
+/dev/
+scratchpad/
+# Python
+__pycache__/
+.venv/
+*.pyc
+.ruff_cache/
+# Secrets and dumps
+.env
+*.keys
+*.nsp
+*.xci
+*.nca
+*.nso
+
+# Local agent tooling settings (private, never published)
+.agents-*
+
+# Icon: the source picture and the .ico made from it (tools/build/make_ico.py, docs/branding.md); fetched by the CI
+/assets/icon/orbitals_logo.png
+/assets/icon/orbitals.ico

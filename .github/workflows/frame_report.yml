@@ -1,0 +1,37 @@
+# orbitals-frame-report.exe: tools/analisis/frame_report.py as one Windows executable (PyInstaller), to read the layout of
+# nn::vi::FrameInfo from the game's own ExeFS without installing git, uv or Python. The exe is an artifact of the run
+# (14 days), not a release. It builds on a push of the diagnostic branch (a new workflow cannot be started by hand until it
+# is on the default branch) and by hand once it is. Nothing of the game goes in: the user runs it on their own exefs folder.
+name: frame_report.exe
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [diag/frame-history-trace, orbitals-port]
+    paths: [tools/analisis/frame_report.py, .github/workflows/frame_report.yml]
+
+permissions:
+  contents: read
+
+jobs:
+  exe:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+      - name: Dependencies
+        run: python -m pip install lz4 numpy capstone pyinstaller
+      - name: Build
+        run: >
+          pyinstaller --onefile --console --name orbitals-frame-report --distpath build/exe --workpath build/pyi
+          --paths recomp --paths tools/gpu --paths tools/analisis tools/analisis/frame_report.py
+      - name: Smoke test
+        shell: bash
+        run: build/exe/orbitals-frame-report.exe --help
+      - uses: actions/upload-artifact@v4
+        with:
+          name: orbitals-frame-report
+          path: build/exe/orbitals-frame-report.exe
+          retention-days: 14

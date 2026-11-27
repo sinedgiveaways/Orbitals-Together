@@ -1,0 +1,2152 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: orbitals-together\nLanguage: zh_Hant\nMIME-Version: 1.0\nContent-Type: "
+"text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\n"
+
+#. The software keyboard's starting text: at most 9 UTF-16 units, no '@' '%' '\'.
+msgctxt "UI_SWKBD_DEFAULT_NAME"
+msgid "Player"
+msgstr "玩家"
+
+msgctxt "UI_MENU_TITLE"
+msgid "Settings"
+msgstr "設定"
+
+msgctxt "UI_MENU_TAB_SCREEN"
+msgid "Screen"
+msgstr "畫面"
+
+msgctxt "UI_MENU_TAB_GAME"
+msgid "Game"
+msgstr "遊戲"
+
+msgctxt "UI_MENU_TAB_SOUND"
+msgid "Sound"
+msgstr "聲音"
+
+msgctxt "UI_MENU_TAB_CONTROLS"
+msgid "Controls"
+msgstr "操作"
+
+msgctxt "UI_MENU_TAB_MENU"
+msgid "Menu"
+msgstr "選單"
+
+msgctxt "UI_MENU_TAB_ADVANCED"
+msgid "Advanced"
+msgstr "進階"
+
+msgctxt "UI_MENU_TAB_GRAPHICS"
+msgid "Graphics"
+msgstr "圖形"
+
+msgctxt "UI_MENU_TAB_HACKS"
+msgid "Hacks"
+msgstr "實驗"
+
+msgctxt "UI_MENU_HACKS_WARNING"
+msgid ""
+"Experimental: shortcuts the console does not have, for playing and testing faster. They can "
+"change how the game behaves."
+msgstr "實驗功能：主機上沒有的捷徑，用於更快地遊玩和測試。可能會改變遊戲的運作方式。"
+
+msgctxt "UI_MENU_TURBO"
+msgid "Turbo"
+msgstr "加速"
+
+msgctxt "UI_MENU_TURBO_DESC"
+msgid ""
+"The whole game runs faster: menus, movies, loads and races. Hold or press F2. The screen shows at "
+"most 60 frames a second."
+msgstr "整個遊戲都會加快：選單、影片、讀取和比賽。按住或按下 F2。畫面最多每秒顯示 60 幀。"
+
+msgctxt "UI_MENU_TURBO_HOLD"
+msgid "Hold F2"
+msgstr "按住 F2"
+
+msgctxt "UI_MENU_TURBO_TOGGLE"
+msgid "F2 on/off"
+msgstr "F2 開/關"
+
+msgctxt "UI_MENU_TURBO_SPEED"
+msgid "Turbo speed"
+msgstr "加速倍率"
+
+msgctxt "UI_MENU_TURBO_SPEED_DESC"
+msgid "How many times faster. A slow PC may not reach it."
+msgstr "加快的倍數。效能較低的電腦可能達不到。"
+
+msgctxt "UI_MENU_SEED"
+msgid "Same randomness every time"
+msgstr "每次相同的隨機"
+
+msgctxt "UI_MENU_SEED_DESC"
+msgid ""
+"The game draws the same random numbers in every session: the same title course, the same items. "
+"For testing."
+msgstr "遊戲每次都使用相同的隨機數：標題畫面的賽道和道具都相同。用於測試。"
+
+msgctxt "UI_MENU_FREEZE_KEYS"
+msgid "Freeze keys"
+msgstr "暫停鍵"
+
+msgctxt "UI_MENU_FREEZE_KEYS_DESC"
+msgid ""
+"F3 stops the game on the frame on screen and starts it again; F4 moves it on by one frame. To "
+"look at a moment closely."
+msgstr "F3 在目前幀暫停遊戲並可再次繼續；F4 前進一幀。用於仔細查看某一瞬間。"
+
+msgctxt "UI_MENU_ANISO"
+msgid "Texture filtering"
+msgstr "紋理過濾"
+
+msgctxt "UI_MENU_ANISO_DESC"
+msgid ""
+"Sharpness of textures seen far away or at a low angle, such as the road ahead. Game uses what "
+"each texture asks for. Impact on frame rate: low."
+msgstr "遠處或斜視角度的紋理（如前方的道路）的清晰度。遊戲使用各紋理自身要求的值。對幀率的影響：小。"
+
+msgctxt "UI_MENU_ANISO_GAME"
+msgid "Game"
+msgstr "遊戲"
+
+msgctxt "UI_MENU_TEX_QUALITY"
+msgid "Texture quality"
+msgstr "紋理品質"
+
+msgctxt "UI_MENU_TEX_QUALITY_DESC"
+msgid ""
+"Detail of the game's own textures. Half and Quarter skip their finest levels: less memory traffic "
+"on the graphics card, blurrier surfaces up close. Impact on frame rate: low."
+msgstr "遊戲自帶紋理的細節程度。「一半」和「四分之一」會跳過最精細的層級：顯示卡的記憶體傳輸更少，但近看表面會更模糊。對幀率的影響：小。"
+
+msgctxt "UI_MENU_TEX_QUALITY_FULL"
+msgid "Full"
+msgstr "全部"
+
+msgctxt "UI_MENU_TEX_QUALITY_HALF"
+msgid "Half"
+msgstr "一半"
+
+msgctxt "UI_MENU_TEX_QUALITY_QUARTER"
+msgid "Quarter"
+msgstr "四分之一"
+
+msgctxt "UI_MENU_DETAIL_LOW"
+msgid "Low"
+msgstr "低"
+
+msgctxt "UI_MENU_DETAIL_MEDIUM"
+msgid "Medium"
+msgstr "中"
+
+msgctxt "UI_MENU_DETAIL_CONSOLE"
+msgid "Console"
+msgstr "主機"
+
+msgctxt "UI_MENU_DETAIL_HIGH"
+msgid "High"
+msgstr "高"
+
+msgctxt "UI_MENU_DETAIL_ULTRA"
+msgid "Very high"
+msgstr "極高"
+
+msgctxt "UI_MENU_CONTINUE"
+msgid "Continue"
+msgstr "繼續"
+
+msgctxt "UI_MENU_QUIT"
+msgid "Quit game"
+msgstr "退出遊戲"
+
+msgctxt "UI_MENU_ON"
+msgid "On"
+msgstr "ON"
+
+msgctxt "UI_MENU_OFF"
+msgid "Off"
+msgstr "OFF"
+
+msgctxt "UI_MENU_AUTO"
+msgid "Automatic"
+msgstr "自動"
+
+msgctxt "UI_MENU_DEFAULT_MARK"
+msgid "default"
+msgstr "預設"
+
+msgctxt "UI_MENU_AFTER_RESTART"
+msgid "after restart"
+msgstr "重新啟動後生效"
+
+msgctxt "UI_MENU_SET_BY_ENV"
+msgid "set by environment variable"
+msgstr "由環境變數設定"
+
+msgctxt "UI_MENU_SAVE_FAILED"
+msgid "could not save settings"
+msgstr "無法儲存設定"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_MENU_VERSION"
+msgid "Orbitals Together %s, game %s"
+msgstr "Orbitals Together %s，遊戲 %s"
+
+msgctxt "UI_MENU_FULLSCREEN"
+msgid "Fullscreen"
+msgstr "全螢幕"
+
+msgctxt "UI_MENU_FULLSCREEN_DESC"
+msgid "Fills the screen with the game; F11 toggles it."
+msgstr "讓遊戲佔滿整個螢幕；F11 可切換。"
+
+msgctxt "UI_MENU_WINDOW_SIZE"
+msgid "Window size"
+msgstr "視窗大小"
+
+msgctxt "UI_MENU_WINDOW_SIZE_DESC"
+msgid "Size of the game window when not fullscreen."
+msgstr "非全螢幕時的遊戲視窗大小。"
+
+msgctxt "UI_MENU_QUALITY"
+msgid "Quality"
+msgstr "畫質"
+
+msgctxt "UI_MENU_QUALITY_DESC"
+msgid ""
+"Sets the rows below at once. Console looks like the Switch 2; Low and Medium are lighter for the "
+"graphics card, High and Very high sharper. Changing a row makes it Custom. The internal "
+"resolution is what changes the frame rate most."
+msgstr "一次性設定下面各項。「主機」的畫面與 Switch 2 相同；「低」和「中」對顯示卡更輕鬆，「高」和「極高」更清晰。修改任一項會變為「自訂」。對幀率影響最大的是內部解析度。"
+
+msgctxt "UI_MENU_QUALITY_CUSTOM"
+msgid "Custom"
+msgstr "自訂"
+
+msgctxt "UI_MENU_PRESENT"
+msgid "Presentation"
+msgstr "呈現方式"
+
+msgctxt "UI_MENU_PRESENT_DESC"
+msgid "How finished frames reach the screen."
+msgstr "渲染完成的幀送到螢幕上的方式。"
+
+msgctxt "UI_MENU_PRESENT_MAILBOX"
+msgid "Mailbox"
+msgstr "Mailbox"
+
+msgctxt "UI_MENU_PRESENT_VSYNC"
+msgid "VSync"
+msgstr "VSync"
+
+msgctxt "UI_MENU_PRESENT_IMMEDIATE"
+msgid "Immediate"
+msgstr "Immediate"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_MENU_PRESENT_IN_USE"
+msgid "in use: %s"
+msgstr "正在使用：%s"
+
+msgctxt "UI_MENU_GPU"
+msgid "Graphics card"
+msgstr "顯示卡"
+
+msgctxt "UI_MENU_GPU_DESC"
+msgid "The Vulkan device that draws the game."
+msgstr "繪製遊戲畫面的 Vulkan 裝置。"
+
+msgctxt "UI_MENU_GPU_AUTO"
+msgid "Automatic"
+msgstr "自動"
+
+msgctxt "UI_MENU_PERF_OVERLAY"
+msgid "Performance overlay"
+msgstr "效能顯示"
+
+msgctxt "UI_MENU_PERF_OVERLAY_DESC"
+msgid ""
+"Frame rate in the top right corner. Full adds frame times with a graph, CPU, GPU and memory load, "
+"temperatures and the render thread's waits. F10 cycles the modes."
+msgstr "在右上角顯示幀率。「完整」還會加上幀時間（附圖表）、CPU、GPU 和記憶體負載、溫度以及繪製執行緒的等待時間。F10 可切換模式。"
+
+msgctxt "UI_MENU_PERF_OFF"
+msgid "Off"
+msgstr "OFF"
+
+msgctxt "UI_MENU_PERF_FPS"
+msgid "FPS"
+msgstr "FPS"
+
+msgctxt "UI_MENU_PERF_FULL"
+msgid "Full"
+msgstr "完整"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_PERF_LINE_FPS"
+msgid "%.0f fps"
+msgstr "%.0f fps"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_PERF_LINE_FPS_FG"
+msgid "%.0f/%.0f fps"
+msgstr "%.0f/%.0f fps"
+
+msgctxt "UI_MENU_FPS_AUTO"
+msgid "Automatic"
+msgstr "自動"
+
+msgctxt "UI_MENU_FRAMEGEN"
+msgid "Frame generation"
+msgstr "幀生成"
+
+msgctxt "UI_MENU_FRAMEGEN_DESC"
+msgid ""
+"Shows frames made between the game's own: 2x turns 30 fps into 60. Automatic makes as many as "
+"your monitor's refresh rate has room for. Adds up to one frame of delay, and fast motion can "
+"smear. Not on the console."
+msgstr "在遊戲自身的幀之間插入生成的幀：2x 會把 30 fps 變成 60 fps。「自動」會按螢幕更新率允許的上限生成。最多增加一幀延遲，快速移動時可能出現殘影。主機上沒有此功能。"
+
+msgctxt "UI_MENU_GRAPHICS"
+msgid "Picture"
+msgstr "畫面"
+
+msgctxt "UI_MENU_UPSCALER"
+msgid "Scaling to the window"
+msgstr "縮放到視窗"
+
+msgctxt "UI_MENU_UPSCALER_DESC"
+msgid ""
+"How the picture is scaled when the window is larger than the game resolution. FSR keeps edges and "
+"detail sharper than bilinear."
+msgstr "視窗大於遊戲解析度時畫面的縮放方式。FSR 比雙線性更能保持邊緣和細節的清晰。"
+
+msgctxt "UI_MENU_UPSCALER_FSR"
+msgid "AMD FSR 1"
+msgstr "AMD FSR 1"
+
+msgctxt "UI_MENU_UPSCALER_BILINEAR"
+msgid "Bilinear"
+msgstr "雙線性"
+
+msgctxt "UI_MENU_PICTURE_FIT"
+msgid "Picture shape"
+msgstr "畫面形狀"
+
+msgctxt "UI_MENU_PICTURE_FIT_DESC"
+msgid ""
+"When the window's shape differs from the game resolution's (a 16:9 game on the Steam Deck's 16:10 "
+"screen), keep the picture's proportions with black bars, or stretch it over the whole window."
+msgstr "視窗的比例與遊戲解析度不同時（例如 Steam Deck 的 16:10 螢幕上執行 16:9 的遊戲），可以加黑邊保持畫面比例，或拉伸鋪滿整個視窗。"
+
+msgctxt "UI_MENU_PICTURE_FIT_KEEP"
+msgid "Keep (bars)"
+msgstr "保持（黑邊）"
+
+msgctxt "UI_MENU_PICTURE_FIT_STRETCH"
+msgid "Stretch"
+msgstr "拉伸"
+
+msgctxt "UI_MENU_HDR"
+msgid "HDR"
+msgstr "HDR"
+
+msgctxt "UI_MENU_HDR_DESC"
+msgid ""
+"Automatic shows the game's own HDR picture when the display is in HDR (on Windows, Settings > "
+"Display > Use HDR), as the console does; its brightness follows the system's HDR settings. Off "
+"always shows the standard picture. Applies at once."
+msgstr ""
+"「自動」會在螢幕處於 HDR 模式時（Windows 中為 設定 > 顯示 > 使用 HDR）像主機一樣顯示遊戲自帶的 HDR 畫面，亮度跟隨系統的 HDR "
+"設定。「OFF」則始終顯示標準畫面。立即生效。"
+
+msgctxt "UI_MENU_SHARPNESS"
+msgid "FSR sharpness"
+msgstr "FSR 銳利度"
+
+msgctxt "UI_MENU_SHARPNESS_DESC"
+msgid "Sharpening after FSR scaling; 0 turns it off."
+msgstr "FSR 縮放後的銳化程度；0 為關閉。"
+
+msgctxt "UI_MENU_GAME_LANG"
+msgid "Game language"
+msgstr "遊戲語言"
+
+msgctxt "UI_MENU_GAME_LANG_DESC"
+msgid "Language of the game's text and voices."
+msgstr "遊戲文字和語音所用的語言。"
+
+msgctxt "UI_MENU_GAME_LANG_AUTO"
+msgid "Automatic"
+msgstr "自動"
+
+msgctxt "UI_MENU_OPERATION_MODE"
+msgid "Console mode"
+msgstr "主機模式"
+
+msgctxt "UI_MENU_OPERATION_MODE_DESC"
+msgid ""
+"Whether the game thinks it runs docked or handheld. Docked, it draws the scene smaller and "
+"enlarges it with its own scaler; handheld, at the full internal resolution with smaller shadows: "
+"sharper, but more work for the graphics card."
+msgstr "讓遊戲認為自己處於底座模式還是掌機模式。底座模式下，它會以較小尺寸繪製畫面，再用自帶的縮放器放大；掌機模式下則以完整內部解析度繪製，但陰影更小：更清晰，但顯示卡負擔更大。"
+
+msgctxt "UI_MENU_MODE_DOCKED"
+msgid "Docked"
+msgstr "底座模式"
+
+msgctxt "UI_MENU_MODE_HANDHELD"
+msgid "Handheld"
+msgstr "掌機模式"
+
+msgctxt "UI_MENU_LAN"
+msgid "LAN play"
+msgstr "區域網路遊戲"
+
+msgctxt "UI_MENU_LAN_DESC"
+msgid ""
+"Lets the game reach other PCs on the same local network when it asks for a local network "
+"connection, for local network play. It only reaches local network addresses, never the internet. "
+"Applies at the next start."
+msgstr "當遊戲要求區域網路連線時，允許它連線同一區域網路中的其他電腦，用於區域網路遊戲。只能連線區域網路位址，絕不連線網際網路。下次啟動時生效。"
+
+msgctxt "UI_MENU_VOLUME"
+msgid "Volume"
+msgstr "音量"
+
+msgctxt "UI_MENU_VOLUME_DESC"
+msgid "Master volume of the game."
+msgstr "遊戲的總音量。"
+
+msgctxt "UI_MENU_SPEAKERS"
+msgid "Speakers"
+msgstr "喇叭"
+
+msgctxt "UI_MENU_SPEAKERS_STEREO"
+msgid "Stereo"
+msgstr "立體聲"
+
+msgctxt "UI_MENU_SPEAKERS_51"
+msgid "5.1 surround"
+msgstr "5.1 環繞聲"
+
+msgctxt "UI_MENU_BACKGROUND_MUTE"
+msgid "Mute in background"
+msgstr "背景時靜音"
+
+msgctxt "UI_MENU_BACKGROUND_MUTE_DESC"
+msgid "No sound while the game window is not in front."
+msgstr "遊戲視窗不在前景時不發出聲音。"
+
+msgctxt "UI_MENU_SPEAKERS_DESC"
+msgid ""
+"Automatic gives the game's 5.1 surround mix when the system's sound output has 6 channels or "
+"more, and stereo otherwise. Applies at the next start."
+msgstr "系統音訊輸出為 6 聲道或以上時，「自動」會使用遊戲的 5.1 環繞聲混音，否則使用立體聲。下次啟動時生效。"
+
+msgctxt "UI_MENU_MOTION"
+msgid "Motion controls"
+msgstr "陀螺儀操作"
+
+msgctxt "UI_MENU_MOTION_DESC"
+msgid "Steering by tilting the controller."
+msgstr "透過傾斜控制器來駕駛。"
+
+msgctxt "UI_MENU_RUMBLE_STRENGTH"
+msgid "Vibration strength"
+msgstr "震動強度"
+
+msgctxt "UI_MENU_RUMBLE_STRENGTH_DESC"
+msgid "How strong the controller vibrates."
+msgstr "控制器震動的強度。"
+
+msgctxt "UI_MENU_RUMBLE_CURVE"
+msgid "Vibration curve"
+msgstr "震動曲線"
+
+msgctxt "UI_MENU_RUMBLE_CURVE_DESC"
+msgid "Lower values make weak vibration stronger."
+msgstr "數值越低，微弱的震動會越強。"
+
+msgctxt "UI_MENU_RUMBLE_TRIGGERS"
+msgid "Trigger vibration (Xbox)"
+msgstr "扳機震動（Xbox）"
+
+msgctxt "UI_MENU_RUMBLE_TRIGGERS_DESC"
+msgid "Vibrates the triggers of an Xbox controller too."
+msgstr "同時讓 Xbox 控制器的扳機震動。"
+
+msgctxt "UI_MENU_PAD_LAYOUT"
+msgid "Button layout"
+msgstr "按鍵配置"
+
+msgctxt "UI_MENU_PAD_LAYOUT_DESC"
+msgid ""
+"Which button is A. Nintendo: the right one, as on a Switch. Xbox: the bottom one, as labelled on "
+"an Xbox controller (cross on a PlayStation controller). Automatic picks Nintendo for controllers "
+"with Nintendo labels and Xbox for the others."
+msgstr ""
+"決定哪個鍵是 A。Nintendo：右側的鍵，與 Switch 相同。Xbox：下方的鍵，與 Xbox 控制器上的標示一致（PlayStation 控制器上為叉鍵）。「自動」會為帶有 "
+"Nintendo 標示的控制器選擇 Nintendo，其他控制器選擇 Xbox。"
+
+msgctxt "UI_MENU_PAD_LAYOUT_AUTO"
+msgid "Automatic"
+msgstr "自動"
+
+msgctxt "UI_MENU_PAD_LAYOUT_NINTENDO"
+msgid "Nintendo (A right)"
+msgstr "Nintendo（A 在右）"
+
+msgctxt "UI_MENU_PAD_LAYOUT_XBOX"
+msgid "Xbox (A bottom)"
+msgstr "Xbox（A 在下）"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_MENU_PAD_LAYOUT_IN_USE"
+msgid "in use: %s"
+msgstr "正在使用：%s"
+
+msgctxt "UI_MENU_MOUSE_SENS"
+msgid "Mouse camera sensitivity"
+msgstr "滑鼠鏡頭靈敏度"
+
+msgctxt "UI_MENU_MOUSE_SENS_DESC"
+msgid "How fast the mouse turns the camera."
+msgstr "滑鼠轉動鏡頭的速度。"
+
+msgctxt "UI_MENU_SWITCH2"
+msgid "Switch 2 controllers (Bluetooth)"
+msgstr "Switch 2 控制器（藍牙）"
+
+msgctxt "UI_MENU_SWITCH2_DESC"
+msgid ""
+"Joy-Con 2 and Pro Controller 2 over Bluetooth. To pair one, hold its Sync button with the game "
+"open. Applies at the next start."
+msgstr "透過藍牙使用 Joy-Con 2 和 Pro 控制器 2。要配對控制器，請在遊戲開啟時按住其同步按鈕。下次啟動時生效。"
+
+msgctxt "UI_MENU_STICK_DEADZONE"
+msgid "Stick dead zone"
+msgstr "搖桿死區"
+
+msgctxt "UI_MENU_STICK_DEADZONE_DESC"
+msgid ""
+"How far a stick must tilt before it counts. Raise it if the kart drifts with the stick at rest."
+msgstr "搖桿需要傾斜多少才算輸入。放開搖桿時卡丁車仍在移動的話請調高。"
+
+msgctxt "UI_MENU_BUTTON_ICONS"
+msgid "Button icons"
+msgstr "按鍵圖示"
+
+msgctxt "UI_MENU_BUTTON_ICONS_DESC"
+msgid ""
+"Which buttons the game's prompts show. Automatic follows the device you used last: the "
+"controller's own buttons (Xbox or PlayStation), or your keys and mouse. The icons follow your "
+"remapped buttons."
+msgstr "遊戲提示中顯示哪種按鍵。「自動」會跟隨你最後使用的裝置：控制器自身的按鍵（Xbox 或 PlayStation），或鍵盤和滑鼠。圖示會反映你重新分配後的按鍵。"
+
+msgctxt "UI_MENU_ICONS_NINTENDO"
+msgid "Nintendo"
+msgstr "Nintendo"
+
+msgctxt "UI_MENU_ICONS_XBOX"
+msgid "Xbox"
+msgstr "Xbox"
+
+msgctxt "UI_MENU_ICONS_PLAYSTATION"
+msgid "PlayStation"
+msgstr "PlayStation"
+
+msgctxt "UI_MENU_ICONS_KEYBOARD"
+msgid "Keyboard"
+msgstr "鍵盤"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_MENU_ICONS_IN_USE"
+msgid "in use: %s"
+msgstr "正在使用：%s"
+
+msgctxt "UI_BINDS_HELP"
+msgid ""
+"Select a cell and press A or Enter, then the key, mouse button or controller button. Delete or X "
+"clears a cell. A key in use moves here; a controller button swaps with the one it replaces."
+msgstr "選擇一個格子並按 A 或 Enter，然後按下鍵盤按鍵、滑鼠按鍵或控制器按鍵。Delete 或 X 可清空格子。已被佔用的按鍵會移到這裡；控制器按鍵則與被取代的按鍵互換。"
+
+msgctxt "UI_BINDS_COL_KEY1"
+msgid "Key 1"
+msgstr "按鍵 1"
+
+msgctxt "UI_BINDS_COL_KEY2"
+msgid "Key 2"
+msgstr "按鍵 2"
+
+msgctxt "UI_BINDS_COL_PAD"
+msgid "Controller"
+msgstr "控制器"
+
+msgctxt "UI_BINDS_GROUP_BUTTONS"
+msgid "Buttons"
+msgstr "按鍵"
+
+msgctxt "UI_BINDS_GROUP_MOVE"
+msgid "Movement"
+msgstr "移動"
+
+msgctxt "UI_BINDS_GROUP_CAMERA"
+msgid "Camera"
+msgstr "鏡頭"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_BINDS_PRESS_KEY"
+msgid "Press a key or mouse button for %s"
+msgstr "請按下用於 %s 的鍵盤或滑鼠按鍵"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_BINDS_PRESS_PAD"
+msgid "Press a controller button for %s"
+msgstr "請按下用於 %s 的控制器按鍵"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_BINDS_CANCEL_HINT"
+msgid "Esc cancels, or wait %d s"
+msgstr "按 Esc 取消，或等待 %d 秒"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_BINDS_TAKEN"
+msgid "%s was taken from %s"
+msgstr "%s 已從 %s 奪來"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_BINDS_SWAPPED"
+msgid "%s swapped with %s"
+msgstr "%s 與 %s 已互換"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_NOTICE_PADS_MISSING"
+msgid "%d players need a controller each: %d connected. The keyboard only counts for player 1."
+msgstr "%d 名玩家各需要一個控制器：目前已連接 %d 個。鍵盤只算作玩家 1。"
+
+msgctxt "UI_BINDS_RESET"
+msgid "Reset all buttons"
+msgstr "重設所有按鍵"
+
+msgctxt "UI_BINDS_RESET_DESC"
+msgid ""
+"Back to the default keys and controller buttons. The button layout above applies again: remapped "
+"controller buttons stay where you put them until this reset."
+msgstr "恢復為預設的鍵盤按鍵和控制器按鍵。上面的按鍵配置會重新生效：已重新分配的控制器按鍵會保持在你設定的位置，直到進行此重設。"
+
+msgctxt "UI_BIND_A"
+msgid "A"
+msgstr "A"
+
+msgctxt "UI_BIND_B"
+msgid "B"
+msgstr "B"
+
+msgctxt "UI_BIND_X"
+msgid "X"
+msgstr "X"
+
+msgctxt "UI_BIND_Y"
+msgid "Y"
+msgstr "Y"
+
+msgctxt "UI_BIND_LCLICK"
+msgid "Left stick click"
+msgstr "左搖桿按下"
+
+msgctxt "UI_BIND_RCLICK"
+msgid "Right stick click"
+msgstr "右搖桿按下"
+
+msgctxt "UI_BIND_L"
+msgid "L"
+msgstr "L"
+
+msgctxt "UI_BIND_R"
+msgid "R"
+msgstr "R"
+
+msgctxt "UI_BIND_ZL"
+msgid "ZL"
+msgstr "ZL"
+
+msgctxt "UI_BIND_ZR"
+msgid "ZR"
+msgstr "ZR"
+
+msgctxt "UI_BIND_PLUS"
+msgid "Plus"
+msgstr "+"
+
+msgctxt "UI_BIND_MINUS"
+msgid "Minus"
+msgstr "-"
+
+msgctxt "UI_BIND_LEFT"
+msgid "D-pad left"
+msgstr "方向鍵 左"
+
+msgctxt "UI_BIND_UP"
+msgid "D-pad up"
+msgstr "方向鍵 上"
+
+msgctxt "UI_BIND_RIGHT"
+msgid "D-pad right"
+msgstr "方向鍵 右"
+
+msgctxt "UI_BIND_DOWN"
+msgid "D-pad down"
+msgstr "方向鍵 下"
+
+msgctxt "UI_BIND_LSTICK_LEFT"
+msgid "Steer left"
+msgstr "向左駕駛"
+
+msgctxt "UI_BIND_LSTICK_UP"
+msgid "Stick up"
+msgstr "搖桿 上"
+
+msgctxt "UI_BIND_LSTICK_RIGHT"
+msgid "Steer right"
+msgstr "向右駕駛"
+
+msgctxt "UI_BIND_LSTICK_DOWN"
+msgid "Stick down"
+msgstr "搖桿 下"
+
+msgctxt "UI_BIND_RSTICK_LEFT"
+msgid "Camera left"
+msgstr "鏡頭 左"
+
+msgctxt "UI_BIND_RSTICK_UP"
+msgid "Camera up"
+msgstr "鏡頭 上"
+
+msgctxt "UI_BIND_RSTICK_RIGHT"
+msgid "Camera right"
+msgstr "鏡頭 右"
+
+msgctxt "UI_BIND_RSTICK_DOWN"
+msgid "Camera down"
+msgstr "鏡頭 下"
+
+msgctxt "UI_BIND_DESC_A"
+msgid "Accelerate; confirm in menus."
+msgstr "加速；在選單中確定。"
+
+msgctxt "UI_BIND_DESC_B"
+msgid "Brake, reverse; back in menus."
+msgstr "煞車、倒車；在選單中返回。"
+
+msgctxt "UI_BIND_DESC_X"
+msgid "Rear view."
+msgstr "後視。"
+
+msgctxt "UI_BIND_DESC_Y"
+msgid "World map (free roam)."
+msgstr "世界地圖（自由行駛）。"
+
+msgctxt "UI_BIND_DESC_LCLICK"
+msgid "No action in the game's control list."
+msgstr "遊戲操作列表中沒有對應的動作。"
+
+msgctxt "UI_BIND_DESC_RCLICK"
+msgid "No action in the game's control list."
+msgstr "遊戲操作列表中沒有對應的動作。"
+
+msgctxt "UI_BIND_DESC_L"
+msgid "Use an item."
+msgstr "使用道具。"
+
+msgctxt "UI_BIND_DESC_R"
+msgid "Hop, drift, charge jump, trick."
+msgstr "跳躍動作、漂移、蓄力跳躍、特技。"
+
+msgctxt "UI_BIND_DESC_ZL"
+msgid "Use an item."
+msgstr "使用道具。"
+
+msgctxt "UI_BIND_DESC_ZR"
+msgid "Hop, drift, charge jump, trick."
+msgstr "跳躍動作、漂移、蓄力跳躍、特技。"
+
+msgctxt "UI_BIND_DESC_PLUS"
+msgid "Pause, settings."
+msgstr "暫停、設定。"
+
+msgctxt "UI_BIND_DESC_MINUS"
+msgid "Photo mode."
+msgstr "拍照模式。"
+
+msgctxt "UI_BIND_DESC_DPAD"
+msgid "Down rewinds; all four move in menus."
+msgstr "下鍵倒帶；在選單中四個方向都用於移動。"
+
+msgctxt "UI_BIND_DESC_MOVE"
+msgid "Steers like the left stick. The controller's left stick always works too."
+msgstr "與左搖桿一樣駕駛。控制器的左搖桿也始終可用。"
+
+msgctxt "UI_BIND_DESC_CAMERA"
+msgid ""
+"Turns the camera like the right stick. The mouse and the controller's right stick always work too."
+msgstr "與右搖桿一樣轉動鏡頭。滑鼠和控制器的右搖桿也始終可用。"
+
+msgctxt "UI_KEY_SPACE"
+msgid "Space"
+msgstr "空白鍵"
+
+msgctxt "UI_KEY_TAB"
+msgid "Tab"
+msgstr "Tab"
+
+msgctxt "UI_KEY_LSHIFT"
+msgid "Left Shift"
+msgstr "左 Shift"
+
+msgctxt "UI_KEY_LCTRL"
+msgid "Left Ctrl"
+msgstr "左 Ctrl"
+
+msgctxt "UI_KEY_UP"
+msgid "Up arrow"
+msgstr "上方向鍵"
+
+msgctxt "UI_KEY_DOWN"
+msgid "Down arrow"
+msgstr "下方向鍵"
+
+msgctxt "UI_KEY_LEFT"
+msgid "Left arrow"
+msgstr "左方向鍵"
+
+msgctxt "UI_KEY_RIGHT"
+msgid "Right arrow"
+msgstr "右方向鍵"
+
+msgctxt "UI_KEY_MOUSE_L"
+msgid "Left mouse"
+msgstr "滑鼠左鍵"
+
+msgctxt "UI_KEY_MOUSE_R"
+msgid "Right mouse"
+msgstr "滑鼠右鍵"
+
+msgctxt "UI_KEY_MOUSE_M"
+msgid "Middle mouse"
+msgstr "滑鼠中鍵"
+
+msgctxt "UI_KEY_MOUSE_X1"
+msgid "Mouse 4"
+msgstr "滑鼠 4"
+
+msgctxt "UI_KEY_MOUSE_X2"
+msgid "Mouse 5"
+msgstr "滑鼠 5"
+
+msgctxt "UI_KEY_ENTER"
+msgid "Enter"
+msgstr "Enter"
+
+msgctxt "UI_KEY_BACKSPACE"
+msgid "Backspace"
+msgstr "Backspace"
+
+msgctxt "UI_KEY_RSHIFT"
+msgid "Right Shift"
+msgstr "右 Shift"
+
+msgctxt "UI_KEY_RCTRL"
+msgid "Right Ctrl"
+msgstr "右 Ctrl"
+
+msgctxt "UI_KEY_LALT"
+msgid "Alt"
+msgstr "Alt"
+
+msgctxt "UI_KEY_CAPSLOCK"
+msgid "Caps Lock"
+msgstr "Caps Lock"
+
+msgctxt "UI_KEY_INSERT"
+msgid "Insert"
+msgstr "Insert"
+
+msgctxt "UI_KEY_DELETE"
+msgid "Delete"
+msgstr "Delete"
+
+msgctxt "UI_KEY_HOME"
+msgid "Home"
+msgstr "Home"
+
+msgctxt "UI_KEY_END"
+msgid "End"
+msgstr "End"
+
+msgctxt "UI_KEY_PAGEUP"
+msgid "Page Up"
+msgstr "Page Up"
+
+msgctxt "UI_KEY_PAGEDOWN"
+msgid "Page Down"
+msgstr "Page Down"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_KEY_NUM_FMT"
+msgid "Num %s"
+msgstr "數字鍵盤 %s"
+
+msgctxt "UI_PAD_SOUTH"
+msgid "Bottom button"
+msgstr "下鍵"
+
+msgctxt "UI_PAD_EAST"
+msgid "Right button"
+msgstr "右鍵"
+
+msgctxt "UI_PAD_WEST"
+msgid "Left button"
+msgstr "左鍵"
+
+msgctxt "UI_PAD_NORTH"
+msgid "Top button"
+msgstr "上鍵"
+
+msgctxt "UI_PAD_LSTICK"
+msgid "Left stick"
+msgstr "左搖桿"
+
+msgctxt "UI_PAD_RSTICK"
+msgid "Right stick"
+msgstr "右搖桿"
+
+msgctxt "UI_PAD_L"
+msgid "Left bumper"
+msgstr "左肩鍵"
+
+msgctxt "UI_PAD_R"
+msgid "Right bumper"
+msgstr "右肩鍵"
+
+msgctxt "UI_PAD_START"
+msgid "Start"
+msgstr "開始"
+
+msgctxt "UI_PAD_BACK"
+msgid "Back"
+msgstr "返回"
+
+msgctxt "UI_PAD_DPAD_LEFT"
+msgid "D-pad left"
+msgstr "方向鍵 左"
+
+msgctxt "UI_PAD_DPAD_UP"
+msgid "D-pad up"
+msgstr "方向鍵 上"
+
+msgctxt "UI_PAD_DPAD_RIGHT"
+msgid "D-pad right"
+msgstr "方向鍵 右"
+
+msgctxt "UI_PAD_DPAD_DOWN"
+msgid "D-pad down"
+msgstr "方向鍵 下"
+
+msgctxt "UI_PAD_ZL"
+msgid "Left trigger"
+msgstr "左扳機"
+
+msgctxt "UI_PAD_ZR"
+msgid "Right trigger"
+msgstr "右扳機"
+
+msgctxt "UI_PAD_CROSS"
+msgid "Cross"
+msgstr "×"
+
+msgctxt "UI_PAD_CIRCLE"
+msgid "Circle"
+msgstr "○"
+
+msgctxt "UI_PAD_SQUARE"
+msgid "Square"
+msgstr "□"
+
+msgctxt "UI_PAD_TRIANGLE"
+msgid "Triangle"
+msgstr "△"
+
+msgctxt "UI_MENU_MENU_LANG"
+msgid "Menu language"
+msgstr "選單語言"
+
+msgctxt "UI_MENU_MENU_LANG_DESC"
+msgid "Language of this menu and the overlay."
+msgstr "此選單和顯示層所用的語言。"
+
+msgctxt "UI_MENU_MENU_LANG_AUTO"
+msgid "Automatic (from the system)"
+msgstr "自動（跟隨系統）"
+
+msgctxt "UI_MENU_ADV_WARNING"
+msgid "These settings are for testing and troubleshooting. Change them only when you know why."
+msgstr "這些設定用於測試和排除問題。只有在清楚原因時才修改。"
+
+msgctxt "UI_MENU_GROUP_SCHED"
+msgid "Scheduling"
+msgstr "排程"
+
+msgctxt "UI_MENU_GROUP_SHADERS"
+msgid "Shaders and pipelines"
+msgstr "著色器與管線"
+
+msgctxt "UI_MENU_GROUP_TEXMEM"
+msgid "Textures and memory"
+msgstr "紋理與記憶體"
+
+msgctxt "UI_MENU_GROUP_FIXES"
+msgid "Render fixes"
+msgstr "繪製修正"
+
+msgctxt "UI_MENU_GROUP_VULKAN"
+msgid "Vulkan"
+msgstr "Vulkan"
+
+msgctxt "UI_MENU_GROUP_DIAG"
+msgid "Diagnostics"
+msgstr "診斷"
+
+msgctxt "UI_MENU_ASYNC_PREEMPT"
+msgid "Virtual core preemption"
+msgstr "虛擬核心搶佔"
+
+msgctxt "UI_MENU_ASYNC_PREEMPT_DESC"
+msgid "Lets a game thread interrupt another one on the same virtual core."
+msgstr "允許遊戲執行緒中斷同一虛擬核心上的另一個執行緒。"
+
+msgctxt "UI_MENU_PREEMPT_OFF"
+msgid "Off"
+msgstr "OFF"
+
+msgctxt "UI_MENU_PREEMPT_ON"
+msgid "On"
+msgstr "ON"
+
+msgctxt "UI_MENU_PREEMPT_INHERIT"
+msgid "Inheritance only"
+msgstr "僅繼承"
+
+msgctxt "UI_MENU_REPLAY_ASYNC"
+msgid "GPU frame prep on its own thread"
+msgstr "GPU 幀準備使用獨立執行緒"
+
+msgctxt "UI_MENU_REPLAY_ASYNC_DESC"
+msgid ""
+"Prepares frames for the GPU on a separate thread instead of the game thread. Adds up to one frame "
+"of latency."
+msgstr "在獨立的執行緒而不是遊戲執行緒中為 GPU 準備幀。最多增加一幀延遲。"
+
+msgctxt "UI_MENU_FREE_CORES"
+msgid "Virtual core gate"
+msgstr "虛擬核心限制"
+
+msgctxt "UI_MENU_FREE_CORES_DESC"
+msgid "Lets only one thread run per virtual core, as on the console."
+msgstr "與主機一樣，每個虛擬核心只執行一個執行緒。"
+
+msgctxt "UI_MENU_TIMER_1MS"
+msgid "1 ms Windows timer"
+msgstr "1 ms Windows 計時器"
+
+msgctxt "UI_MENU_TIMER_1MS_DESC"
+msgid "Raises the system timer resolution to 1 ms for steadier frame pacing."
+msgstr "將系統計時器精度提高到 1 ms，使幀間隔更平穩。"
+
+msgctxt "UI_MENU_PIPE_WAIT"
+msgid "Waiting draw handling"
+msgstr "等待中的繪製處理"
+
+msgctxt "UI_MENU_PIPE_WAIT_DESC"
+msgid ""
+"Default keeps the current scheduling with a reserved worker for waiting draws; Old (draw) uses "
+"the previous scheduling."
+msgstr "「預設」沿用目前的排程方式，並為等待中的繪製保留一個專用工作執行緒；「舊（繪製）」使用之前的排程方式。"
+
+msgctxt "UI_MENU_PIPE_WAIT_DEFAULT"
+msgid "Default"
+msgstr "預設"
+
+msgctxt "UI_MENU_PIPE_WAIT_DRAW"
+msgid "Old (draw)"
+msgstr "舊（繪製）"
+
+msgctxt "UI_MENU_PIPE_SKIP"
+msgid "Draws skipped while a pipeline builds"
+msgstr "管線建置期間跳過的繪製"
+
+msgctxt "UI_MENU_PIPE_SKIP_DESC"
+msgid "Which draws are dropped instead of waiting for their pipeline."
+msgstr "哪些繪製會被捨棄，而不是等待其管線。"
+
+msgctxt "UI_MENU_PIPE_SKIP_STRICT"
+msgid "Strict"
+msgstr "嚴格"
+
+msgctxt "UI_MENU_PIPE_SKIP_ANY"
+msgid "Any"
+msgstr "任意"
+
+msgctxt "UI_MENU_PIPE_SKIP_FULLSCREEN"
+msgid "Fullscreen passes"
+msgstr "全螢幕通道"
+
+msgctxt "UI_MENU_PIPE_PREBUILD"
+msgid "Pipeline prebuild"
+msgstr "管線預先建置"
+
+msgctxt "UI_MENU_PIPE_PREBUILD_DESC"
+msgid "Builds known pipelines ahead of time."
+msgstr "提前建置已知的管線。"
+
+msgctxt "UI_MENU_GPL"
+msgid "Graphics pipeline library"
+msgstr "圖形管線程式庫"
+
+msgctxt "UI_MENU_GPL_DESC"
+msgid "Uses the Vulkan pipeline library extension; turn off if your driver misbehaves with it."
+msgstr "使用 Vulkan 管線程式庫擴充功能；如果驅動程式出現異常，請關閉。"
+
+msgctxt "UI_MENU_ASTC"
+msgid "ASTC texture decoding"
+msgstr "ASTC 紋理解碼"
+
+msgctxt "UI_MENU_ASTC_DESC"
+msgid "Where compressed ASTC textures are decoded."
+msgstr "壓縮的 ASTC 紋理在何處解碼。"
+
+msgctxt "UI_MENU_ASTC_AUTO"
+msgid "Automatic"
+msgstr "自動"
+
+msgctxt "UI_MENU_ASTC_GPU"
+msgid "GPU shader"
+msgstr "GPU 著色器"
+
+msgctxt "UI_MENU_ASTC_NATIVE"
+msgid "Native"
+msgstr "原生"
+
+msgctxt "UI_MENU_ASTC_CPU"
+msgid "CPU"
+msgstr "CPU"
+
+msgctxt "UI_MENU_MEMORY"
+msgid "GPU memory mode"
+msgstr "GPU 記憶體模式"
+
+msgctxt "UI_MENU_MEMORY_DESC"
+msgid "How game memory is shared with the GPU."
+msgstr "遊戲記憶體與 GPU 共用的方式。"
+
+msgctxt "UI_MENU_MEMORY_AUTO"
+msgid "Automatic"
+msgstr "自動"
+
+msgctxt "UI_MENU_MEMORY_IMPORT"
+msgid "Import"
+msgstr "匯入"
+
+msgctxt "UI_MENU_MEMORY_MIRROR"
+msgid "Mirror"
+msgstr "鏡像"
+
+msgctxt "UI_MENU_MEMORY_VERIFY"
+msgid "Verify"
+msgstr "驗證"
+
+msgctxt "UI_MENU_TEX_ALIAS"
+msgid "Texture aliasing"
+msgstr "紋理別名"
+
+msgctxt "UI_MENU_TEX_ALIAS_DESC"
+msgid ""
+"A new texture created over a live texture's memory starts with that content instead of empty."
+msgstr "在仍在使用的紋理的記憶體上建立新紋理時，新紋理會以原有內容開始，而不是空白。"
+
+msgctxt "UI_MENU_FIX_C0"
+msgid "Constant buffer fix"
+msgstr "常數緩衝區修正"
+
+msgctxt "UI_MENU_FIX_C0_DESC"
+msgid ""
+"Fills the driver-reserved constant bank c0 (storage sizes, dispatch size, point size, base "
+"instance) instead of reading zeros."
+msgstr "填入驅動程式保留的常數庫 c0（儲存大小、調度大小、點大小、基礎實體），而不是讀到零。"
+
+msgctxt "UI_MENU_FIX_ZERO"
+msgid "Zero new GPU memory"
+msgstr "新 GPU 記憶體清零"
+
+msgctxt "UI_MENU_FIX_ZERO_DESC"
+msgid "New GPU memory pools start zero-filled, as Switch memory does."
+msgstr "與 Switch 的記憶體一樣，新的 GPU 記憶體池以全零填充的狀態開始。"
+
+msgctxt "UI_MENU_BIND_SKIP"
+msgid "Skip repeated binds"
+msgstr "跳過重複綁定"
+
+msgctxt "UI_MENU_BIND_SKIP_DESC"
+msgid "Optimisation: skips bindings that did not change."
+msgstr "最佳化：跳過未發生變化的綁定。"
+
+msgctxt "UI_MENU_SHADER_MEMO"
+msgid "Shader memo"
+msgstr "著色器快取"
+
+msgctxt "UI_MENU_SHADER_MEMO_DESC"
+msgid "Optimisation: remembers shader lookups."
+msgstr "最佳化：記住著色器的查找結果。"
+
+msgctxt "UI_MENU_PIPE_MEMO"
+msgid "Pipeline memo"
+msgstr "管線快取"
+
+msgctxt "UI_MENU_PIPE_MEMO_DESC"
+msgid "Optimisation: reuses the previous draw's pipeline when its state repeats."
+msgstr "最佳化：狀態重複時重複使用上一次繪製的管線。"
+
+msgctxt "UI_MENU_TEX_MEMO"
+msgid "Texture binding memo"
+msgstr "紋理綁定快取"
+
+msgctxt "UI_MENU_TEX_MEMO_DESC"
+msgid "Optimisation: remembers texture descriptors between draws."
+msgstr "最佳化：在多次繪製之間記住紋理描述元。"
+
+msgctxt "UI_MENU_DESC_TEMPLATE"
+msgid "Descriptor templates"
+msgstr "描述元範本"
+
+msgctxt "UI_MENU_DESC_TEMPLATE_DESC"
+msgid "Optimisation: updates descriptors in bulk."
+msgstr "最佳化：批次更新描述元。"
+
+msgctxt "UI_MENU_PUSH_SKIP"
+msgid "Skip repeated push constants"
+msgstr "跳過重複的推送常數"
+
+msgctxt "UI_MENU_PUSH_SKIP_DESC"
+msgid "Optimisation: skips push constants that did not change."
+msgstr "最佳化：跳過未發生變化的推送常數。"
+
+msgctxt "UI_MENU_SPLIT_DRAWS"
+msgid "Early GPU submission"
+msgstr "提前提交 GPU 工作"
+
+msgctxt "UI_MENU_SPLIT_DRAWS_DESC"
+msgid ""
+"Submits GPU work in parts every N draws between passes so the GPU starts earlier; 0 turns it off."
+msgstr "在多個通道之間，每 N 次繪製就分批提交 GPU 工作，讓 GPU 更早開始；0 為關閉。"
+
+msgctxt "UI_MENU_VK_VALIDATION"
+msgid "Validation layer"
+msgstr "驗證層"
+
+msgctxt "UI_MENU_VK_VALIDATION_DESC"
+msgid "Checks every Vulkan call and slows the game down a lot."
+msgstr "檢查每一次 Vulkan 呼叫，會讓遊戲明顯變慢。"
+
+msgctxt "UI_MENU_VK_VALIDATION_MISSING"
+msgid "The validation layer is not installed."
+msgstr "未安裝驗證層。"
+
+msgctxt "UI_MENU_VK_DYN_VERTEX"
+msgid "Dynamic vertex state"
+msgstr "動態頂點狀態"
+
+msgctxt "UI_MENU_VK_DYN_VERTEX_DESC"
+msgid "Forces dynamic vertex input on or off; the default depends on the GPU."
+msgstr "強制開啟或關閉動態頂點輸入；預設值取決於 GPU。"
+
+msgctxt "UI_MENU_VK_SUBGROUP_PIN"
+msgid "Pin subgroup size"
+msgstr "固定子群組大小"
+
+msgctxt "UI_MENU_VK_SUBGROUP_PIN_DESC"
+msgid "Fixes the shader subgroup size."
+msgstr "固定著色器的子群組大小。"
+
+msgctxt "UI_MENU_TRACE"
+msgid "Performance log"
+msgstr "效能記錄"
+
+msgctxt "UI_MENU_TRACE_DESC"
+msgid "Writes frame timings to a file."
+msgstr "將幀耗時寫入檔案。"
+
+msgctxt "UI_MENU_FLIGHT"
+msgid "Flight recorder"
+msgstr "飛行記錄器"
+
+msgctxt "UI_MENU_FLIGHT_DESC"
+msgid "Keeps a short history and saves it when a frame freezes."
+msgstr "保留一小段歷史記錄，並在畫面卡住時儲存下來。"
+
+msgctxt "UI_MENU_FLIGHT_SPIKE_MS"
+msgid "Freeze threshold (ms)"
+msgstr "卡頓門檻（ms）"
+
+msgctxt "UI_MENU_FLIGHT_SPIKE_MS_DESC"
+msgid "Frame time that counts as a freeze."
+msgstr "被視為卡住的幀耗時。"
+
+msgctxt "UI_MENU_INPUT_RECORD"
+msgid "Input recording"
+msgstr "輸入錄製"
+
+msgctxt "UI_MENU_INPUT_RECORD_DESC"
+msgid "Writes your inputs to a file for bug reports."
+msgstr "將你的輸入寫入檔案，用於提交錯誤報告。"
+
+msgctxt "UI_MENU_OPEN_LOG"
+msgid "Open log folder"
+msgstr "開啟記錄資料夾"
+
+msgctxt "UI_MENU_OPEN_LOG_DESC"
+msgid "Shows the folder with the log files."
+msgstr "顯示存放記錄檔的資料夾。"
+
+msgctxt "UI_MENU_COPY_INFO"
+msgid "Copy system info"
+msgstr "複製系統資訊"
+
+msgctxt "UI_MENU_COPY_INFO_DESC"
+msgid "Copies GPU, driver, CPU, RAM and changed settings to the clipboard."
+msgstr "將 GPU、驅動程式、CPU、RAM 和已變更的設定複製到剪貼簿。"
+
+msgctxt "UI_MENU_COPY_INFO_DONE"
+msgid "Copied"
+msgstr "已複製"
+
+msgctxt "UI_MENU_ACTION_FAILED"
+msgid "did not work"
+msgstr "未能完成"
+
+msgctxt "UI_MENU_RESET"
+msgid "Reset all settings to defaults"
+msgstr "將所有設定還原為預設值"
+
+msgctxt "UI_MENU_RESET_DESC"
+msgid "Applies to every tab."
+msgstr "適用於所有分頁。"
+
+msgctxt "UI_MENU_RESET_CONFIRM"
+msgid "Reset every setting to its default?"
+msgstr "要將所有設定還原為預設值嗎？"
+
+msgctxt "UI_MENU_RESET_YES"
+msgid "Reset"
+msgstr "重設"
+
+msgctxt "UI_MENU_RESET_NO"
+msgid "Cancel"
+msgstr "取消"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_MENU_OV_FPS"
+msgid "%.0f FPS"
+msgstr "%.0f FPS"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_MENU_OV_FRAME_MS"
+msgid "%.1f ms"
+msgstr "%.1f ms"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_MENU_OV_GAME_PCT"
+msgid "game %.0f%%"
+msgstr "遊戲 %.0f%%"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_MENU_OV_MAX_MS"
+msgid "max %.1f ms"
+msgstr "最高 %.1f ms"
+
+msgctxt "UI_MENU_OV_GPU"
+msgid "GPU"
+msgstr "GPU"
+
+msgctxt "UI_MENU_OV_CPU"
+msgid "CPU"
+msgstr "CPU"
+
+msgctxt "UI_MENU_OV_RAM"
+msgid "RAM"
+msgstr "RAM"
+
+msgctxt "UI_MENU_OV_VRAM"
+msgid "VRAM"
+msgstr "VRAM"
+
+msgctxt "UI_MENU_OV_NONE"
+msgid "-"
+msgstr "-"
+
+msgctxt "UI_MENU_OV_REPLAY"
+msgid "GPU frame prep"
+msgstr "GPU 幀準備"
+
+msgctxt "UI_MENU_OV_GPU_TIME"
+msgid "GPU busy per frame"
+msgstr "每幀 GPU 佔用時間"
+
+msgctxt "UI_MENU_OV_PIPE_WAIT"
+msgid "Pipeline waits"
+msgstr "管線等待"
+
+msgctxt "UI_MENU_OV_TEX_UPLOADS"
+msgid "Texture uploads"
+msgstr "紋理上傳"
+
+msgctxt "UI_MENU_OV_MAIN_CPU"
+msgid "Game main thread CPU"
+msgstr "遊戲主執行緒 CPU"
+
+msgctxt "UI_MENU_OV_RENDER_CPU"
+msgid "Render thread CPU"
+msgstr "繪製執行緒 CPU"
+
+msgctxt "UI_MENU_OV_SLOW"
+msgid "Frames over 33 ms"
+msgstr "超過 33 ms 的幀"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_MENU_OV_PER_MIN"
+msgid "%.0f last minute"
+msgstr "最近一分鐘 %.0f"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_MENU_OV_FMT_PCT"
+msgid "%.0f%%"
+msgstr "%.0f%%"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_MENU_OV_FMT_TEMP"
+msgid "%.0f °C"
+msgstr "%.0f °C"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_MENU_OV_FMT_POWER"
+msgid "%.0f W"
+msgstr "%.0f W"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_MENU_OV_FMT_MHZ"
+msgid "%.0f MHz"
+msgstr "%.0f MHz"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_MENU_OV_FMT_GB"
+msgid "%.1f GB"
+msgstr "%.1f GB"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_MENU_OV_FMT_GB_OF"
+msgid "/ %.1f GB"
+msgstr "/ %.1f GB"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_MENU_OV_GAME_GB"
+msgid "game %.1f GB"
+msgstr "遊戲 %.1f GB"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_MENU_OV_FMT_MS"
+msgid "%.2f ms"
+msgstr "%.2f ms"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_MENU_OV_PER_FRAME"
+msgid "%.1f per frame"
+msgstr "每幀 %.1f"
+
+msgctxt "UI_MENU_OV_WINDOW"
+msgid "Window"
+msgstr "視窗"
+
+msgctxt "UI_MENU_OV_OUTPUT"
+msgid "Game image"
+msgstr "遊戲畫面"
+
+msgctxt "UI_MENU_OV_SCALING"
+msgid "Scaling"
+msgstr "縮放"
+
+msgctxt "UI_MENU_OV_PRESENT"
+msgid "Presentation"
+msgstr "呈現方式"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_MENU_OV_FMT_SIZE"
+msgid "%ux%u"
+msgstr "%ux%u"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_MENU_OV_FMT_FSR"
+msgid "AMD FSR 1, sharpness %d%%"
+msgstr "AMD FSR 1，銳利度 %d%%"
+
+msgctxt "UI_MENU_OV_SCALE_NONE"
+msgid "none (1:1)"
+msgstr "無（1:1）"
+
+msgctxt "UI_MENU_OV_SCALE_BILINEAR"
+msgid "bilinear"
+msgstr "雙線性"
+
+msgctxt "UI_LAUNCH_SUBTITLE"
+msgid "Static recompilation for PC"
+msgstr "PC 版靜態重編譯"
+
+msgctxt "UI_LAUNCH_PLAY"
+msgid "Play"
+msgstr "開始遊戲"
+
+msgctxt "UI_LAUNCH_SETTINGS"
+msgid "Settings"
+msgstr "設定"
+
+msgctxt "UI_LAUNCH_FILES"
+msgid "Game files"
+msgstr "遊戲檔案"
+
+msgctxt "UI_LAUNCH_QUIT"
+msgid "Quit"
+msgstr "結束"
+
+msgctxt "UI_LAUNCH_BACK"
+msgid "Back"
+msgstr "返回"
+
+msgctxt "UI_LAUNCH_FILES_READY"
+msgid "Game files ready (Orbitals Deluxe Edition 1.0.5)"
+msgstr "遊戲檔案已就緒（Orbitals Deluxe Edition 1.0.5）"
+
+msgctxt "UI_LAUNCH_FILES_MISSING"
+msgid "Game files not set up"
+msgstr "遊戲檔案尚未設定"
+
+msgctxt "UI_LAUNCH_FILES_FOLDER"
+msgid "Game folder"
+msgstr "遊戲資料夾"
+
+msgctxt "UI_LAUNCH_PICK_GAME_DIR"
+msgid "Choose game folder"
+msgstr "選擇遊戲資料夾"
+
+msgctxt "UI_LAUNCH_GAME_DIR_HELP"
+msgid ""
+"Choose where to install the game, or select an existing installation. The launcher reopens with "
+"that folder. Existing files are kept where they are."
+msgstr "選擇遊戲的安裝位置，或選擇已有的安裝。啟動器會以該資料夾重新開啟。已有的檔案保留在原處。"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_LAUNCH_GAME_DIR_INVALID"
+msgid ""
+"This game folder could not be selected. Choose a folder whose full path is at most %d UTF-8 bytes "
+"and contains no line breaks."
+msgstr "無法選擇此遊戲資料夾。請選擇完整路徑不超過 %d 個 UTF-8 位元組且不含換行的資料夾。"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_LAUNCH_GAME_DIR_INVALID_WIN32"
+msgid ""
+"This game folder could not be selected. On Windows, choose a folder without line breaks whose "
+"full path is at most %d UTF-16 units to leave room for the game's files."
+msgstr "無法選擇此遊戲資料夾。在 Windows 上，請選擇不含換行、完整路徑不超過 %d 個 UTF-16 單位的資料夾，以便為遊戲檔案保留空間。"
+
+msgctxt "UI_LAUNCH_FILES_HELP"
+msgid ""
+"The game does not come with the port: it needs your own copy of Orbitals with its update, dumped "
+"from your console (a .nup package, or the exefs and romfs folders). The setup checks its build "
+"and builds the game code on this computer."
+msgstr ""
+"本移植不包含遊戲：需要你自己從主機傾印的 Orbitals 副本及其更新（.nup 套件，或 exefs 和 romfs 資料夾）。安裝程式會檢查其版本，並在這台電腦上編譯遊戲程式碼。"
+
+msgctxt "UI_LAUNCH_NO_TOOLS"
+msgid "The setup tools are missing: the setup/ folder that comes with the program."
+msgstr "缺少設定工具：即隨程式附帶的 setup/ 資料夾。"
+
+msgctxt "UI_LAUNCH_SOURCE"
+msgid "Your copy"
+msgstr "你的副本"
+
+msgctxt "UI_LAUNCH_PICK"
+msgid "Choose folder"
+msgstr "選擇資料夾"
+
+msgctxt "UI_LAUNCH_PICK_NUP"
+msgid "Choose .nup or .nx file"
+msgstr "選擇 .nup 或 .nx 檔案"
+
+msgctxt "UI_LAUNCH_ROMFS_MODE"
+msgid "RomFS (23 GB)"
+msgstr "RomFS（23 GB）"
+
+msgctxt "UI_LAUNCH_ROMFS_COPY"
+msgid "Copy into the game folder"
+msgstr "複製到遊戲資料夾"
+
+msgctxt "UI_LAUNCH_ROMFS_LINK"
+msgid "Use it where it is"
+msgstr "在原位置使用"
+
+msgctxt "UI_LAUNCH_SETUP"
+msgid "Set up"
+msgstr "開始設定"
+
+msgctxt "UI_LAUNCH_SETUP_AGAIN"
+msgid "Set up again"
+msgstr "重新設定"
+
+msgctxt "UI_LAUNCH_CANCEL"
+msgid "Cancel"
+msgstr "取消"
+
+msgctxt "UI_LAUNCH_SETUP_DONE"
+msgid "Set up finished: the game is ready."
+msgstr "設定完成：遊戲已就緒。"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_LAUNCH_SETUP_FAILED"
+msgid "Set up failed: %s"
+msgstr "設定失敗：%s"
+
+#. No %s: the detail is not shown.
+msgctxt "UI_SETUP_ERR_SOURCE"
+msgid "there is no earlier setup in this folder: choose the folder of your copy"
+msgstr "此資料夾中沒有先前的設定：請選擇你的副本所在的資料夾"
+
+#. %s: the folder the player chose.
+msgctxt "UI_SETUP_ERR_NOGAME"
+msgid "no exefs/main and romfs/ in %s: choose the folder of your copy of the game"
+msgstr "%s 中沒有 exefs/main 和 romfs/：請選擇你的遊戲副本所在的資料夾"
+
+#. %s: the path of the exefs/main file.
+msgctxt "UI_SETUP_ERR_ENCRYPTED"
+msgid "%s is encrypted: the game's exefs must be decrypted"
+msgstr "%s 已加密：遊戲的 exefs 必須先解密"
+
+#. %s: the build id of the player's exefs/main (hexadecimal).
+msgctxt "UI_SETUP_ERR_VERSION"
+msgid "the game is not a supported build of Orbitals (build id %s)"
+msgstr "此遊戲不是支援的 Orbitals 版本（build id %s）"
+
+#. %s: how many files the player's RomFS has.
+msgctxt "UI_SETUP_ERR_ROMFS"
+msgid "the RomFS has only %s files: the copy is incomplete, copy it again"
+msgstr "RomFS 只有 %s 個檔案：副本不完整，請重新複製"
+
+#. %s: the failing tool's message, in English. logs/setup.log is a file name: keep it.
+msgctxt "UI_SETUP_ERR_FAILED"
+msgid "%s (more in logs/setup.log)"
+msgstr "%s（詳見 logs/setup.log）"
+
+#. %s: the system's error message, in English. logs/setup.log is a file name: keep it.
+msgctxt "UI_SETUP_ERR_IO"
+msgid "file error: %s (more in logs/setup.log)"
+msgstr "檔案錯誤：%s（詳見 logs/setup.log）"
+
+msgctxt "UI_SETUP_ERR_STOPPED"
+msgid "the setup stopped (more in logs/setup.log)"
+msgstr "設定已停止（詳見 logs/setup.log）"
+
+msgctxt "UI_SETUP_ERR_CANCELLED"
+msgid "cancelled"
+msgstr "已取消"
+
+msgctxt "UI_SETUP_ERR_NO_SETUP"
+msgid "the setup tools are missing (setup/ next to the program): extract the release again"
+msgstr "缺少設定工具（程式旁的 setup/）：請重新解壓縮發行包"
+
+#. %s: the folder of the last setup's game files, which no longer exists.
+msgctxt "UI_SETUP_ERR_MOVED"
+msgid "your game files are no longer in %s: if you moved or renamed that folder, choose it again"
+msgstr "遊戲檔案已不在 %s 中：如果你移動或重新命名了該資料夾，請重新選擇"
+
+#. %s: the two versions, e.g. "RomFS 1.8.0, exefs/main 1.0.0".
+msgctxt "UI_SETUP_ERR_MISMATCH"
+msgid ""
+"the game files and the program are from different versions (%s): take exefs and romfs from the "
+"same dump, with the update applied to both"
+msgstr "遊戲檔案與程式的版本不同（%s）：請從同一份傾印中取出 exefs 和 romfs，並對兩者都套用更新"
+
+msgctxt "UI_LAUNCH_STEP_CHECK"
+msgid "Check the copy"
+msgstr "檢查副本"
+
+msgctxt "UI_LAUNCH_STEP_EXEFS"
+msgid "Copy exefs"
+msgstr "複製 exefs"
+
+msgctxt "UI_LAUNCH_STEP_ROMFS"
+msgid "RomFS"
+msgstr "RomFS"
+
+msgctxt "UI_LAUNCH_STEP_GENERATE"
+msgid "Generate the game code"
+msgstr "產生遊戲程式碼"
+
+msgctxt "UI_LAUNCH_STEP_COMPILE"
+msgid "Compile the game code"
+msgstr "編譯遊戲程式碼"
+
+msgctxt "UI_LAUNCH_STEP_SHADERS"
+msgid "Translate the shaders"
+msgstr "轉換著色器"
+
+msgctxt "UI_LAUNCH_STEP_WARM"
+msgid "Warm up the graphics (one minute)"
+msgstr "預熱圖形（一分鐘）"
+
+msgctxt "UI_LAUNCH_STEP_CLEANUP"
+msgid "Clean up"
+msgstr "清理"
+
+msgctxt "UI_LAUNCH_STEP_KEPT"
+msgid "kept"
+msgstr "已保留"
+
+msgctxt "UI_LAUNCH_SHORTCUT"
+msgid "Desktop shortcut"
+msgstr "桌面捷徑"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_LAUNCH_SHORTCUT_DONE"
+msgid "Shortcut made: %s"
+msgstr "已建立捷徑：%s"
+
+msgctxt "UI_LAUNCH_SHORTCUT_FAILED"
+msgid "Could not make the shortcut"
+msgstr "無法建立捷徑"
+
+msgctxt "UI_LAUNCH_MODS"
+msgid "Mods"
+msgstr "模組"
+
+msgctxt "UI_LAUNCH_MODS_EMPTY"
+msgid "No mods yet: import a zip or a folder below"
+msgstr "還沒有模組：在下面匯入 zip 或資料夾"
+
+msgctxt "UI_MOD_IMPORT_ZIP"
+msgid "Import zip..."
+msgstr "匯入 zip..."
+
+msgctxt "UI_MOD_IMPORT_FOLDER"
+msgid "Import folder..."
+msgstr "匯入資料夾..."
+
+msgctxt "UI_MOD_NAME"
+msgid "Name"
+msgstr "名稱"
+
+msgctxt "UI_MOD_IMPORT"
+msgid "Import"
+msgstr "匯入"
+
+msgctxt "UI_MOD_DELETE"
+msgid "Delete"
+msgstr "刪除"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_MOD_CONFIRM"
+msgid "Delete %s?"
+msgstr "刪除%s？"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_MOD_ROMFS"
+msgid "%d files"
+msgstr "%d 個檔案"
+
+msgctxt "UI_MOD_ROMFS_1"
+msgid "1 file"
+msgstr "1 個檔案"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_MOD_CODE_BUILD"
+msgid "code: built for %s"
+msgstr "程式碼：適用於 %s"
+
+msgctxt "UI_MOD_CODE_PORT"
+msgid "code: needs a ported build"
+msgstr "程式碼：需要移植"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_MOD_CODE_SWITCHES"
+msgid "code: %d switches"
+msgstr "程式碼：%d 個開關"
+
+msgctxt "UI_MOD_CODE_SWITCH_1"
+msgid "code: 1 switch"
+msgstr "程式碼：1 個開關"
+
+msgctxt "UI_MOD_MERGING"
+msgid "Merging mods..."
+msgstr "正在合併模組..."
+
+msgctxt "UI_MOD_CONFLICTS"
+msgid "Conflicts: click the winner to change it"
+msgstr "衝突：點選勝出者以變更"
+
+msgctxt "UI_MOD_VANILLA"
+msgid "Vanilla"
+msgstr "原版"
+
+msgctxt "UI_MOD_IMPORTED"
+msgid "Imported %s"
+msgstr "已匯入 %s"
+
+msgctxt "UI_MOD_RESOLVE"
+msgid "Resolve conflicts"
+msgstr "解決衝突"
+
+msgctxt "UI_MOD_OK"
+msgid "OK"
+msgstr "確定"
+
+msgctxt "UI_MOD_ERR_LAYOUT"
+msgid "Not a mod: no romfs/ or exefs/ inside"
+msgstr "不是模組：裡面沒有 romfs/ 或 exefs/"
+
+msgctxt "UI_MOD_ERR_NAME"
+msgid "That name is taken or empty"
+msgstr "該名稱已被使用或為空"
+
+msgctxt "UI_MOD_ERR_IO"
+msgid "Could not copy the files"
+msgstr "無法複製檔案"
+
+msgctxt "UI_MOD_ERR_NOPORT"
+msgid "Not ported yet: no code patches for this game"
+msgstr "尚未移植：沒有適用於此遊戲的程式碼補丁"
+
+msgctxt "UI_MOD_ERR_NOGAME"
+msgid "Game files not set up: do that on the Files page first"
+msgstr "尚未設定遊戲檔案：請先在檔案頁面完成設定"
+
+#. Above one button per mod found in the archive (its folder inside the archive).
+msgctxt "UI_MOD_VARIANTS"
+msgid "This archive holds several mods: pick the one to import"
+msgstr "此壓縮檔包含多個模組：請選擇要匯入的那個"
+
+msgctxt "UI_MOD_ERR_BIG"
+msgid "Too large to be a mod (over 4 GB or 50000 files)"
+msgstr "太大，不像是模組（超過 4 GB 或 50000 個檔案）"
+
+msgctxt "UI_MOD_ERR_UNPACK"
+msgid "Cannot open this archive: .rar and .7z need bsdtar (libarchive) installed"
+msgstr "無法開啟此壓縮檔：.rar 與 .7z 需要安裝 bsdtar（libarchive）"
+
+#. Under an installed mod that replaces the game's graphics settings archive (general_format).
+msgctxt "UI_MOD_WARN_GRAPHICS"
+msgid ""
+"Changes the game's graphics settings: the port's own settings (resolution, quality) go on top, so "
+"this mod may do less than on a console, look worse or misbehave"
+msgstr "變更遊戲的圖形設定：移植版自己的設定（解析度、畫質）會疊加其上，因此此模組的效果可能不如主機版，畫面可能較差或出現異常"
+
+#. Above every mod install and import.
+msgctxt "UI_MOD_RISK"
+msgid ""
+"Mods are made by other people and are not tested by this project. A mod can crash the game or "
+"damage your save: read its page first, keep a copy of your save, and report a mod's problems to "
+"its author."
+msgstr "模組由其他人製作，本專案並未測試。模組可能導致遊戲當機或損壞存檔：請先閱讀其頁面，備份你的存檔，並將模組的問題回報給其作者。"
+
+msgctxt "UI_MOD_RISK_ACK"
+msgid "I understand"
+msgstr "我了解了"
+
+#. Under a mod that changes the game's code (its .ips): the game code is built with it.
+msgctxt "UI_MOD_CODE_REBUILD"
+msgid "code: turning it on or off builds the game code again before you play (a few minutes)"
+msgstr "程式碼：開啟或關閉會在遊玩前重新建置遊戲程式碼（需幾分鐘）"
+
+#. Under an installed mod that ships shaders (Shader/ files).
+msgctxt "UI_MOD_WARN_SHADERS"
+msgid ""
+"Replaces shaders: the port translates the game's shaders during the setup, so this mod may not "
+"show, or may break the picture"
+msgstr "取代著色器：移植版在設定過程中轉換遊戲的著色器，因此此模組可能無法顯示，或導致畫面異常"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_LAUNCH_UPDATE"
+msgid "Update to %s (%d MB)"
+msgstr "更新至 %s（%d MB）"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_LAUNCH_UPDATE_FETCHING"
+msgid "Downloading %s"
+msgstr "正在下載 %s"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_LAUNCH_UPDATE_FAILED"
+msgid "Update failed: %s"
+msgstr "更新失敗：%s"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_LAUNCH_UPDATED"
+msgid "Updated to %s: setting up again what it changed"
+msgstr "已更新至 %s：正在重新設定有變化的部分"
+
+msgctxt "UI_LAUNCH_NO_GAME_DATA"
+msgid "Your own copy of the game · No game data included"
+msgstr "你自己的遊戲副本 · 不含任何遊戲資料"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_LAUNCH_LASTRUN_KNOWN"
+msgid ""
+"The last game stopped with a known problem, followed in issue #%d. No need to report it again."
+msgstr "上次遊戲因已知問題停止，該問題在 issue #%d 中追蹤，不需再次回報。"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_LAUNCH_LASTRUN_FIXED"
+msgid "The last game stopped with a problem that %s fixes. Update to get the fix."
+msgstr "上次遊戲因 %s 已修正的問題停止。請更新以取得修正。"
+
+msgctxt "UI_LAUNCH_LASTRUN_CRASH"
+msgid ""
+"The last game stopped with an error. Reporting it with logs/orbitals.log attached helps to fix it."
+msgstr "上次遊戲因錯誤停止。附上 logs/orbitals.log 回報有助於修正。"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_LAUNCH_LASTRUN_OPEN"
+msgid "Open issue #%d"
+msgstr "開啟 issue #%d"
+
+msgctxt "UI_LAUNCH_LASTRUN_REPORT"
+msgid "Report it"
+msgstr "回報"
+
+msgctxt "UI_LAUNCH_LASTRUN_DISMISS"
+msgid "Close"
+msgstr "關閉"
+
+msgctxt "UI_MENU_UPDATE_CHECK"
+msgid "Check for updates"
+msgstr "檢查更新"
+
+msgctxt "UI_MENU_UPDATE_CHECK_DESC"
+msgid ""
+"At start, ask GitHub for a newer release of the port and offer it on the start screen (a few "
+"seconds at most, nothing offline)."
+msgstr "啟動時向 GitHub 查詢此移植版的新版本，並在開始畫面中提示（最多幾秒，離線時不做任何事）。"
+
+msgctxt "UI_LAUNCH_PLAYERS"
+msgid "Profiles"
+msgstr "檔案"
+
+msgctxt "UI_LAUNCH_PLAYER"
+msgid "Profile: %s"
+msgstr "檔案：%s"
+
+msgctxt "UI_PLAYER_NOTE"
+msgid ""
+"Each profile has its own name and save, like the users of a console. The game shows the name, and "
+"so do the other players' screens in LAN play."
+msgstr "每個檔案都有自己的名稱和存檔，就像主機上的使用者。遊戲會顯示這個名稱，區域網路遊戲中其他玩家的畫面上也會顯示。"
+
+msgctxt "UI_PLAYER_NAME_HINT"
+msgid "Name (up to 10 characters)"
+msgstr "名稱（最多 10 個字元）"
+
+msgctxt "UI_PLAYER_CHOOSE"
+msgid "Play as"
+msgstr "用這個玩"
+
+msgctxt "UI_PLAYER_CHOSEN"
+msgid "Playing"
+msgstr "使用中"
+
+msgctxt "UI_PLAYER_NEW"
+msgid "New profile"
+msgstr "新增檔案"
+
+msgctxt "UI_PLAYER_REMOVE"
+msgid "Remove"
+msgstr "移除"
+
+msgctxt "UI_PLAYER_CONFIRM"
+msgid ""
+"Remove the profile %s? It leaves the list; its save is kept in the folder profile/players/deleted."
+msgstr "移除檔案 %s？它會從清單中消失，存檔保留在 profile/players/deleted 資料夾中。"
+
+msgctxt "UI_PLAYER_FAILED"
+msgid "The profile could not be saved (the log says why)."
+msgstr "無法儲存檔案（原因見記錄）。"
+
+#. A product name: keep it as Steam shows it in your language.
+msgctxt "UI_MENU_GROUP_RPT"
+msgid "Steam Remote Play Together"
+msgstr "Steam Remote Play Together"
+
+msgctxt "UI_MENU_RPT_INVITE"
+msgid "Invite friends"
+msgstr "邀請好友"
+
+msgctxt "UI_MENU_RPT_INVITE_DESC"
+msgid ""
+"Opens Remote Play Together in the Steam overlay. Friends who join see and hear the game; each "
+"one's controller, or keyboard, becomes the next free player."
+msgstr "在 Steam 介面中開啟 Remote Play Together。加入的好友可以看到並聽到遊戲；每人的控制器或鍵盤會成為下一個空閒玩家。"
+
+msgctxt "UI_MENU_RPT_LINK"
+msgid "Copy guest link"
+msgstr "複製訪客連結"
+
+msgctxt "UI_MENU_RPT_LINK_DESC"
+msgid ""
+"Copies a link that lets anyone join from a browser or the Steam Link app, without being your "
+"Steam friend."
+msgstr "複製一個連結，任何人都可以透過瀏覽器或 Steam Link 應用程式加入，無需是你的 Steam 好友。"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_MENU_RPT_CONNECTED"
+msgid "%d connected"
+msgstr "已連線 %d 人"
+
+msgctxt "UI_MENU_RPT_NO_OVERLAY"
+msgid "no Steam overlay"
+msgstr "沒有 Steam 介面"
+
+msgctxt "UI_MENU_RPT_WAITING"
+msgid "waiting for Steam"
+msgstr "正在等待 Steam"
+
+#. steam_appid and orbitals.ini are a setting and a file name: keep them.
+msgctxt "UI_MENU_RPT_NEED_APPID"
+msgid "Needs steam_appid in orbitals.ini"
+msgstr "需要在 orbitals.ini 中設定 steam_appid"
+
+msgctxt "UI_MENU_RPT_AT_START"
+msgid "Starts with the game"
+msgstr "隨遊戲一起啟動"
+
+msgctxt "UI_MENU_RPT_FAILED"
+msgid "Steam is not available: see the log"
+msgstr "Steam 無法使用：請查看記錄"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_NOTICE_RPT_JOINED"
+msgid "%s joined Remote Play Together"
+msgstr "%s 加入了 Remote Play Together"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_NOTICE_RPT_LEFT"
+msgid "%s left Remote Play Together"
+msgstr "%s 離開了 Remote Play Together"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_NOTICE_RPT_PAD"
+msgid "A Remote Play guest's controller is player %d"
+msgstr "一位 Remote Play 訪客的控制器是玩家 %d"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_NOTICE_RPT_KEYBOARD"
+msgid "%s plays on the keyboard as player %d"
+msgstr "%s 使用鍵盤作為玩家 %d"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_NOTICE_RPT_FULL"
+msgid "%s: no free player for the keyboard"
+msgstr "%s：沒有空閒玩家給鍵盤"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_NOTICE_RPT_FAILED"
+msgid "Remote Play Together is off: %s"
+msgstr "Remote Play Together 已關閉：%s"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_NOTICE_RPT_INVITE"
+msgid ""
+"%d players need a controller each: %d connected. Steam's invite list is open: once your friends' "
+"controllers are in, pick the mode again."
+msgstr "%d 名玩家各需要一個控制器：已連線 %d 個。Steam 邀請清單已開啟：好友的控制器接入後，請再次選擇該模式。"
+
+msgctxt "UI_NOTICE_RPT_NO_OVERLAY"
+msgid ""
+"The Steam overlay did not open: start the game from Steam, or send a guest link (menu > Game)."
+msgstr "Steam 介面未能開啟：請從 Steam 啟動遊戲，或傳送訪客連結（選單 > 遊戲）。"
+
+msgctxt "UI_NOTICE_RPT_ONLINE"
+msgid ""
+"Online play goes through Steam Remote Play Together: invite your friend from the list that just "
+"opened. Once they have joined and pressed a button, start a local game for 2 players."
+msgstr "線上遊戲透過 Steam 遠端同樂進行：從剛開啟的清單中邀請你的好友。好友加入並按下一個按鈕後，開始一場 2 人本機遊戲。"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_NOTICE_RPT_ONLINE_OFF"
+msgid ""
+"Online play goes through Steam Remote Play Together, which is off: %s. Set it up in menu > Game "
+"(docs/remote-play.md)."
+msgstr "線上遊戲透過 Steam 遠端同樂進行，但它已關閉：%s。請在 選單 > 遊戲 中設定（docs/remote-play.md）。"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_MENU_RPT_CHOICE"
+msgid "Local multiplayer for %d players: %d controllers connected. How do the other players join?"
+msgstr "%d 人本機多人遊戲：已連接 %d 個控制器。其他玩家要如何加入？"
+
+msgctxt "UI_MENU_RPT_CHOICE_LOCAL"
+msgid "Local players (connect more controllers)"
+msgstr "本機玩家（連接更多控制器）"
+
+msgctxt "UI_MENU_RPT_CHOICE_STEAM"
+msgid "Steam Remote Play Together (invite friends)"
+msgstr "Steam 遠端同樂（邀請好友）"
+
+msgctxt "UI_MENU_RPT_APPID"
+msgid "Steam App ID"
+msgstr "Steam 應用程式 ID"
+
+msgctxt "UI_MENU_RPT_APPID_DESC"
+msgid ""
+"The Steam game orbitals-together runs as for Remote Play Together. Automatic: the game whose "
+"launch options start orbitals-together (\"C:\\...\\orbitals-together.exe\" %command%), so any "
+"Steam game you own with Remote Play Together works. Another number: steam_appid in orbitals.ini. "
+"Takes effect at the next start."
+msgstr ""
+"orbitals-together 在遠端同樂中所使用的 Steam 遊戲。自動：透過啟動選項啟動 orbitals-together 的遊戲 "
+"(\"C:\\...\\orbitals-together.exe\" %command%)，因此你擁有的任何支援遠端同樂的 Steam 遊戲都可以。其他編號：orbitals.ini 中的 "
+"steam_appid。下次啟動時生效。"
+
+msgctxt "UI_MENU_RPT_APPID_OFF"
+msgid "Off"
+msgstr "關閉"
+
+msgctxt "UI_MENU_RPT_APPID_AUTO"
+msgid "Automatic (the game Steam started)"
+msgstr "自動（Steam 啟動的遊戲）"
+
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_MENU_RPT_APPID_CUSTOM"
+msgid "%s (orbitals.ini)"
+msgstr "%s（orbitals.ini）"
+
+msgctxt "UI_MENU_RPT_APPID_ADD"
+msgid "Enter a Steam App ID"
+msgstr "輸入 Steam 應用程式 ID"
+
+msgctxt "UI_MENU_RPT_APPID_ADD_DESC"
+msgid ""
+"Type the App ID of a Steam game you own that has Remote Play Together, with the keyboard's number "
+"keys (it is the number in the game's store address, store.steampowered.com/app/<number>/), then "
+"press Enter or A. orbitals-together runs as that game from the next start, and the Steam App ID "
+"row above keeps it in its list (steam_appids in orbitals.ini). Backspace deletes a digit."
+msgstr ""
+"用鍵盤的數字鍵輸入你擁有且支援遠端同樂的 Steam 遊戲的應用程式 ID（即該遊戲商店網址中的數字，store.steampowered.com/app/<number>/），然後按 "
+"Enter 或 A。下次啟動起 orbitals-together 會以該遊戲執行，上方的 Steam 應用程式 ID 一列會把它保留在清單中（orbitals.ini 中的 "
+"steam_appids）。Backspace 刪除一位數字。"
+
+msgctxt "UI_MENU_RPT_APPID_ADD_HINT"
+msgid "type the number"
+msgstr "輸入數字"

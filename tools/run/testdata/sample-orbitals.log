@@ -1,0 +1,55 @@
+[host] log: C:\Users\player\orbitals-together/logs/orbitals.log (Orbitals Together 0.2.0-g31c595b)
+[host] vk: using gpu 0: NVIDIA GeForce RTX 4080
+[host] imports: main calls the SDK's _ZN2nn5codec10AacDecoderC1Ev (no host override)
+[host] imports: main calls the SDK's _ZN2nn3hid12GetJcmsStateEPNS0_9JcmsStateERKNS0_10JcmsHandleE (no host override)
+[host] imports: main calls 20 nn::codec and nn::hid functions with no host override; per namespace: diag 4, os 88, codec 18, hid 2
+[host] main: weak import _ZTHN13LowLevelTasks5FTask10ActiveTaskE is unresolved (0)
+[host] AllocateMemoryPages address 0xec0000000 size 0x13a000 result 0
+[host] AllocateMemoryPages address 0xec0200000 size 0x100000 result 0
+[host] sdk call 1: sdk+0x16b670 (_ZN2nn2os15AllocateTlsSlotEPNS0_7TlsSlotEPFvmE+0) from main+0x14094
+[host] fs entry rom:/Orbitals/Orbitals.uproject -> 0x202
+[host] version: program 040032B023CA4000, build d6efcc0a51c1c792, game version 1 (unknown); NVN2 proc table from the dump
+boot: DT_INIT main state=2 (1990)
+boot: DT_INIT sdk state=2 (94)
+[host] ENTER nnMain
+[host] nn::codec: queued decoder 0x7009dadf60: 48000 Hz, 1 channels, span 20000000 ns, manager 0x7009dadec0
+[host] host call nvn:nvnSyncInitialize from main+0x151939c
+[host] host call nvn:nvnCommandBufferFenceSync from main+0x15193d4
+[host] host call nvn:nvnQueueSubmitCommands from main+0x153766c
+[host] host call nvn:nvnSyncWait from main+0x1537bc4
+[host] nvn2: PushGraphicsConstants stage 0 offset 0 size 48 dropped
+[host] nvn2: PushGraphicsConstants stage 0 offset 0 size 48 dropped
+[host] nvn: present interval 1 -> 2 (from main+0x1540268)
+[host] vk: present of NVN format 0x25 (Vulkan 37) from frame 1
+[host] vk: a draw without a bound program is skipped (logged once)
+[host] gfx_shader: prepared SPIR-V from C:\Users\player\orbitals-together/spirv
+[host] gfx_shader: no prepared SPIR-V 899b8305d50591fd514e5301a41ff81d86e34ed0ff9386351090809987b00c92 (1 lookups so far)
+[host] vk: a stage 1 shader of program 148 has no prepared SPIR-V: draws with it are skipped (logged once)
+[host] vk: pitch texture 0xf21410000 1920x1088 format 0x1 (2088960 bytes) written back to its storage at fence 26
+[host] vk: pitch texture 0xf21610000 1920x1088 format 0x1 (2088960 bytes) written back to its storage at fence 100
+[host] guest Break reason 0 result 0 at sdk+0x1a4540
+FATAL: svc #0x26 Break at sdk+0x1a4540: Break (the SDK aborted)
+  x0 0 x1 0x113fd91dc x2 0x4 x3 0
+  texts the abort's registers and stack point at:
+    sp+0x2c8 "GameThread timed out waiting for %s after %.02f secs"
+    sp+0x838 "RenderThread"
+  every guest thread:
+  thread 0x1021 "RenderThread 0" prio 43 core -1: waiting on a condition variable 0x5800b16dc, inside an SVC or host function
+    lr sdk+0x17161c (_ZN2nn2os6detail38InternalConditionVariableImplByHorizon4WaitEPNS1_23InternalCriticalSectionE+0x4c)
+    frame  0: sdk+0x163940 (_ZN2nn2os9WaitEventEPNS0_9EventTypeE+0x40)
+    frame  1: main+0x18cc8
+    frame  2: main+0x4a6d4
+  thread 0x1020 "RHIThread" prio 43 core -1: waiting on a condition variable 0x5800b113c, inside an SVC or host function
+    frame  0: sdk+0x163940 (_ZN2nn2os9WaitEventEPNS0_9EventTypeE+0x40)
+    frame  1: main+0x4a668
+  thread 0x1023 "Viewport Thread" prio 43 core -1: waiting on handles 0, inside an SVC or host function
+    frame  0: main+0x1540434
+    frame  1: main+0x15405b4
+  thread 0x1022 "RTHeartBeat 0" prio 43 core -1: running or ready 0, inside an SVC or host function
+    frame  0: main+0x16398b8
+  thread 0x1002 "GameThread" prio 43 core 1 (this one): running or ready 0, inside an SVC or host function
+    frame  0: sdk+0xb9c48
+    frame  1: main+0x161dc80
+  run time at the abort: 121.77 s by the host clock, 121.77 s by the guest's GetSystemTick
+FATAL: svc #0x26 Break is not implemented
+[host] FATAL: memory: process 1794 MiB resident, 4731 MiB private; system 11390 of 32581 MiB in use

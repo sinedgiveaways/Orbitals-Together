@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Documentation
+    url: https://github.com/sinedgiveaways/pmocer-latibro/tree/HEAD/docs
+    about: Building, setting up and running, settings, environment variables

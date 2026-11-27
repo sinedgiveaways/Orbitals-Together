@@ -1,0 +1,55 @@
+# romfs_check.exe: tools/analisis/romfs_check.py as one Windows executable (PyInstaller), so a .nup's RomFS listing can
+# be checked without Python or uv (docs/romfs-res-audit.md). Reads the package's table of contents only. Built on each
+# push that changes it, and by hand; the exe goes to the "romfs-check" release and to the run's artifacts.
+name: romfs_check.exe
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [orbitals-port]
+    paths: [tools/analisis/romfs_check.py, tools/prepare/nup.py, .github/workflows/romfs_check.yml]
+
+permissions:
+  contents: write
+
+jobs:
+  exe:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+      - name: Dependencies
+        run: python -m pip install pyinstaller
+      - name: Build
+        run: >
+          pyinstaller --onefile --console --name romfs_check --distpath build/exe --workpath build/pyi
+          --paths tools/prepare tools/analisis/romfs_check.py
+      - name: Smoke test on a tiny package (no game files)
+        shell: bash
+        run: |
+          mkdir -p build/fake/exefs build/fake/romfs/System/GymlArchive build/fake/romfs/Content/Paks
+          printf 'x' > build/fake/exefs/main
+          printf 'x' > build/fake/romfs/Content/Paks/a.pak
+          python tools/prepare/nup.py pack build/fake build/fake.nup --title 0100000000000000
+          build/exe/romfs_check.exe build/fake.nup < /dev/null | tee build/no-gyml.txt
+          grep -q "Gyml: \[\]" build/no-gyml.txt
+          grep -q "Unreal .pak: 1" build/no-gyml.txt
+          printf 'x' > build/fake/romfs/System/GymlArchive/general_format.Product_100.sarc.zs
+          python tools/prepare/nup.py pack build/fake build/fake2.nup --title 0100000000000000
+          build/exe/romfs_check.exe build/fake2.nup < /dev/null | tee build/gyml.txt
+          grep -q "PRESENT" build/gyml.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: romfs_check
+          path: build/exe/romfs_check.exe
+          retention-days: 14
+      - name: Release
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view romfs-check >/dev/null 2>&1 || gh release create romfs-check --target "$GITHUB_SHA" --prerelease \
+            --title "romfs_check.exe" --notes "Drop your .nup on romfs_check.exe; the report (romfs_check.txt) is written next to it. It reads the package's table of contents only. Built from ${GITHUB_SHA}."
+          gh release upload romfs-check build/exe/romfs_check.exe --clobber

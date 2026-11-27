@@ -1,0 +1,66 @@
+# shader_analyzer.exe: tools/run/shader_analyzer.py as one Windows executable (PyInstaller), so an orbitals.log can be
+# turned into a report without Python or a terminal (docs/log-analyzer.md). Built on every pull request and push that
+# changes it, and by hand; the exe goes to the run's artifacts, and on orbitals-port also to the release
+# "shader-analyzer-<version>" (the version is VERSION in the script; raise it with every change to the patterns).
+name: shader_analyzer.exe
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [orbitals-port]
+    paths: [tools/run/shader_analyzer.py, tools/run/analyze_timeout.py, tools/run/testdata/**, .github/workflows/log-analyzer.yml]
+  push:
+    branches: [orbitals-port]
+    paths: [tools/run/shader_analyzer.py, tools/run/analyze_timeout.py, tools/run/testdata/**, .github/workflows/log-analyzer.yml]
+
+permissions:
+  contents: write
+
+jobs:
+  exe:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Version
+        id: v
+        shell: bash
+        run: echo "version=$(grep -m1 '^VERSION = ' tools/run/shader_analyzer.py | cut -d'"' -f2)" >> "$GITHUB_OUTPUT"
+      - name: Dependencies
+        run: python -m pip install pyinstaller
+      - name: Build
+        run: >
+          pyinstaller --onefile --console --name shader_analyzer-${{ steps.v.outputs.version }}
+          --distpath build/exe --workpath build/pyi --paths tools/run tools/run/shader_analyzer.py
+      - name: Smoke test on the sample log (no game files)
+        shell: bash
+        run: |
+          exe="build/exe/shader_analyzer-${{ steps.v.outputs.version }}.exe"
+          "$exe" --version | tee build/version.txt
+          grep -q "shader_analyzer ${{ steps.v.outputs.version }}" build/version.txt
+          "$exe" --input tools/run/testdata/sample-orbitals.log --output build/report.md
+          "$exe" --input tools/run/testdata/sample-orbitals.log --output build/report.json --format json
+          grep -q "Orbitals log report (shader_analyzer ${{ steps.v.outputs.version }})" build/report.md
+          grep -q "wait target in the abort stack text: RenderThread" build/report.md
+          grep -q "899b8305d50591fd514e5301a41ff81d86e34ed0ff9386351090809987b00c92" build/report.md
+          python -c "import json;d=json.load(open('build/report.json',encoding='utf-8'));assert d['end']['aborted'] and len(d['shaders']['missing_hashes'])==1"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: shader_analyzer-${{ steps.v.outputs.version }}
+          path: |
+            build/exe/shader_analyzer-${{ steps.v.outputs.version }}.exe
+            build/report.md
+          retention-days: 30
+      - name: Release
+        if: github.ref == 'refs/heads/orbitals-port'
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          tag="shader-analyzer-${{ steps.v.outputs.version }}"
+          gh release view "$tag" >/dev/null 2>&1 || gh release create "$tag" --target "$GITHUB_SHA" --prerelease \
+            --title "shader_analyzer.exe ${{ steps.v.outputs.version }}" \
+            --notes "Double-click it (it finds logs\\orbitals.log or asks for the file) or run it with --input orbitals.log --output report.md; send the report. docs/log-analyzer.md. Built from ${GITHUB_SHA}."
+          gh release upload "$tag" "build/exe/shader_analyzer-${{ steps.v.outputs.version }}.exe" --clobber

@@ -1,0 +1,27 @@
+[project]
+name = "orbitals-recomp"
+version = "0.0.0"
+description = "Static recompilation of Orbitals (Switch 2): generator and analysis tools"
+requires-python = ">=3.14"
+dependencies = ["lz4>=4.4", "numpy>=2.3"]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.14",
+    "pytest>=8.4",
+    "capstone>=5.0.9",
+    "cogapp>=3.6.0",
+]
+
+[tool.ruff]
+line-length = 120
+# vendored (totk-pc-recomp, nvsass-disassembler, DocumentSASS): kept close to upstream
+extend-exclude = ["recomp", "sm86/decode", "sm86/spec/funnel.py", "sm86/spec/parse_sidl.py", "sm86/spec/sidl_*.py"]
+
+[tool.ruff.lint]
+# Real bugs only (syntax errors, pyflakes: undefined names, unused variables), fixed here so the CI does not change
+# with the ruff version (0.17 widened its defaults).
+select = ["E9", "F"]
+
+[tool.uv]
+package = false

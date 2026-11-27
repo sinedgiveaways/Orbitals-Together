@@ -1,0 +1,202 @@
+"""Pack a release from the player's folder (build/dist/<target>, after build.py --dist --runtime-only and dist.py): the
+Linux AppImage or the Windows zip. Only the runtime, its libraries and setup/ go in, never anything of the game: a dev
+folder that also holds the built game (orbitalgame.*, spirv/, the caches) packs the same release.
+
+Linux: the AppImage's AppRun keeps a copy of mkw in ${XDG_DATA_HOME:-~/.local/share}/orbitals-together, updated when the
+AppImage brings a new one, links setup/ there to the mount (a new path on every start) and starts it with the bundled
+libraries first on the library path. The runtime keeps using the folder of its executable for the game the setup builds,
+its settings and caches, as in the Windows zip; the read-only mount only holds the tools. The libraries come from the
+sysroot the release links against (tools/build/sysroot.py), which lets it start on systems as old as Debian 11. The
+packing follows totk-pc-recomp's tools/make_release_linux.py (MIT): appimagetool and the static type-2 runtime from
+release tags (no libfuse2 needed on the player's system), pinned by sha256.
+
+AArch64 (--target linux-aarch64): the same AppImage from build/dist/linux-aarch64 and the Debian 11 arm64 sysroot
+(sysroot.py --arch aarch64), packed with this machine's appimagetool and the aarch64 type-2 runtime.
+
+Usage: uv run tools/build/release.py --target linux|linux-aarch64|windows --version 0.1.0
+       writes build/release/orbitals-together-<version>-x86_64.AppImage, -aarch64.AppImage or -windows-x64.zip
+"""
+
+import argparse
+import os
+import shutil
+import subprocess
+import sys
+import zipfile
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from dist import WIN_DLLS, fetch  # noqa: E402
+import sysroot  # noqa: E402
+
+ROOT = Path(__file__).resolve().parents[2]
+OUT = ROOT / "build/release"
+PINS = {
+    "appimagetool": ("https://github.com/AppImage/appimagetool/releases/download/1.9.1/appimagetool-x86_64.AppImage",
+                     "ed4ce84f0d9caff66f50bcca6ff6f35aae54ce8135408b3fa33abfc3cb384eb0"),
+    "runtime": ("https://github.com/AppImage/type2-runtime/releases/download/20251108/runtime-x86_64",
+                "2fca8b443c92510f1483a883f60061ad09b46b978b2631c807cd873a47ec260d"),
+    "runtime-aarch64": ("https://github.com/AppImage/type2-runtime/releases/download/20251108/runtime-aarch64",
+                        "00cbdfcf917cc6c0ff6d3347d59e0ca1f7f45a6df1a428a0d6d8a78664d87444"),
+}  # fmt: skip
+# Libraries every desktop has and the AppImage must take from it: glibc, the Vulkan loader (it finds the system's
+# drivers), libgcc_s and libstdc++ (the sysroot's is older than any desktop's, and Mesa's drivers need the newer one).
+SYSTEM_LIBS = {"libc.so.6", "libm.so.6", "libdl.so.2", "libpthread.so.0", "librt.so.1", "ld-linux-x86-64.so.2",
+               "ld-linux-aarch64.so.1", "libvulkan.so.1", "libgcc_s.so.1", "libstdc++.so.6"}  # fmt: skip
+# The licence files of the libraries bundled (the sysroot's, Debian's copyright files) and of the static zstd.
+LICENSES = {"SDL3": "usr/local/share/doc/SDL3/LICENSE.txt", "libopus": "usr/share/doc/libopus0/copyright",
+            "libvpx": "usr/share/doc/libvpx6/copyright", "zstd": "usr/local/share/doc/zstd/LICENSE"}  # fmt: skip
+GAME_MARKER = "ORBITALS_RECOMP_" + "GENERATED_FROM_GAME_CODE"
+
+APPRUN = """#!/bin/sh
+# The AppImage's entry (tools/build/release.py): the runtime runs from a copy in the player's data folder, which holds
+# the game the setup builds; setup/ and the libraries stay in the mount.
+set -eu
+here=$(dirname "$(readlink -f "$0")")
+home=${XDG_DATA_HOME:-$HOME/.local/share}/orbitals-together
+mkdir -p "$home"
+if ! cmp -s "$here/orbitals-together" "$home/orbitals-together"; then
+    # a rename, not a write over it: a mkw still running keeps its old file
+    cp "$here/orbitals-together" "$home/orbitals-together.new"
+    mv -f "$home/orbitals-together.new" "$home/orbitals-together"
+fi
+ln -sfn "$here/setup" "$home/setup"
+export LD_LIBRARY_PATH="$here/lib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+exec "$home/orbitals-together" "$@"
+"""
+
+DESKTOP = """[Desktop Entry]
+Type=Application
+Name=Orbitals Together
+Comment=Static recompilation of Orbitals; builds the game from your own copy
+Exec=AppRun
+Icon=orbitals-together
+Categories=Game;
+Terminal=false
+"""
+
+
+def needed(elf: Path) -> list[str]:
+    out = subprocess.run(["readelf", "-d", str(elf)], capture_output=True, text=True, check=True).stdout
+    return [line.split("[", 1)[1].rstrip("]") for line in out.splitlines() if "(NEEDED)" in line]
+
+
+def find_lib(name: str) -> Path:
+    root, triple = sysroot.SYSROOT, sysroot.TRIPLE
+    for d in ("usr/local/lib", f"usr/lib/{triple}", f"lib/{triple}"):
+        if (root / d / name).exists():
+            return (root / d / name).resolve()
+    sys.exit(f"{name}: not in {root} (built with build.py --sysroot?)")
+
+
+def bundle_libs(exe: Path, lib: Path) -> None:
+    """The libraries mkw needs that are not SYSTEM_LIBS, and theirs, from the sysroot."""
+    lib.mkdir()
+    todo = [n for n in needed(exe) if n not in SYSTEM_LIBS]
+    while todo:
+        name = todo.pop()
+        if (lib / name).exists():
+            continue
+        src = find_lib(name)
+        shutil.copy2(src, lib / name)
+        todo += [n for n in needed(src) if n not in SYSTEM_LIBS]
+    print("bundled:", " ".join(sorted(p.name for p in lib.iterdir())))
+
+
+def check_no_game(root: Path) -> None:
+    """The generated C carries GAME_MARKER (recomp/gen.py); setup/src is the repository's sources. NVIDIA's SM86 spec
+    neither: the player's setup builds it (sm86/spec/spec.py)."""
+    for p in root.rglob("*"):
+        if p.name in ("instructions.json", "sm_86_instructions.txt"):
+            sys.exit(f"{p}: NVIDIA's SM86 spec in the release")
+        if p.is_file() and not p.is_symlink() and p.name != "gen.py" and GAME_MARKER.encode() in p.read_bytes():
+            sys.exit(f"{p}: game code in the release")
+
+
+def licenses(dst: Path) -> None:
+    dst.mkdir()
+    shutil.copy2(ROOT / "LICENSE", dst / "orbitals-together-LICENSE")
+    shutil.copy2(ROOT / "LICENSE-MIT", dst / "orbitals-together-LICENSE-MIT")  # the pre-GPL code's notice
+    for name, rel in LICENSES.items():
+        shutil.copy2(sysroot.SYSROOT / rel, dst / f"{name}-copyright")
+
+
+def linux(dist: Path, version: str, arch: str = "x86_64") -> Path:
+    exe = dist / "orbitals-together"
+    glibc = subprocess.run(["objdump", "-T", str(exe)], capture_output=True, text=True, check=True).stdout
+    newest = max((tuple(map(int, v.split("."))) for v in set(_glibc_versions(glibc))), default=(0, 0))
+    if newest > (2, 31):  # built against the machine's glibc: the AppImage would need that glibc or newer
+        sys.exit(f"{exe} needs glibc {'.'.join(map(str, newest))}: build.py --sysroot {sysroot.SYSROOT}")
+    app = OUT / "AppDir"
+    shutil.rmtree(app, ignore_errors=True)
+    app.mkdir(parents=True)
+    shutil.copy2(exe, app / "orbitals-together")
+    shutil.copytree(dist / "setup", app / "setup", symlinks=True)
+    bundle_libs(exe, app / "lib")
+    licenses(app / "licenses")
+    check_no_game(app)
+    (app / "AppRun").write_text(APPRUN)
+    (app / "AppRun").chmod(0o755)
+    (app / "orbitals-together.desktop").write_text(DESKTOP)
+    subprocess.run([sys.executable, str(ROOT / "tools/build/icon.py"), str(app / "orbitals-together.png")], check=True)
+    (app / ".DirIcon").symlink_to("orbitals-together.png")
+    # this machine's appimagetool packs either architecture; the runtime is the target's
+    tool, runtime = fetch(*PINS["appimagetool"]), fetch(*PINS["runtime" if arch == "x86_64" else f"runtime-{arch}"])
+    tool.chmod(0o755)
+    out = OUT / f"orbitals-together-{version}-{arch}.AppImage"
+    # appimagetool is an AppImage itself: extracted and run, no FUSE in a container. Into a .part then renamed: an
+    # AppImage of the same name still mounted (a test of it) made mksquashfs fail with "Text file busy" (09/11/2026).
+    env = dict(os.environ, ARCH=arch, APPIMAGE_EXTRACT_AND_RUN="1")
+    part = out.with_name(out.name + ".part")
+    subprocess.run([str(tool), "--no-appstream", "--runtime-file", str(runtime), str(app), str(part)], env=env,
+                   check=True)  # fmt: skip
+    part.replace(out)
+    shutil.rmtree(app)
+    return out
+
+
+def _glibc_versions(text: str) -> list[str]:
+    return [w.removeprefix("(GLIBC_").rstrip(")") for w in text.split() if w.startswith("(GLIBC_2.")]
+
+
+def windows(dist: Path, version: str) -> Path:
+    out = OUT / f"orbitals-together-{version}-windows-x64.zip"
+    files = [dist / "orbitals-together.exe", *(dist / d for d in WIN_DLLS), *sorted((dist / "setup").rglob("*"))]
+    # Remote Play Together: Steam's steam_api64.dll goes in when tools/build/steamlib.py put it beside the exe (the
+    # workflows do; a local build without it packs the same zip as before), as the earlier project's release did
+    files.append(dist / "steam_api64.dll")
+    check_no_game(dist / "setup")
+    top = Path("orbitals-together")
+    with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED, compresslevel=6) as z:
+        for p in files:
+            if p.is_file():
+                z.write(p, top / p.relative_to(dist))
+        z.write(ROOT / "LICENSE", top / "licenses/orbitals-together-LICENSE")
+        z.write(ROOT / "LICENSE-MIT", top / "licenses/orbitals-together-LICENSE-MIT")
+        # the libraries in orbitals-together.exe and beside it (tools/build/windeps.py keeps each package's licence files)
+        for p in sorted((ROOT / "build/win/deps/share/licenses").rglob("*")):
+            if p.is_file():
+                z.write(p, top / "licenses" / p.relative_to(ROOT / "build/win/deps/share/licenses"))
+    return out
+
+
+def main() -> None:
+    ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    ap.add_argument("--target", choices=("linux", "linux-aarch64", "windows"), default="linux")
+    ap.add_argument("--version", required=True, help="the release's version, e.g. 0.1.0 (the tag without its v)")
+    args = ap.parse_args()
+    dist = ROOT / "build/dist" / args.target
+    if not (dist / "setup").is_dir():
+        sys.exit(f"{dist}/setup missing: uv run tools/build/dist.py --target {args.target} first")
+    OUT.mkdir(parents=True, exist_ok=True)
+    if args.target == "windows":
+        out = windows(dist, args.version)
+    else:
+        arch = "aarch64" if args.target == "linux-aarch64" else "x86_64"
+        sysroot.use_arch(arch)
+        out = linux(dist, args.version, arch)
+    print(f"{out}: {out.stat().st_size / 2**20:.0f} MiB")
+
+
+if __name__ == "__main__":
+    main()

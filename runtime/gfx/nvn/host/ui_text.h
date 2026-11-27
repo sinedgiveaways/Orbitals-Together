@@ -1,0 +1,251 @@
+// Text the host shows the player (runtime/ui_text.c): one catalog, keyed by stable ids. The software keyboard reads it
+// in the game's language (ui_text); the menu and the performance overlay read it in the menu language (menu_text).
+#pragma once
+
+typedef enum {
+    // Software keyboard
+    UI_SWKBD_DEFAULT_NAME,   // text the entry starts with when the game gives none, so a controller can confirm it
+
+    // Menu: window, tabs, bottom row. UI_MENU_FIRST..UI_MENU_LAST_ID carry English and Russian texts.
+    UI_MENU_FIRST,
+    UI_MENU_TITLE = UI_MENU_FIRST,
+    UI_MENU_TAB_SCREEN, UI_MENU_TAB_GAME, UI_MENU_TAB_SOUND, UI_MENU_TAB_CONTROLS, UI_MENU_TAB_MENU,
+    UI_MENU_TAB_ADVANCED, UI_MENU_TAB_GRAPHICS,
+    UI_MENU_CONTINUE, UI_MENU_QUIT,
+    UI_MENU_ON, UI_MENU_OFF, UI_MENU_AUTO, UI_MENU_DEFAULT_MARK,      // "default" beside the default value
+    UI_MENU_AFTER_RESTART,    // note on a setting that is read at start
+    UI_MENU_SET_BY_ENV,       // note on a setting an environment variable fixes
+    UI_MENU_SAVE_FAILED,
+    UI_MENU_VERSION,          // "Orbitals Together %s, game %s": the port version and the game update, beside the title
+
+    // Screen
+    UI_MENU_FULLSCREEN, UI_MENU_FULLSCREEN_DESC,
+    UI_MENU_WINDOW_SIZE, UI_MENU_WINDOW_SIZE_DESC,
+    UI_MENU_QUALITY, UI_MENU_QUALITY_DESC, UI_MENU_QUALITY_CUSTOM,
+    UI_MENU_PRESENT, UI_MENU_PRESENT_DESC, UI_MENU_PRESENT_MAILBOX, UI_MENU_PRESENT_VSYNC, UI_MENU_PRESENT_IMMEDIATE,
+    UI_MENU_PRESENT_IN_USE,   // "in use: %s" under the value when the swapchain got another mode than the setting
+    UI_MENU_GPU, UI_MENU_GPU_DESC, UI_MENU_GPU_AUTO,
+    UI_MENU_PERF_OVERLAY, UI_MENU_PERF_OVERLAY_DESC, UI_MENU_PERF_OFF, UI_MENU_PERF_FPS, UI_MENU_PERF_FULL,
+    UI_PERF_LINE_FPS,
+    UI_PERF_LINE_FPS_FG,   // the same with frame generation on: game frames / frames shown
+    UI_MENU_FPS_AUTO,
+    UI_MENU_FRAMEGEN, UI_MENU_FRAMEGEN_DESC,   // values: UI_MENU_PERF_OFF, UI_MENU_FPS_AUTO, 2x..4x
+    UI_MENU_GRAPHICS,         // group heading over the picture rows
+    UI_MENU_UPSCALER, UI_MENU_UPSCALER_DESC, UI_MENU_UPSCALER_FSR, UI_MENU_UPSCALER_BILINEAR,
+    UI_MENU_PICTURE_FIT, UI_MENU_PICTURE_FIT_DESC, UI_MENU_PICTURE_FIT_KEEP, UI_MENU_PICTURE_FIT_STRETCH,
+    UI_MENU_HDR, UI_MENU_HDR_DESC,   // values: UI_MENU_FPS_AUTO, UI_MENU_PERF_OFF
+    UI_MENU_SHARPNESS, UI_MENU_SHARPNESS_DESC,
+
+    // Graphics
+    UI_MENU_ANISO, UI_MENU_ANISO_DESC, UI_MENU_ANISO_GAME,
+    UI_MENU_TEX_QUALITY, UI_MENU_TEX_QUALITY_DESC, UI_MENU_TEX_QUALITY_FULL, UI_MENU_TEX_QUALITY_HALF,
+    UI_MENU_TEX_QUALITY_QUARTER,
+    UI_MENU_DETAIL_LOW, UI_MENU_DETAIL_MEDIUM, UI_MENU_DETAIL_CONSOLE,
+    UI_MENU_DETAIL_HIGH, UI_MENU_DETAIL_ULTRA,
+
+    // Hacks
+    UI_MENU_TAB_HACKS, UI_MENU_HACKS_WARNING,
+    UI_MENU_TURBO, UI_MENU_TURBO_DESC, UI_MENU_TURBO_HOLD, UI_MENU_TURBO_TOGGLE, UI_MENU_TURBO_SPEED,
+    UI_MENU_TURBO_SPEED_DESC, UI_MENU_SEED, UI_MENU_SEED_DESC,
+    UI_MENU_FREEZE_KEYS, UI_MENU_FREEZE_KEYS_DESC,
+
+    // Game
+    UI_MENU_GAME_LANG, UI_MENU_GAME_LANG_DESC, UI_MENU_GAME_LANG_AUTO,
+    UI_MENU_OPERATION_MODE, UI_MENU_OPERATION_MODE_DESC, UI_MENU_MODE_DOCKED, UI_MENU_MODE_HANDHELD,
+    UI_MENU_LAN, UI_MENU_LAN_DESC,
+
+    // Sound
+    UI_MENU_VOLUME, UI_MENU_VOLUME_DESC,
+    UI_MENU_SPEAKERS, UI_MENU_SPEAKERS_DESC, UI_MENU_SPEAKERS_STEREO, UI_MENU_SPEAKERS_51,   // and UI_MENU_FPS_AUTO
+    UI_MENU_BACKGROUND_MUTE, UI_MENU_BACKGROUND_MUTE_DESC,
+
+    // Controls
+    UI_MENU_MOTION, UI_MENU_MOTION_DESC,
+    UI_MENU_RUMBLE_STRENGTH, UI_MENU_RUMBLE_STRENGTH_DESC,
+    UI_MENU_RUMBLE_CURVE, UI_MENU_RUMBLE_CURVE_DESC,
+    UI_MENU_RUMBLE_TRIGGERS, UI_MENU_RUMBLE_TRIGGERS_DESC,
+    UI_MENU_PAD_LAYOUT, UI_MENU_PAD_LAYOUT_DESC, UI_MENU_PAD_LAYOUT_AUTO, UI_MENU_PAD_LAYOUT_NINTENDO,
+    UI_MENU_PAD_LAYOUT_XBOX, UI_MENU_PAD_LAYOUT_IN_USE,
+    UI_MENU_MOUSE_SENS, UI_MENU_MOUSE_SENS_DESC,
+    UI_MENU_STICK_DEADZONE, UI_MENU_STICK_DEADZONE_DESC,
+    UI_MENU_SWITCH2, UI_MENU_SWITCH2_DESC,
+    UI_MENU_BUTTON_ICONS, UI_MENU_BUTTON_ICONS_DESC, UI_MENU_ICONS_NINTENDO, UI_MENU_ICONS_XBOX,
+    UI_MENU_ICONS_PLAYSTATION, UI_MENU_ICONS_KEYBOARD, UI_MENU_ICONS_IN_USE,   // "in use: %s"
+
+    // Controls tab: the remapping rows (ui/menu/binds_page.cpp)
+    UI_BINDS_HELP, UI_BINDS_COL_KEY1, UI_BINDS_COL_KEY2, UI_BINDS_COL_PAD,
+    UI_BINDS_GROUP_BUTTONS, UI_BINDS_GROUP_MOVE, UI_BINDS_GROUP_CAMERA,
+    UI_BINDS_PRESS_KEY,       // "Press a key or mouse button for %s"
+    UI_BINDS_PRESS_PAD,       // "Press a controller button for %s"
+    UI_BINDS_CANCEL_HINT,     // "Esc cancels, or wait %d s"
+    UI_BINDS_TAKEN,           // "%s was taken from %s": the key, the action that lost it
+    UI_BINDS_SWAPPED,         // "%s swapped with %s": the two actions
+    UI_NOTICE_PADS_MISSING,   // "%d players need a controller each: %d connected" (ov_input.c, controller applet)
+    UI_BINDS_RESET, UI_BINDS_RESET_DESC,
+    // the actions, in action order (input_map.h B_A .. B_SR_DOWN)
+    UI_BIND_A, UI_BIND_B, UI_BIND_X, UI_BIND_Y, UI_BIND_LCLICK, UI_BIND_RCLICK, UI_BIND_L, UI_BIND_R, UI_BIND_ZL,
+    UI_BIND_ZR, UI_BIND_PLUS, UI_BIND_MINUS, UI_BIND_LEFT, UI_BIND_UP, UI_BIND_RIGHT, UI_BIND_DOWN,
+    UI_BIND_LSTICK_LEFT, UI_BIND_LSTICK_UP, UI_BIND_LSTICK_RIGHT, UI_BIND_LSTICK_DOWN,
+    UI_BIND_RSTICK_LEFT, UI_BIND_RSTICK_UP, UI_BIND_RSTICK_RIGHT, UI_BIND_RSTICK_DOWN,
+    // what an action does in the world, in action order up to Minus
+    UI_BIND_DESC_A, UI_BIND_DESC_B, UI_BIND_DESC_X, UI_BIND_DESC_Y, UI_BIND_DESC_LCLICK, UI_BIND_DESC_RCLICK,
+    UI_BIND_DESC_L, UI_BIND_DESC_R, UI_BIND_DESC_ZL, UI_BIND_DESC_ZR, UI_BIND_DESC_PLUS, UI_BIND_DESC_MINUS,
+    UI_BIND_DESC_DPAD, UI_BIND_DESC_MOVE, UI_BIND_DESC_CAMERA,
+    // key names, in key id order KEY_SPACE .. KEY_PAGEDOWN (letters, digits, F keys and punctuation show as themselves)
+    UI_KEY_SPACE, UI_KEY_TAB, UI_KEY_LSHIFT, UI_KEY_LCTRL, UI_KEY_UP, UI_KEY_DOWN, UI_KEY_LEFT, UI_KEY_RIGHT,
+    UI_KEY_MOUSE_L, UI_KEY_MOUSE_R, UI_KEY_MOUSE_M, UI_KEY_MOUSE_X1, UI_KEY_MOUSE_X2,
+    UI_KEY_ENTER, UI_KEY_BACKSPACE, UI_KEY_RSHIFT, UI_KEY_RCTRL, UI_KEY_LALT, UI_KEY_CAPSLOCK, UI_KEY_INSERT,
+    UI_KEY_DELETE, UI_KEY_HOME, UI_KEY_END, UI_KEY_PAGEUP, UI_KEY_PAGEDOWN,
+    UI_KEY_NUM_FMT,           // "Num %s": a numpad key
+    // gamepad buttons, in pad id order PAD_SOUTH .. PAD_ZR, then the PlayStation face labels
+    UI_PAD_SOUTH, UI_PAD_EAST, UI_PAD_WEST, UI_PAD_NORTH, UI_PAD_LSTICK, UI_PAD_RSTICK, UI_PAD_L, UI_PAD_R,
+    UI_PAD_START, UI_PAD_BACK, UI_PAD_DPAD_LEFT, UI_PAD_DPAD_UP, UI_PAD_DPAD_RIGHT, UI_PAD_DPAD_DOWN, UI_PAD_ZL,
+    UI_PAD_ZR,
+    UI_PAD_CROSS, UI_PAD_CIRCLE, UI_PAD_SQUARE, UI_PAD_TRIANGLE,
+
+    // Menu tab
+    UI_MENU_MENU_LANG, UI_MENU_MENU_LANG_DESC, UI_MENU_MENU_LANG_AUTO,
+
+    // Language names, each in its own language and the same in every row (game language and menu language lists)
+    UI_MENU_LANGNAME_EN, UI_MENU_LANGNAME_JA, UI_MENU_LANGNAME_FR, UI_MENU_LANGNAME_DE, UI_MENU_LANGNAME_IT,
+    UI_MENU_LANGNAME_ES, UI_MENU_LANGNAME_NL, UI_MENU_LANGNAME_PT, UI_MENU_LANGNAME_PT_BR, UI_MENU_LANGNAME_RU,
+    UI_MENU_LANGNAME_ZH_HANS, UI_MENU_LANGNAME_ZH_HANT, UI_MENU_LANGNAME_KO,
+    // menu languages the game does not ship (its texts then in es for ca, gl, eu; in English for pl, tr, uk)
+    UI_MENU_LANGNAME_ES_419, UI_MENU_LANGNAME_CA, UI_MENU_LANGNAME_GL, UI_MENU_LANGNAME_EU, UI_MENU_LANGNAME_PL,
+    UI_MENU_LANGNAME_TR, UI_MENU_LANGNAME_UK,
+    // game language added by update 1.7.0 (Polish came in 1.5.0): offered when the RomFS ships its Mals folder
+    UI_MENU_LANGNAME_TH,
+    UI_MENU_LANGNAME_LAST = UI_MENU_LANGNAME_TH,
+
+    // Advanced
+    UI_MENU_ADV_WARNING,
+    UI_MENU_GROUP_SCHED, UI_MENU_GROUP_SHADERS, UI_MENU_GROUP_TEXMEM, UI_MENU_GROUP_FIXES, UI_MENU_GROUP_VULKAN,
+    UI_MENU_GROUP_DIAG,
+    UI_MENU_ASYNC_PREEMPT, UI_MENU_ASYNC_PREEMPT_DESC, UI_MENU_PREEMPT_OFF, UI_MENU_PREEMPT_ON,
+    UI_MENU_PREEMPT_INHERIT,
+    UI_MENU_REPLAY_ASYNC, UI_MENU_REPLAY_ASYNC_DESC,
+    UI_MENU_FREE_CORES, UI_MENU_FREE_CORES_DESC,
+    UI_MENU_TIMER_1MS, UI_MENU_TIMER_1MS_DESC,
+    UI_MENU_PIPE_WAIT, UI_MENU_PIPE_WAIT_DESC, UI_MENU_PIPE_WAIT_DEFAULT, UI_MENU_PIPE_WAIT_DRAW,
+    UI_MENU_PIPE_SKIP, UI_MENU_PIPE_SKIP_DESC, UI_MENU_PIPE_SKIP_STRICT, UI_MENU_PIPE_SKIP_ANY,
+    UI_MENU_PIPE_SKIP_FULLSCREEN,
+    UI_MENU_PIPE_PREBUILD, UI_MENU_PIPE_PREBUILD_DESC,
+    UI_MENU_GPL, UI_MENU_GPL_DESC,
+    UI_MENU_ASTC, UI_MENU_ASTC_DESC, UI_MENU_ASTC_AUTO, UI_MENU_ASTC_GPU, UI_MENU_ASTC_NATIVE, UI_MENU_ASTC_CPU,
+    UI_MENU_MEMORY, UI_MENU_MEMORY_DESC, UI_MENU_MEMORY_AUTO, UI_MENU_MEMORY_IMPORT, UI_MENU_MEMORY_MIRROR,
+    UI_MENU_MEMORY_VERIFY,
+    UI_MENU_TEX_ALIAS, UI_MENU_TEX_ALIAS_DESC,
+    UI_MENU_FIX_C0, UI_MENU_FIX_C0_DESC,
+    UI_MENU_FIX_ZERO, UI_MENU_FIX_ZERO_DESC,
+    UI_MENU_BIND_SKIP, UI_MENU_BIND_SKIP_DESC,
+    UI_MENU_SHADER_MEMO, UI_MENU_SHADER_MEMO_DESC,
+    UI_MENU_PIPE_MEMO, UI_MENU_PIPE_MEMO_DESC,
+    UI_MENU_TEX_MEMO, UI_MENU_TEX_MEMO_DESC,
+    UI_MENU_DESC_TEMPLATE, UI_MENU_DESC_TEMPLATE_DESC,
+    UI_MENU_PUSH_SKIP, UI_MENU_PUSH_SKIP_DESC,
+    UI_MENU_SPLIT_DRAWS, UI_MENU_SPLIT_DRAWS_DESC,
+    UI_MENU_VK_VALIDATION, UI_MENU_VK_VALIDATION_DESC, UI_MENU_VK_VALIDATION_MISSING,
+    UI_MENU_VK_DYN_VERTEX, UI_MENU_VK_DYN_VERTEX_DESC,
+    UI_MENU_VK_SUBGROUP_PIN, UI_MENU_VK_SUBGROUP_PIN_DESC,
+    UI_MENU_TRACE, UI_MENU_TRACE_DESC,
+    UI_MENU_FLIGHT, UI_MENU_FLIGHT_DESC,
+    UI_MENU_FLIGHT_SPIKE_MS, UI_MENU_FLIGHT_SPIKE_MS_DESC,
+    UI_MENU_INPUT_RECORD, UI_MENU_INPUT_RECORD_DESC,
+    UI_MENU_OPEN_LOG, UI_MENU_OPEN_LOG_DESC,
+    UI_MENU_COPY_INFO, UI_MENU_COPY_INFO_DESC, UI_MENU_COPY_INFO_DONE,
+    UI_MENU_ACTION_FAILED,    // beside a button whose action did not work (no clipboard, no folder)
+    UI_MENU_RESET, UI_MENU_RESET_DESC, UI_MENU_RESET_CONFIRM, UI_MENU_RESET_YES, UI_MENU_RESET_NO,
+
+    // Performance overlay
+    UI_MENU_OV_FPS, UI_MENU_OV_FRAME_MS, UI_MENU_OV_GAME_PCT, UI_MENU_OV_MAX_MS,
+    UI_MENU_OV_GPU, UI_MENU_OV_CPU, UI_MENU_OV_RAM, UI_MENU_OV_VRAM, UI_MENU_OV_NONE,
+    UI_MENU_OV_REPLAY, UI_MENU_OV_GPU_TIME, UI_MENU_OV_PIPE_WAIT, UI_MENU_OV_TEX_UPLOADS,
+    UI_MENU_OV_MAIN_CPU, UI_MENU_OV_RENDER_CPU, UI_MENU_OV_SLOW, UI_MENU_OV_PER_MIN,
+    // number formats of the overlay's cells (printf, one number each)
+    UI_MENU_OV_FMT_PCT, UI_MENU_OV_FMT_TEMP, UI_MENU_OV_FMT_POWER, UI_MENU_OV_FMT_MHZ, UI_MENU_OV_FMT_GB,
+    UI_MENU_OV_FMT_GB_OF, UI_MENU_OV_GAME_GB, UI_MENU_OV_FMT_MS, UI_MENU_OV_PER_FRAME,
+    // the picture lines: window and game image sizes, the scaling to the window and presentation
+    UI_MENU_OV_WINDOW, UI_MENU_OV_OUTPUT, UI_MENU_OV_SCALING, UI_MENU_OV_PRESENT,
+    UI_MENU_OV_FMT_SIZE,      // "%ux%u"
+    UI_MENU_OV_FMT_FSR,       // "AMD FSR 1, sharpness %d%%"
+    UI_MENU_OV_SCALE_NONE, UI_MENU_OV_SCALE_BILINEAR,
+
+    // Start screen (ui/launcher/launcher.cpp)
+    UI_LAUNCH_SUBTITLE, UI_LAUNCH_PLAY, UI_LAUNCH_SETTINGS, UI_LAUNCH_FILES, UI_LAUNCH_QUIT, UI_LAUNCH_BACK,
+    UI_LAUNCH_FILES_READY, UI_LAUNCH_FILES_MISSING, UI_LAUNCH_FILES_FOLDER, UI_LAUNCH_FILES_HELP,
+    UI_LAUNCH_PICK_GAME_DIR, UI_LAUNCH_GAME_DIR_HELP, UI_LAUNCH_GAME_DIR_INVALID, UI_LAUNCH_GAME_DIR_INVALID_WIN32,
+    UI_LAUNCH_NO_TOOLS, UI_LAUNCH_SOURCE, UI_LAUNCH_PICK, UI_LAUNCH_PICK_NUP, UI_LAUNCH_ROMFS_MODE, UI_LAUNCH_ROMFS_COPY,
+    UI_LAUNCH_ROMFS_LINK, UI_LAUNCH_SETUP, UI_LAUNCH_SETUP_AGAIN, UI_LAUNCH_CANCEL, UI_LAUNCH_SETUP_DONE,
+    UI_LAUNCH_SETUP_FAILED,   // "Set up failed: %s"
+    // why it failed, by prepare.py's "error <code> <detail>" code (launcher_setup.cpp): "%s" is the detail (a folder,
+    // a build id, a file count or the failing tool's English message); STOPPED, CANCELLED and NO_SETUP have none
+    UI_SETUP_ERR_SOURCE, UI_SETUP_ERR_NOGAME, UI_SETUP_ERR_ENCRYPTED, UI_SETUP_ERR_VERSION, UI_SETUP_ERR_ROMFS,
+    UI_SETUP_ERR_FAILED, UI_SETUP_ERR_IO, UI_SETUP_ERR_STOPPED, UI_SETUP_ERR_CANCELLED, UI_SETUP_ERR_NO_SETUP,
+    UI_SETUP_ERR_MOVED,   // "... %s": the last setup's game files folder, no longer there (#188)
+    UI_SETUP_ERR_MISMATCH,   // "... %s": which version the RomFS and exefs/main are (#315)
+    // the setup's steps (tools/prepare/prepare.py STEPS), and the mark of one an earlier setup already did
+    UI_LAUNCH_STEP_CHECK, UI_LAUNCH_STEP_EXEFS, UI_LAUNCH_STEP_ROMFS, UI_LAUNCH_STEP_GENERATE, UI_LAUNCH_STEP_COMPILE,
+    UI_LAUNCH_STEP_SHADERS, UI_LAUNCH_STEP_WARM, UI_LAUNCH_STEP_CLEANUP, UI_LAUNCH_STEP_KEPT,
+    UI_LAUNCH_SHORTCUT, UI_LAUNCH_SHORTCUT_DONE, UI_LAUNCH_SHORTCUT_FAILED,   // DONE: "... %s" (the shortcut's path)
+    // the Mods page (ui/launcher/mods.cpp): CONFIRM and CODE_BUILD take %s (the mod's name, the build id)
+    UI_LAUNCH_MODS, UI_LAUNCH_MODS_EMPTY, UI_MOD_IMPORT_ZIP, UI_MOD_IMPORT_FOLDER, UI_MOD_NAME, UI_MOD_IMPORT,
+    UI_MOD_DELETE, UI_MOD_CONFIRM, UI_MOD_ROMFS, UI_MOD_ROMFS_1, UI_MOD_CODE_BUILD,
+    UI_MOD_CODE_PORT, UI_MOD_CODE_SWITCHES, UI_MOD_CODE_SWITCH_1, UI_MOD_MERGING, UI_MOD_CONFLICTS, UI_MOD_VANILLA, UI_MOD_IMPORTED, UI_MOD_RESOLVE, UI_MOD_OK,
+    UI_MOD_ERR_LAYOUT, UI_MOD_ERR_NAME, UI_MOD_ERR_IO, UI_MOD_ERR_NOPORT, UI_MOD_ERR_NOGAME,
+    UI_MOD_VARIANTS, UI_MOD_ERR_BIG, UI_MOD_ERR_UNPACK,
+    UI_MOD_WARN_GRAPHICS, UI_MOD_WARN_SHADERS, UI_MOD_CODE_REBUILD, UI_MOD_RISK, UI_MOD_RISK_ACK,
+    // the update (ui/launcher/launcher_update.cpp): UPDATE "... %s ... %d MB" (tag, size), FETCHING "... %s" (tag),
+    // FAILED "... %s" (why), UPDATED "... %s" (tag); the Menu tab's switch
+    UI_LAUNCH_UPDATE, UI_LAUNCH_UPDATE_FETCHING, UI_LAUNCH_UPDATE_FAILED, UI_LAUNCH_UPDATED,
+    UI_LAUNCH_NO_GAME_DATA,   // the start screen's lower right: the player brings the game, the port ships none
+    // the last run's end (ui/launcher/launcher_lastrun.cpp): KNOWN "... #%d ..." (issue), FIXED "... %s ..." (tag),
+    // OPEN "... #%d" (issue): the buttons open the issue or the bug form
+    UI_LAUNCH_LASTRUN_KNOWN, UI_LAUNCH_LASTRUN_FIXED, UI_LAUNCH_LASTRUN_CRASH, UI_LAUNCH_LASTRUN_OPEN,
+    UI_LAUNCH_LASTRUN_REPORT, UI_LAUNCH_LASTRUN_DISMISS,
+    UI_MENU_UPDATE_CHECK, UI_MENU_UPDATE_CHECK_DESC,
+    // the Profiles page (ui/launcher/launcher_players.cpp): PLAYER "...: %s" (the main page's row, the name),
+    // CONFIRM "... %s ..." (the name)
+    UI_LAUNCH_PLAYERS, UI_LAUNCH_PLAYER, UI_PLAYER_NOTE, UI_PLAYER_NAME_HINT, UI_PLAYER_CHOOSE, UI_PLAYER_CHOSEN,
+    UI_PLAYER_NEW, UI_PLAYER_REMOVE, UI_PLAYER_CONFIRM, UI_PLAYER_FAILED,
+    // Steam Remote Play Together (steam/steam_rpt.c), the Game tab's group: the buttons; CONNECTED "%d connected" (the
+    // guests) beside Invite; the notes of a greyed-out group (no App ID, the start screen, Steam not available)
+    UI_MENU_GROUP_RPT, UI_MENU_RPT_INVITE, UI_MENU_RPT_INVITE_DESC, UI_MENU_RPT_LINK, UI_MENU_RPT_LINK_DESC,
+    UI_MENU_RPT_CONNECTED, UI_MENU_RPT_NO_OVERLAY, UI_MENU_RPT_WAITING,
+    UI_MENU_RPT_NEED_APPID, UI_MENU_RPT_AT_START, UI_MENU_RPT_FAILED,
+    // notices: JOINED / LEFT "%s" (the guest's name); PAD "%d" (the player); KEYBOARD "%s ... %d"; FULL "%s";
+    // FAILED "%s" (Steam's reason, in English)
+    UI_NOTICE_RPT_JOINED, UI_NOTICE_RPT_LEFT, UI_NOTICE_RPT_PAD, UI_NOTICE_RPT_KEYBOARD, UI_NOTICE_RPT_FULL,
+    UI_NOTICE_RPT_FAILED,
+    // local multiplayer with too few controllers and Steam ready: INVITE "%d ... %d" (players, controllers) as
+    // UI_NOTICE_PADS_MISSING, saying the invite list opened; NO_OVERLAY when the overlay could not open
+    UI_NOTICE_RPT_INVITE, UI_NOTICE_RPT_NO_OVERLAY,
+    // the game asked for online play (steam_rpt_online): ONLINE with Steam ready, the invite list opened;
+    // ONLINE_OFF "%s" (why Remote Play Together is off)
+    UI_NOTICE_RPT_ONLINE, UI_NOTICE_RPT_ONLINE_OFF,
+    // local multiplayer with too few controllers and Steam ready (steam_invite = ask, menu_choice): the question
+    // CHOICE "%d ... %d" (players, controllers) and its two buttons
+    UI_MENU_RPT_CHOICE, UI_MENU_RPT_CHOICE_LOCAL, UI_MENU_RPT_CHOICE_STEAM,
+    // the Game tab's App ID row (steam_appid): its values off and auto (the game Steam started); CUSTOM "%s" (a number
+    // from orbitals.ini that the list lacks)
+    UI_MENU_RPT_APPID, UI_MENU_RPT_APPID_DESC, UI_MENU_RPT_APPID_OFF, UI_MENU_RPT_APPID_AUTO, UI_MENU_RPT_APPID_CUSTOM,
+    // the row under it that takes a typed App ID (opt_digits; steam_appids keeps them for the list): label, description,
+    // and the hint shown while nothing is typed
+    UI_MENU_RPT_APPID_ADD, UI_MENU_RPT_APPID_ADD_DESC, UI_MENU_RPT_APPID_ADD_HINT,
+    UI_MENU_LAST_ID = UI_MENU_RPT_APPID_ADD_HINT,
+    UI_TEXT_COUNT
+} UiTextId;
+
+// UTF-8 text for id in the language of ov_language(); English when the catalog has no row for that language.
+const char *ui_text(UiTextId id);
+// The same for an explicit catalog language ("en", "ja", "fr", "de", "it", "es", "nl", "pt", "pt-BR", "ru",
+// "zh-Hans", "zh-Hant", "ko", "es-419", "ca", "gl", "eu", "pl", "tr", "uk", "th"); an empty entry gives the English text.
+const char *ui_text_in(const char *lang, UiTextId id);
+// 1 when the row of lang has its own text for id (no fallback to English), for the probe.
+int ui_text_defined(const char *lang, UiTextId id);
+// The catalog language for a Switch language code ("en-GB" -> "en", "zh-CN" -> "zh-Hans", ...).
+const char *ui_text_lang(const char *switch_code);
+
+// Menu text: ui_text_in(menu_lang(), id). The menu language is ORBITALS_MENU_LANG (a catalog language); unset, the system
+// UI language when the catalog has it, else English. Follows a live change of the setting.
+const char *menu_text(UiTextId id);
+const char *menu_lang(void);
