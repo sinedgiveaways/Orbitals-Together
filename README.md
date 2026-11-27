@@ -136,7 +136,7 @@ Play Together (invite friends)".
 
 ## 6. If something goes wrong
 
-Open an [issue](https://github.com/sinedgiveaways/Orbitals-Together/issues) and attach the logs from the game folder:
+Open an [issue](https://github.com/sinedgiveaways/pmocer-latibro/issues) and attach the logs from the game folder:
 
 - `logs\orbitals.log` (the game and the launcher);
 - `logs\setup.log` (the setup).

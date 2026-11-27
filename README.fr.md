@@ -138,7 +138,7 @@ PC, il ne reste pas de place pour votre ami. Débranchez la deuxième avant de l
 
 ## 6. En cas de problème
 
-Ouvrez une [issue](https://github.com/sinedgiveaways/Orbitals-Together/issues) et joignez les journaux du dossier du
+Ouvrez une [issue](https://github.com/sinedgiveaways/pmocer-latibro/issues) et joignez les journaux du dossier du
 jeu :
 
 - `logs\orbitals.log` (le jeu et le lanceur) ;
