@@ -19,6 +19,7 @@ extern "C" {
 #include "input_map.h"
 #include "platform/platform.h"
 #include "steam_rpt.h"
+#include "stream/stream.h"
 #include "sysinfo.h"
 #include "ui/menu/menu.h"
 #include "ui_text.h"
@@ -311,11 +312,29 @@ static void rows_remote_play(void) {
     }
 }
 
+// Online play in a browser (stream/stream.h): the game's Online Play starts it too. Start copies the link again once
+// it is known; its value says where the stream is.
+static void rows_stream(void) {
+    opt_group(UI_MENU_GROUP_STREAM);
+    int st = webplay_state();
+    static char value[96];
+    const char *v = st == WEBPLAY_STARTING ? menu_text(UI_MENU_STREAM_STARTING)
+                  : st == WEBPLAY_FAILED   ? menu_text(UI_MENU_STREAM_FAILED)
+                  : st == WEBPLAY_READY && webplay_clients() ? menu_text(UI_MENU_STREAM_PLAYING)
+                  : st == WEBPLAY_READY    ? menu_text(UI_MENU_STREAM_READY)
+                                          : menu_text(UI_MENU_STREAM_OFF);
+    snprintf(value, sizeof value, "%s", v);
+    if (opt_button("##webplay_start", UI_MENU_STREAM_START, UI_MENU_STREAM_START_DESC, value)) webplay_start();
+    if (st == WEBPLAY_OFF) opt_disable_next(UI_MENU_STREAM_OFF);
+    if (opt_button("##webplay_stop", UI_MENU_STREAM_STOP, UI_MENU_STREAM_STOP_DESC, "") && st != WEBPLAY_OFF) webplay_stop();
+}
+
 static void tab_game(float scale) {
     opt_begin("##game", scale);
     row_game_lang();
     opt_toggle("ORBITALS_LAN", UI_MENU_LAN, UI_MENU_LAN_DESC);   // sdk/ov/ov_net.c and ov_socket.c
     rows_remote_play();
+    rows_stream();
     opt_end();
 }
 
@@ -410,18 +429,11 @@ static bool validation_layer_present(void) {
     return have != 0;
 }
 
-// Every setting the menu shows back to its default (the environment's keys stay), written to orbitals.ini. The Mods page's
-// keys have rows too but are the player's choices, not settings: a reset left every mod disabled.
+// Every setting the menu shows back to its default (the environment's keys stay), written to orbitals.ini.
 static void reset_all(void) {
-    static const char *const keep[] = {"MODS", "MODS_ACK", "MODS_PLAYED"};
     const char *keys[128];
     int n = 0;
-    for (int i = 0; n < 128 && cfg_meta_at(i); i++) {
-        const char *k = cfg_meta_at(i)->key;
-        bool kept = false;
-        for (const char *x : keep) kept |= !strcmp(k, x);
-        if (!kept) keys[n++] = k;
-    }
+    for (int i = 0; n < 128 && cfg_meta_at(i); i++) keys[n++] = cfg_meta_at(i)->key;
     int done = cfg_reset(keys, n);
     opt_save_soon();
     rt_log("menu: reset %d settings to their defaults", done);

@@ -40,70 +40,6 @@ msgctxt "UI_MENU_TAB_GRAPHICS"
 msgid "Graphics"
 msgstr "Графика"
 
-msgctxt "UI_MENU_TAB_HACKS"
-msgid "Hacks"
-msgstr "Хаки"
-
-msgctxt "UI_MENU_HACKS_WARNING"
-msgid ""
-"Experimental: shortcuts the console does not have, for playing and testing faster. They can "
-"change how the game behaves."
-msgstr ""
-"Экспериментально: возможности, которых нет на консоли, чтобы играть и тестировать быстрее. Могут "
-"менять поведение игры."
-
-msgctxt "UI_MENU_TURBO"
-msgid "Turbo"
-msgstr "Турбо"
-
-msgctxt "UI_MENU_TURBO_DESC"
-msgid ""
-"The whole game runs faster: menus, movies, loads and races. Hold or press F2. The screen shows at "
-"most 60 frames a second."
-msgstr ""
-"Вся игра идёт быстрее: меню, ролики, загрузки и гонки. Удерживайте или нажмите F2. Экран "
-"показывает не больше 60 кадров в секунду."
-
-msgctxt "UI_MENU_TURBO_HOLD"
-msgid "Hold F2"
-msgstr "Удерживать F2"
-
-msgctxt "UI_MENU_TURBO_TOGGLE"
-msgid "F2 on/off"
-msgstr "F2 вкл/выкл"
-
-msgctxt "UI_MENU_TURBO_SPEED"
-msgid "Turbo speed"
-msgstr "Скорость турбо"
-
-msgctxt "UI_MENU_TURBO_SPEED_DESC"
-msgid "How many times faster. A slow PC may not reach it."
-msgstr "Во сколько раз быстрее. Медленный ПК может не успевать."
-
-msgctxt "UI_MENU_SEED"
-msgid "Same randomness every time"
-msgstr "Одинаковая случайность"
-
-msgctxt "UI_MENU_SEED_DESC"
-msgid ""
-"The game draws the same random numbers in every session: the same title course, the same items. "
-"For testing."
-msgstr ""
-"Игра выдаёт одни и те же случайные числа в каждом запуске: та же трасса на титульном экране, те "
-"же предметы. Для тестов."
-
-msgctxt "UI_MENU_FREEZE_KEYS"
-msgid "Freeze keys"
-msgstr "Клавиши паузы кадра"
-
-msgctxt "UI_MENU_FREEZE_KEYS_DESC"
-msgid ""
-"F3 stops the game on the frame on screen and starts it again; F4 moves it on by one frame. To "
-"look at a moment closely."
-msgstr ""
-"F3 останавливает игру на текущем кадре и запускает снова; F4 продвигает на один кадр. Чтобы "
-"рассмотреть момент."
-
 msgctxt "UI_MENU_ANISO"
 msgid "Texture filtering"
 msgstr "Фильтрация текстур"
@@ -1795,161 +1731,6 @@ msgctxt "UI_LAUNCH_SHORTCUT_FAILED"
 msgid "Could not make the shortcut"
 msgstr "Не удалось создать ярлык"
 
-msgctxt "UI_LAUNCH_MODS"
-msgid "Mods"
-msgstr "Моды"
-
-msgctxt "UI_LAUNCH_MODS_EMPTY"
-msgid "No mods yet: import a zip or a folder below"
-msgstr "Модов пока нет: импортируйте zip или папку ниже"
-
-msgctxt "UI_MOD_IMPORT_ZIP"
-msgid "Import zip..."
-msgstr "Импорт zip..."
-
-msgctxt "UI_MOD_IMPORT_FOLDER"
-msgid "Import folder..."
-msgstr "Импорт папки..."
-
-msgctxt "UI_MOD_NAME"
-msgid "Name"
-msgstr "Имя"
-
-msgctxt "UI_MOD_IMPORT"
-msgid "Import"
-msgstr "Импортировать"
-
-msgctxt "UI_MOD_DELETE"
-msgid "Delete"
-msgstr "Удалить"
-
-#. printf format: keep every %... conversion, in the same order.
-msgctxt "UI_MOD_CONFIRM"
-msgid "Delete %s?"
-msgstr "Удалить %s?"
-
-#. printf format: keep every %... conversion, in the same order.
-msgctxt "UI_MOD_ROMFS"
-msgid "%d files"
-msgstr "%d файлов"
-
-msgctxt "UI_MOD_ROMFS_1"
-msgid "1 file"
-msgstr "1 файл"
-
-#. printf format: keep every %... conversion, in the same order.
-msgctxt "UI_MOD_CODE_BUILD"
-msgid "code: built for %s"
-msgstr "код: собран для %s"
-
-msgctxt "UI_MOD_CODE_PORT"
-msgid "code: needs a ported build"
-msgstr "код: нужен порт"
-
-#. printf format: keep every %... conversion, in the same order.
-msgctxt "UI_MOD_CODE_SWITCHES"
-msgid "code: %d switches"
-msgstr "код: %d переключателей"
-
-msgctxt "UI_MOD_CODE_SWITCH_1"
-msgid "code: 1 switch"
-msgstr "код: 1 переключатель"
-
-msgctxt "UI_MOD_MERGING"
-msgid "Merging mods..."
-msgstr "Объединение модов..."
-
-msgctxt "UI_MOD_CONFLICTS"
-msgid "Conflicts: click the winner to change it"
-msgstr "Конфликты: нажмите на победителя, чтобы изменить его"
-
-msgctxt "UI_MOD_VANILLA"
-msgid "Vanilla"
-msgstr "Оригинал"
-
-msgctxt "UI_MOD_IMPORTED"
-msgid "Imported %s"
-msgstr "%s импортирован"
-
-msgctxt "UI_MOD_RESOLVE"
-msgid "Resolve conflicts"
-msgstr "Разрешить конфликты"
-
-msgctxt "UI_MOD_OK"
-msgid "OK"
-msgstr "ОК"
-
-msgctxt "UI_MOD_ERR_LAYOUT"
-msgid "Not a mod: no romfs/ or exefs/ inside"
-msgstr "Не мод: внутри нет romfs/ или exefs/"
-
-msgctxt "UI_MOD_ERR_NAME"
-msgid "That name is taken or empty"
-msgstr "Это имя занято или пусто"
-
-msgctxt "UI_MOD_ERR_IO"
-msgid "Could not copy the files"
-msgstr "Не удалось скопировать файлы"
-
-msgctxt "UI_MOD_ERR_NOPORT"
-msgid "Not ported yet: no code patches for this game"
-msgstr "Пока не портировано: нет патчей кода для этой игры"
-
-msgctxt "UI_MOD_ERR_NOGAME"
-msgid "Game files not set up: do that on the Files page first"
-msgstr "Файлы игры не настроены: сначала укажите их на странице «Файлы»"
-
-#. Above one button per mod found in the archive (its folder inside the archive).
-msgctxt "UI_MOD_VARIANTS"
-msgid "This archive holds several mods: pick the one to import"
-msgstr "В этом архиве несколько модов: выберите, какой импортировать"
-
-msgctxt "UI_MOD_ERR_BIG"
-msgid "Too large to be a mod (over 4 GB or 50000 files)"
-msgstr "Слишком большой для мода (больше 4 ГБ или 50000 файлов)"
-
-msgctxt "UI_MOD_ERR_UNPACK"
-msgid "Cannot open this archive: .rar and .7z need bsdtar (libarchive) installed"
-msgstr "Не удаётся открыть архив: для .rar и .7z нужен установленный bsdtar (libarchive)"
-
-#. Under an installed mod that replaces the game's graphics settings archive (general_format).
-msgctxt "UI_MOD_WARN_GRAPHICS"
-msgid ""
-"Changes the game's graphics settings: the port's own settings (resolution, quality) go on top, so "
-"this mod may do less than on a console, look worse or misbehave"
-msgstr ""
-"Меняет настройки графики игры: собственные настройки порта (разрешение, качество) применяются "
-"поверх, поэтому мод может работать хуже, чем на консоли, выглядеть хуже или вести себя неправильно"
-
-#. Above every mod install and import.
-msgctxt "UI_MOD_RISK"
-msgid ""
-"Mods are made by other people and are not tested by this project. A mod can crash the game or "
-"damage your save: read its page first, keep a copy of your save, and report a mod's problems to "
-"its author."
-msgstr ""
-"Моды создают другие люди, и проект их не тестирует. Мод может привести к вылету игры или "
-"повредить сохранение: сначала прочитайте его страницу, сделайте копию сохранения и сообщайте о "
-"проблемах мода его автору."
-
-msgctxt "UI_MOD_RISK_ACK"
-msgid "I understand"
-msgstr "Понятно"
-
-#. Under a mod that changes the game's code (its .ips): the game code is built with it.
-msgctxt "UI_MOD_CODE_REBUILD"
-msgid "code: turning it on or off builds the game code again before you play (a few minutes)"
-msgstr "код: включение или отключение заново собирает код игры перед запуском (несколько минут)"
-
-#. Under an installed mod that ships shaders (Shader/ files).
-msgctxt "UI_MOD_WARN_SHADERS"
-msgid ""
-"Replaces shaders: the port translates the game's shaders during the setup, so this mod may not "
-"show, or may break the picture"
-msgstr ""
-"Заменяет шейдеры: порт переводит шейдеры игры при подготовке, поэтому этот мод может не "
-"отображаться или испортить картинку"
-
 #. printf format: keep every %... conversion, in the same order.
 msgctxt "UI_LAUNCH_UPDATE"
 msgid "Update to %s (%d MB)"
@@ -1969,10 +1750,6 @@ msgstr "Не удалось обновить: %s"
 msgctxt "UI_LAUNCH_UPDATED"
 msgid "Updated to %s: setting up again what it changed"
 msgstr "Обновлено до %s: заново готовится то, что изменилось"
-
-msgctxt "UI_LAUNCH_NO_GAME_DATA"
-msgid "Your own copy of the game · No game data included"
-msgstr "Ваша собственная копия игры · Данные игры не входят"
 
 #. printf format: keep every %... conversion, in the same order.
 msgctxt "UI_LAUNCH_LASTRUN_KNOWN"
@@ -2168,22 +1945,83 @@ msgid ""
 msgstr ""
 "Оверлей Steam не открылся: запустите игру из Steam или отправьте гостевую ссылку (меню > Игра)."
 
-msgctxt "UI_NOTICE_RPT_ONLINE"
-msgid ""
-"Online play goes through Steam Remote Play Together: invite your friend from the list that just "
-"opened. Once they have joined and pressed a button, start a local game for 2 players."
-msgstr ""
-"Сетевая игра идёт через Steam Remote Play Together: пригласите друга из только что открывшегося "
-"списка. Когда он присоединится и нажмёт кнопку, начните локальную игру на 2 игроков."
+msgctxt "UI_NOTICE_STREAM_STARTING"
+msgid "Online play: making a link for your friend (Cloudflare)…"
+msgstr "Сетевая игра: создаётся ссылка для друга (Cloudflare)…"
 
+#. %s: the link (https://...trycloudflare.com)
 #. printf format: keep every %... conversion, in the same order.
-msgctxt "UI_NOTICE_RPT_ONLINE_OFF"
+msgctxt "UI_NOTICE_STREAM_LINK"
 msgid ""
-"Online play goes through Steam Remote Play Together, which is off: %s. Set it up in menu > Game "
-"(docs/remote-play.md)."
+"Online play: link copied, send it to your friend: %s. Once they have joined, start a Local Play "
+"game for 2 players."
 msgstr ""
-"Сетевая игра идёт через Steam Remote Play Together, который выключен: %s. Настройте его в меню > "
-"Игра (docs/remote-play.md)."
+"Сетевая игра: ссылка скопирована, отправьте её другу: %s. Когда он присоединится, начните "
+"локальную игру на 2 игроков."
+
+msgctxt "UI_NOTICE_STREAM_JOINED"
+msgid "Your friend joined from their browser as player 2."
+msgstr "Ваш друг присоединился из браузера как игрок 2."
+
+msgctxt "UI_NOTICE_STREAM_LEFT"
+msgid "Your friend left the browser stream."
+msgstr "Ваш друг покинул трансляцию в браузере."
+
+msgctxt "UI_NOTICE_STREAM_FULL"
+msgid "Your friend could not join: player 2 already has a controller. Unplug the second controller."
+msgstr "Друг не смог присоединиться: у игрока 2 уже есть контроллер. Отключите второй контроллер."
+
+#. %s: why, in English
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_NOTICE_STREAM_FAILED"
+msgid "Online play is not available: %s."
+msgstr "Сетевая игра недоступна: %s."
+
+msgctxt "UI_MENU_GROUP_STREAM"
+msgid "Online play in a browser (Cloudflare)"
+msgstr "Сетевая игра в браузере (Cloudflare)"
+
+msgctxt "UI_MENU_STREAM_START"
+msgid "Start and copy the link"
+msgstr "Запустить и скопировать ссылку"
+
+msgctxt "UI_MENU_STREAM_START_DESC"
+msgid ""
+"Streams the game to a friend's browser through a Cloudflare link, copied to the clipboard; their "
+"gamepad or keyboard is player 2. The game's Online Play does the same. The first start downloads "
+"cloudflared (55 MB)."
+msgstr ""
+"Транслирует игру в браузер друга по ссылке Cloudflare, скопированной в буфер обмена; его "
+"контроллер или клавиатура — игрок 2. Сетевая игра в самой игре делает то же самое. Первый запуск "
+"скачивает cloudflared (55 МБ)."
+
+msgctxt "UI_MENU_STREAM_STOP"
+msgid "Stop"
+msgstr "Остановить"
+
+msgctxt "UI_MENU_STREAM_STOP_DESC"
+msgid "Ends the stream and its link: your friend is disconnected."
+msgstr "Останавливает трансляцию и ссылку: друг отключается."
+
+msgctxt "UI_MENU_STREAM_OFF"
+msgid "off"
+msgstr "выключено"
+
+msgctxt "UI_MENU_STREAM_STARTING"
+msgid "starting…"
+msgstr "запуск…"
+
+msgctxt "UI_MENU_STREAM_READY"
+msgid "link ready"
+msgstr "ссылка готова"
+
+msgctxt "UI_MENU_STREAM_PLAYING"
+msgid "friend connected"
+msgstr "друг подключён"
+
+msgctxt "UI_MENU_STREAM_FAILED"
+msgid "failed (see the log)"
+msgstr "ошибка (см. журнал)"
 
 #. printf format: keep every %... conversion, in the same order.
 msgctxt "UI_MENU_RPT_CHOICE"

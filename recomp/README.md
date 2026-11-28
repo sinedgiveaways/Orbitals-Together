@@ -35,5 +35,11 @@ Usage: `uv run tools/cpu/spin_waits.py --exefs game/exefs > build/patches-port.t
 | `layout.py` | Load addresses of the modules |
 | `patches.py` | Instruction patches by address and spin loops (`spin`) |
 | `versions.py` | The game builds the port knows, by `exefs/main`'s build id: name, `RtGame.version` number, program ids, module build ids, patch table, setup steps that do not apply |
+| `peek_words.py` | Prints a module's raw `.text` words around main-relative offsets in `patches-v1.txt`'s word format, from the extracted ExeFS, to state a patch site with the game's own words. Read-only |
 
 Coverage: `tools/cpu/lift_coverage.py`.
+
+Mods: the launcher's Mods page and its tools were removed on 27/11/2026. `gen.py --mods` / `--image` and
+`patches.py` `load_mods` / `load_image` stay for now: any change to `recomp/*.py` changes the setup's generate and
+compile keys (`tools/prepare/prepare.py` `GENERATOR`), so every player would rebuild the game code for nothing. Remove
+them with the next change that rebuilds it anyway (and `tests/test_mods.py` with them).

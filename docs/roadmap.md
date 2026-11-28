@@ -513,6 +513,26 @@ locuteurs natifs.
 (`lastrun.py` et `update.py` au démarrage, setup, mods, mise à jour) ouvraient chacun une console. `launcher_process`
 (`launcher_setup.cpp`) les démarre avec `CREATE_NO_WINDOW` sous Windows.
 
+**Version publique 0.3.0 (27/11/2026) :** dépôt public `sinedgiveaways/Orbitals-Together` (créé d'abord sous le nom `Obitals-Together`, renommé ; GitHub redirige l'ancien nom, que le lanceur 0.3.0 utilise encore) (code du tag `v0.3.0`, README en
+anglais et en français, workflow **Publish release**), release https://github.com/sinedgiveaways/Orbitals-Together/releases/tag/v0.3.0.
+Seuls les builds déclarés définitifs par le joueur y sont publiés ; les tests continuent ici.
+
+**Ménage (27/11/2026) :** supprimés à la demande du joueur : restes du retrait de MKW et migration des anciens réglages,
+puis toute la gestion des mods (page Mods du lanceur, `mods.cpp`, `tools/mod/`, superposition des mods dans
+`romfs.c`, réglages `ORBITALS_MODS*`, 34 textes). Le générateur garde `--mods`/`--image` jusqu'au prochain changement
+de `recomp/` (voir recomp/README.md). Gardés : les diagnostics du gel, le code Linux, les outils de rapport.
+
+**Partie en ligne par navigateur (27/11/2026, confirmé par le joueur avec le build `2017775` : « tout fonctionne ») :** choix du joueur : Steam Remote Play Together reste pour la
+Partie locale, la Partie en ligne lance un stream vers le navigateur de l'ami par un tunnel Cloudflare
+(`runtime/stream/`, adapté de MTF Recomp, MIT) : VP8 + Opus, manette/clavier/tactile de l'ami en joueur 2.
+`cloudflared` 2026.11.2 est téléchargé au premier lancement (sha256 vérifié). À valider : lien copié, image, son,
+manette de l'ami, latence. Les README d'Orbitals-Together disent encore que Partie en ligne ouvre Steam : à corriger à
+la prochaine publication.
+Build `2017775` : le lanceur accepte de nouveau l'`orbitalgame.dll` de la 0.3.0 (un commentaire de `gamelib.h` avait
+changé `RT_GAME_ID` dans `d22d99d`) ; le joueur confirme qu'il fonctionne avec le seul exe remplacé.
+Build `4758633` (confirmé) : la manette Xbox de l'ami fait A avec A (la page mappait toutes les manettes par
+position, à la Nintendo) ; elle suit le réglage « Disposition des boutons » de l'hôte, boutons tactiles en positions Xbox.
+
 **Diagnostics à retirer quand ils ne servent plus :** `ORBITALS_OCCLUSION=visible` (`68d2a22`), le log des écritures
 dans une copie transitoire (`97bc308`), les notes de signal des variables de condition (`c03f2a0`, utile tant que le
 gel n'est pas résolu).

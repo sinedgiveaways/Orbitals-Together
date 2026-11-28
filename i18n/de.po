@@ -40,70 +40,6 @@ msgctxt "UI_MENU_TAB_GRAPHICS"
 msgid "Graphics"
 msgstr "Grafik"
 
-msgctxt "UI_MENU_TAB_HACKS"
-msgid "Hacks"
-msgstr "Hacks"
-
-msgctxt "UI_MENU_HACKS_WARNING"
-msgid ""
-"Experimental: shortcuts the console does not have, for playing and testing faster. They can "
-"change how the game behaves."
-msgstr ""
-"Experimentell: Abkürzungen, die die Konsole nicht hat, um schneller zu spielen und zu testen. Sie "
-"können das Spielverhalten verändern."
-
-msgctxt "UI_MENU_TURBO"
-msgid "Turbo"
-msgstr "Turbo"
-
-msgctxt "UI_MENU_TURBO_DESC"
-msgid ""
-"The whole game runs faster: menus, movies, loads and races. Hold or press F2. The screen shows at "
-"most 60 frames a second."
-msgstr ""
-"Das ganze Spiel läuft schneller: Menüs, Filme, Ladezeiten und Rennen. F2 halten oder drücken. Der "
-"Bildschirm zeigt höchstens 60 Bilder pro Sekunde."
-
-msgctxt "UI_MENU_TURBO_HOLD"
-msgid "Hold F2"
-msgstr "F2 halten"
-
-msgctxt "UI_MENU_TURBO_TOGGLE"
-msgid "F2 on/off"
-msgstr "F2 Ein/Aus"
-
-msgctxt "UI_MENU_TURBO_SPEED"
-msgid "Turbo speed"
-msgstr "Turbo-Tempo"
-
-msgctxt "UI_MENU_TURBO_SPEED_DESC"
-msgid "How many times faster. A slow PC may not reach it."
-msgstr "Um welchen Faktor es schneller läuft. Ein langsamer PC schafft das evtl. nicht."
-
-msgctxt "UI_MENU_SEED"
-msgid "Same randomness every time"
-msgstr "Immer derselbe Zufall"
-
-msgctxt "UI_MENU_SEED_DESC"
-msgid ""
-"The game draws the same random numbers in every session: the same title course, the same items. "
-"For testing."
-msgstr ""
-"Das Spiel zieht in jeder Sitzung dieselben Zufallszahlen: dieselbe Titelstrecke, dieselben Items. "
-"Zum Testen."
-
-msgctxt "UI_MENU_FREEZE_KEYS"
-msgid "Freeze keys"
-msgstr "Standbild-Tasten"
-
-msgctxt "UI_MENU_FREEZE_KEYS_DESC"
-msgid ""
-"F3 stops the game on the frame on screen and starts it again; F4 moves it on by one frame. To "
-"look at a moment closely."
-msgstr ""
-"F3 hält das Spiel auf dem aktuellen Bild an und setzt es fort; F4 geht ein Bild weiter. Um einen "
-"Moment genau zu betrachten."
-
 msgctxt "UI_MENU_ANISO"
 msgid "Texture filtering"
 msgstr "Texturfilter"
@@ -1808,162 +1744,6 @@ msgctxt "UI_LAUNCH_SHORTCUT_FAILED"
 msgid "Could not make the shortcut"
 msgstr "Verknüpfung konnte nicht erstellt werden"
 
-msgctxt "UI_LAUNCH_MODS"
-msgid "Mods"
-msgstr "Mods"
-
-msgctxt "UI_LAUNCH_MODS_EMPTY"
-msgid "No mods yet: import a zip or a folder below"
-msgstr "Noch keine Mods: importiere unten ein Zip oder einen Ordner"
-
-msgctxt "UI_MOD_IMPORT_ZIP"
-msgid "Import zip..."
-msgstr "Zip importieren..."
-
-msgctxt "UI_MOD_IMPORT_FOLDER"
-msgid "Import folder..."
-msgstr "Ordner importieren..."
-
-msgctxt "UI_MOD_NAME"
-msgid "Name"
-msgstr "Name"
-
-msgctxt "UI_MOD_IMPORT"
-msgid "Import"
-msgstr "Importieren"
-
-msgctxt "UI_MOD_DELETE"
-msgid "Delete"
-msgstr "Löschen"
-
-#. printf format: keep every %... conversion, in the same order.
-msgctxt "UI_MOD_CONFIRM"
-msgid "Delete %s?"
-msgstr "%s löschen?"
-
-#. printf format: keep every %... conversion, in the same order.
-msgctxt "UI_MOD_ROMFS"
-msgid "%d files"
-msgstr "%d Dateien"
-
-msgctxt "UI_MOD_ROMFS_1"
-msgid "1 file"
-msgstr "1 Datei"
-
-#. printf format: keep every %... conversion, in the same order.
-msgctxt "UI_MOD_CODE_BUILD"
-msgid "code: built for %s"
-msgstr "Code: erstellt für %s"
-
-msgctxt "UI_MOD_CODE_PORT"
-msgid "code: needs a ported build"
-msgstr "Code: braucht einen Port"
-
-#. printf format: keep every %... conversion, in the same order.
-msgctxt "UI_MOD_CODE_SWITCHES"
-msgid "code: %d switches"
-msgstr "Code: %d Schalter"
-
-msgctxt "UI_MOD_CODE_SWITCH_1"
-msgid "code: 1 switch"
-msgstr "Code: 1 Schalter"
-
-msgctxt "UI_MOD_MERGING"
-msgid "Merging mods..."
-msgstr "Mods werden zusammengeführt..."
-
-msgctxt "UI_MOD_CONFLICTS"
-msgid "Conflicts: click the winner to change it"
-msgstr "Konflikte: Klicke auf den Gewinner, um ihn zu ändern"
-
-msgctxt "UI_MOD_VANILLA"
-msgid "Vanilla"
-msgstr "Original"
-
-msgctxt "UI_MOD_IMPORTED"
-msgid "Imported %s"
-msgstr "%s importiert"
-
-msgctxt "UI_MOD_RESOLVE"
-msgid "Resolve conflicts"
-msgstr "Konflikte lösen"
-
-msgctxt "UI_MOD_OK"
-msgid "OK"
-msgstr "OK"
-
-msgctxt "UI_MOD_ERR_LAYOUT"
-msgid "Not a mod: no romfs/ or exefs/ inside"
-msgstr "Kein Mod: weder romfs/ noch exefs/ darin"
-
-msgctxt "UI_MOD_ERR_NAME"
-msgid "That name is taken or empty"
-msgstr "Dieser Name ist vergeben oder leer"
-
-msgctxt "UI_MOD_ERR_IO"
-msgid "Could not copy the files"
-msgstr "Dateien konnten nicht kopiert werden"
-
-msgctxt "UI_MOD_ERR_NOPORT"
-msgid "Not ported yet: no code patches for this game"
-msgstr "Noch nicht portiert: keine Code-Patches für dieses Spiel"
-
-msgctxt "UI_MOD_ERR_NOGAME"
-msgid "Game files not set up: do that on the Files page first"
-msgstr "Spieldateien fehlen: zuerst auf der Seite Dateien einrichten"
-
-#. Above one button per mod found in the archive (its folder inside the archive).
-msgctxt "UI_MOD_VARIANTS"
-msgid "This archive holds several mods: pick the one to import"
-msgstr "Dieses Archiv enthält mehrere Mods: wähle den zu importierenden"
-
-msgctxt "UI_MOD_ERR_BIG"
-msgid "Too large to be a mod (over 4 GB or 50000 files)"
-msgstr "Zu groß für einen Mod (über 4 GB oder 50000 Dateien)"
-
-msgctxt "UI_MOD_ERR_UNPACK"
-msgid "Cannot open this archive: .rar and .7z need bsdtar (libarchive) installed"
-msgstr "Archiv lässt sich nicht öffnen: .rar und .7z brauchen installiertes bsdtar (libarchive)"
-
-#. Under an installed mod that replaces the game's graphics settings archive (general_format).
-msgctxt "UI_MOD_WARN_GRAPHICS"
-msgid ""
-"Changes the game's graphics settings: the port's own settings (resolution, quality) go on top, so "
-"this mod may do less than on a console, look worse or misbehave"
-msgstr ""
-"Ändert die Grafikeinstellungen des Spiels: Die eigenen Einstellungen des Ports (Auflösung, "
-"Qualität) wirken darüber, daher kann diese Mod weniger bewirken als auf der Konsole, schlechter "
-"aussehen oder Fehler verursachen"
-
-#. Above every mod install and import.
-msgctxt "UI_MOD_RISK"
-msgid ""
-"Mods are made by other people and are not tested by this project. A mod can crash the game or "
-"damage your save: read its page first, keep a copy of your save, and report a mod's problems to "
-"its author."
-msgstr ""
-"Mods stammen von anderen Personen und werden von diesem Projekt nicht getestet. Eine Mod kann das "
-"Spiel zum Absturz bringen oder deinen Spielstand beschädigen: Lies zuerst ihre Seite, sichere "
-"eine Kopie deines Spielstands und melde Probleme einer Mod ihrem Autor."
-
-msgctxt "UI_MOD_RISK_ACK"
-msgid "I understand"
-msgstr "Verstanden"
-
-#. Under a mod that changes the game's code (its .ips): the game code is built with it.
-msgctxt "UI_MOD_CODE_REBUILD"
-msgid "code: turning it on or off builds the game code again before you play (a few minutes)"
-msgstr "Code: Das Ein- oder Ausschalten erstellt den Spielcode vor dem Spielen neu (einige Minuten)"
-
-#. Under an installed mod that ships shaders (Shader/ files).
-msgctxt "UI_MOD_WARN_SHADERS"
-msgid ""
-"Replaces shaders: the port translates the game's shaders during the setup, so this mod may not "
-"show, or may break the picture"
-msgstr ""
-"Ersetzt Shader: Der Port übersetzt die Shader des Spiels bei der Einrichtung, daher wird diese "
-"Mod eventuell nicht angezeigt oder zerstört das Bild"
-
 #. printf format: keep every %... conversion, in the same order.
 msgctxt "UI_LAUNCH_UPDATE"
 msgid "Update to %s (%d MB)"
@@ -1983,10 +1763,6 @@ msgstr "Update fehlgeschlagen: %s"
 msgctxt "UI_LAUNCH_UPDATED"
 msgid "Updated to %s: setting up again what it changed"
 msgstr "Auf %s aktualisiert: Geändertes wird neu eingerichtet"
-
-msgctxt "UI_LAUNCH_NO_GAME_DATA"
-msgid "Your own copy of the game · No game data included"
-msgstr "Deine eigene Kopie des Spiels · Keine Spieldaten enthalten"
 
 #. printf format: keep every %... conversion, in the same order.
 msgctxt "UI_LAUNCH_LASTRUN_KNOWN"
@@ -2183,23 +1959,85 @@ msgstr ""
 "Das Steam-Overlay ging nicht auf: Starte das Spiel über Steam oder schicke einen Gastlink (Menü > "
 "Spiel)."
 
-msgctxt "UI_NOTICE_RPT_ONLINE"
-msgid ""
-"Online play goes through Steam Remote Play Together: invite your friend from the list that just "
-"opened. Once they have joined and pressed a button, start a local game for 2 players."
-msgstr ""
-"Online spielen läuft über Steam Remote Play Together: Lade deinen Freund aus der eben geöffneten "
-"Liste ein. Sobald er beigetreten ist und eine Taste gedrückt hat, starte ein lokales Spiel für 2 "
-"Spieler."
+msgctxt "UI_NOTICE_STREAM_STARTING"
+msgid "Online play: making a link for your friend (Cloudflare)…"
+msgstr "Online-Spiel: Link für deinen Freund wird erstellt (Cloudflare)…"
 
+#. %s: the link (https://...trycloudflare.com)
 #. printf format: keep every %... conversion, in the same order.
-msgctxt "UI_NOTICE_RPT_ONLINE_OFF"
+msgctxt "UI_NOTICE_STREAM_LINK"
 msgid ""
-"Online play goes through Steam Remote Play Together, which is off: %s. Set it up in menu > Game "
-"(docs/remote-play.md)."
+"Online play: link copied, send it to your friend: %s. Once they have joined, start a Local Play "
+"game for 2 players."
 msgstr ""
-"Online spielen läuft über Steam Remote Play Together, das ausgeschaltet ist: %s. Richte es unter "
-"Menü > Spiel ein (docs/remote-play.md)."
+"Online-Spiel: Link kopiert, schick ihn deinem Freund: %s. Sobald er beigetreten ist, starte ein "
+"lokales Spiel für 2 Spieler."
+
+msgctxt "UI_NOTICE_STREAM_JOINED"
+msgid "Your friend joined from their browser as player 2."
+msgstr "Dein Freund ist über seinen Browser als Spieler 2 beigetreten."
+
+msgctxt "UI_NOTICE_STREAM_LEFT"
+msgid "Your friend left the browser stream."
+msgstr "Dein Freund hat den Browser-Stream verlassen."
+
+msgctxt "UI_NOTICE_STREAM_FULL"
+msgid "Your friend could not join: player 2 already has a controller. Unplug the second controller."
+msgstr ""
+"Dein Freund konnte nicht beitreten: Spieler 2 hat schon einen Controller. Zieh den zweiten "
+"Controller ab."
+
+#. %s: why, in English
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_NOTICE_STREAM_FAILED"
+msgid "Online play is not available: %s."
+msgstr "Das Online-Spiel ist nicht verfügbar: %s."
+
+msgctxt "UI_MENU_GROUP_STREAM"
+msgid "Online play in a browser (Cloudflare)"
+msgstr "Online-Spiel im Browser (Cloudflare)"
+
+msgctxt "UI_MENU_STREAM_START"
+msgid "Start and copy the link"
+msgstr "Starten und Link kopieren"
+
+msgctxt "UI_MENU_STREAM_START_DESC"
+msgid ""
+"Streams the game to a friend's browser through a Cloudflare link, copied to the clipboard; their "
+"gamepad or keyboard is player 2. The game's Online Play does the same. The first start downloads "
+"cloudflared (55 MB)."
+msgstr ""
+"Streamt das Spiel über einen Cloudflare-Link, der in die Zwischenablage kopiert wird, in den "
+"Browser eines Freundes; sein Controller oder seine Tastatur ist Spieler 2. Das Online-Spiel des "
+"Spiels tut dasselbe. Der erste Start lädt cloudflared herunter (55 MB)."
+
+msgctxt "UI_MENU_STREAM_STOP"
+msgid "Stop"
+msgstr "Beenden"
+
+msgctxt "UI_MENU_STREAM_STOP_DESC"
+msgid "Ends the stream and its link: your friend is disconnected."
+msgstr "Beendet den Stream und seinen Link: dein Freund wird getrennt."
+
+msgctxt "UI_MENU_STREAM_OFF"
+msgid "off"
+msgstr "aus"
+
+msgctxt "UI_MENU_STREAM_STARTING"
+msgid "starting…"
+msgstr "startet…"
+
+msgctxt "UI_MENU_STREAM_READY"
+msgid "link ready"
+msgstr "Link bereit"
+
+msgctxt "UI_MENU_STREAM_PLAYING"
+msgid "friend connected"
+msgstr "Freund verbunden"
+
+msgctxt "UI_MENU_STREAM_FAILED"
+msgid "failed (see the log)"
+msgstr "fehlgeschlagen (siehe Protokoll)"
 
 #. printf format: keep every %... conversion, in the same order.
 msgctxt "UI_MENU_RPT_CHOICE"

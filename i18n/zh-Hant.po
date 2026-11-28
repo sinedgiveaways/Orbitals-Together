@@ -40,62 +40,6 @@ msgctxt "UI_MENU_TAB_GRAPHICS"
 msgid "Graphics"
 msgstr "圖形"
 
-msgctxt "UI_MENU_TAB_HACKS"
-msgid "Hacks"
-msgstr "實驗"
-
-msgctxt "UI_MENU_HACKS_WARNING"
-msgid ""
-"Experimental: shortcuts the console does not have, for playing and testing faster. They can "
-"change how the game behaves."
-msgstr "實驗功能：主機上沒有的捷徑，用於更快地遊玩和測試。可能會改變遊戲的運作方式。"
-
-msgctxt "UI_MENU_TURBO"
-msgid "Turbo"
-msgstr "加速"
-
-msgctxt "UI_MENU_TURBO_DESC"
-msgid ""
-"The whole game runs faster: menus, movies, loads and races. Hold or press F2. The screen shows at "
-"most 60 frames a second."
-msgstr "整個遊戲都會加快：選單、影片、讀取和比賽。按住或按下 F2。畫面最多每秒顯示 60 幀。"
-
-msgctxt "UI_MENU_TURBO_HOLD"
-msgid "Hold F2"
-msgstr "按住 F2"
-
-msgctxt "UI_MENU_TURBO_TOGGLE"
-msgid "F2 on/off"
-msgstr "F2 開/關"
-
-msgctxt "UI_MENU_TURBO_SPEED"
-msgid "Turbo speed"
-msgstr "加速倍率"
-
-msgctxt "UI_MENU_TURBO_SPEED_DESC"
-msgid "How many times faster. A slow PC may not reach it."
-msgstr "加快的倍數。效能較低的電腦可能達不到。"
-
-msgctxt "UI_MENU_SEED"
-msgid "Same randomness every time"
-msgstr "每次相同的隨機"
-
-msgctxt "UI_MENU_SEED_DESC"
-msgid ""
-"The game draws the same random numbers in every session: the same title course, the same items. "
-"For testing."
-msgstr "遊戲每次都使用相同的隨機數：標題畫面的賽道和道具都相同。用於測試。"
-
-msgctxt "UI_MENU_FREEZE_KEYS"
-msgid "Freeze keys"
-msgstr "暫停鍵"
-
-msgctxt "UI_MENU_FREEZE_KEYS_DESC"
-msgid ""
-"F3 stops the game on the frame on screen and starts it again; F4 moves it on by one frame. To "
-"look at a moment closely."
-msgstr "F3 在目前幀暫停遊戲並可再次繼續；F4 前進一幀。用於仔細查看某一瞬間。"
-
 msgctxt "UI_MENU_ANISO"
 msgid "Texture filtering"
 msgstr "紋理過濾"
@@ -1731,154 +1675,6 @@ msgctxt "UI_LAUNCH_SHORTCUT_FAILED"
 msgid "Could not make the shortcut"
 msgstr "無法建立捷徑"
 
-msgctxt "UI_LAUNCH_MODS"
-msgid "Mods"
-msgstr "模組"
-
-msgctxt "UI_LAUNCH_MODS_EMPTY"
-msgid "No mods yet: import a zip or a folder below"
-msgstr "還沒有模組：在下面匯入 zip 或資料夾"
-
-msgctxt "UI_MOD_IMPORT_ZIP"
-msgid "Import zip..."
-msgstr "匯入 zip..."
-
-msgctxt "UI_MOD_IMPORT_FOLDER"
-msgid "Import folder..."
-msgstr "匯入資料夾..."
-
-msgctxt "UI_MOD_NAME"
-msgid "Name"
-msgstr "名稱"
-
-msgctxt "UI_MOD_IMPORT"
-msgid "Import"
-msgstr "匯入"
-
-msgctxt "UI_MOD_DELETE"
-msgid "Delete"
-msgstr "刪除"
-
-#. printf format: keep every %... conversion, in the same order.
-msgctxt "UI_MOD_CONFIRM"
-msgid "Delete %s?"
-msgstr "刪除%s？"
-
-#. printf format: keep every %... conversion, in the same order.
-msgctxt "UI_MOD_ROMFS"
-msgid "%d files"
-msgstr "%d 個檔案"
-
-msgctxt "UI_MOD_ROMFS_1"
-msgid "1 file"
-msgstr "1 個檔案"
-
-#. printf format: keep every %... conversion, in the same order.
-msgctxt "UI_MOD_CODE_BUILD"
-msgid "code: built for %s"
-msgstr "程式碼：適用於 %s"
-
-msgctxt "UI_MOD_CODE_PORT"
-msgid "code: needs a ported build"
-msgstr "程式碼：需要移植"
-
-#. printf format: keep every %... conversion, in the same order.
-msgctxt "UI_MOD_CODE_SWITCHES"
-msgid "code: %d switches"
-msgstr "程式碼：%d 個開關"
-
-msgctxt "UI_MOD_CODE_SWITCH_1"
-msgid "code: 1 switch"
-msgstr "程式碼：1 個開關"
-
-msgctxt "UI_MOD_MERGING"
-msgid "Merging mods..."
-msgstr "正在合併模組..."
-
-msgctxt "UI_MOD_CONFLICTS"
-msgid "Conflicts: click the winner to change it"
-msgstr "衝突：點選勝出者以變更"
-
-msgctxt "UI_MOD_VANILLA"
-msgid "Vanilla"
-msgstr "原版"
-
-msgctxt "UI_MOD_IMPORTED"
-msgid "Imported %s"
-msgstr "已匯入 %s"
-
-msgctxt "UI_MOD_RESOLVE"
-msgid "Resolve conflicts"
-msgstr "解決衝突"
-
-msgctxt "UI_MOD_OK"
-msgid "OK"
-msgstr "確定"
-
-msgctxt "UI_MOD_ERR_LAYOUT"
-msgid "Not a mod: no romfs/ or exefs/ inside"
-msgstr "不是模組：裡面沒有 romfs/ 或 exefs/"
-
-msgctxt "UI_MOD_ERR_NAME"
-msgid "That name is taken or empty"
-msgstr "該名稱已被使用或為空"
-
-msgctxt "UI_MOD_ERR_IO"
-msgid "Could not copy the files"
-msgstr "無法複製檔案"
-
-msgctxt "UI_MOD_ERR_NOPORT"
-msgid "Not ported yet: no code patches for this game"
-msgstr "尚未移植：沒有適用於此遊戲的程式碼補丁"
-
-msgctxt "UI_MOD_ERR_NOGAME"
-msgid "Game files not set up: do that on the Files page first"
-msgstr "尚未設定遊戲檔案：請先在檔案頁面完成設定"
-
-#. Above one button per mod found in the archive (its folder inside the archive).
-msgctxt "UI_MOD_VARIANTS"
-msgid "This archive holds several mods: pick the one to import"
-msgstr "此壓縮檔包含多個模組：請選擇要匯入的那個"
-
-msgctxt "UI_MOD_ERR_BIG"
-msgid "Too large to be a mod (over 4 GB or 50000 files)"
-msgstr "太大，不像是模組（超過 4 GB 或 50000 個檔案）"
-
-msgctxt "UI_MOD_ERR_UNPACK"
-msgid "Cannot open this archive: .rar and .7z need bsdtar (libarchive) installed"
-msgstr "無法開啟此壓縮檔：.rar 與 .7z 需要安裝 bsdtar（libarchive）"
-
-#. Under an installed mod that replaces the game's graphics settings archive (general_format).
-msgctxt "UI_MOD_WARN_GRAPHICS"
-msgid ""
-"Changes the game's graphics settings: the port's own settings (resolution, quality) go on top, so "
-"this mod may do less than on a console, look worse or misbehave"
-msgstr "變更遊戲的圖形設定：移植版自己的設定（解析度、畫質）會疊加其上，因此此模組的效果可能不如主機版，畫面可能較差或出現異常"
-
-#. Above every mod install and import.
-msgctxt "UI_MOD_RISK"
-msgid ""
-"Mods are made by other people and are not tested by this project. A mod can crash the game or "
-"damage your save: read its page first, keep a copy of your save, and report a mod's problems to "
-"its author."
-msgstr "模組由其他人製作，本專案並未測試。模組可能導致遊戲當機或損壞存檔：請先閱讀其頁面，備份你的存檔，並將模組的問題回報給其作者。"
-
-msgctxt "UI_MOD_RISK_ACK"
-msgid "I understand"
-msgstr "我了解了"
-
-#. Under a mod that changes the game's code (its .ips): the game code is built with it.
-msgctxt "UI_MOD_CODE_REBUILD"
-msgid "code: turning it on or off builds the game code again before you play (a few minutes)"
-msgstr "程式碼：開啟或關閉會在遊玩前重新建置遊戲程式碼（需幾分鐘）"
-
-#. Under an installed mod that ships shaders (Shader/ files).
-msgctxt "UI_MOD_WARN_SHADERS"
-msgid ""
-"Replaces shaders: the port translates the game's shaders during the setup, so this mod may not "
-"show, or may break the picture"
-msgstr "取代著色器：移植版在設定過程中轉換遊戲的著色器，因此此模組可能無法顯示，或導致畫面異常"
-
 #. printf format: keep every %... conversion, in the same order.
 msgctxt "UI_LAUNCH_UPDATE"
 msgid "Update to %s (%d MB)"
@@ -1898,10 +1694,6 @@ msgstr "更新失敗：%s"
 msgctxt "UI_LAUNCH_UPDATED"
 msgid "Updated to %s: setting up again what it changed"
 msgstr "已更新至 %s：正在重新設定有變化的部分"
-
-msgctxt "UI_LAUNCH_NO_GAME_DATA"
-msgid "Your own copy of the game · No game data included"
-msgstr "你自己的遊戲副本 · 不含任何遊戲資料"
 
 #. printf format: keep every %... conversion, in the same order.
 msgctxt "UI_LAUNCH_LASTRUN_KNOWN"
@@ -2078,18 +1870,79 @@ msgid ""
 "The Steam overlay did not open: start the game from Steam, or send a guest link (menu > Game)."
 msgstr "Steam 介面未能開啟：請從 Steam 啟動遊戲，或傳送訪客連結（選單 > 遊戲）。"
 
-msgctxt "UI_NOTICE_RPT_ONLINE"
-msgid ""
-"Online play goes through Steam Remote Play Together: invite your friend from the list that just "
-"opened. Once they have joined and pressed a button, start a local game for 2 players."
-msgstr "線上遊戲透過 Steam 遠端同樂進行：從剛開啟的清單中邀請你的好友。好友加入並按下一個按鈕後，開始一場 2 人本機遊戲。"
+msgctxt "UI_NOTICE_STREAM_STARTING"
+msgid "Online play: making a link for your friend (Cloudflare)…"
+msgstr "線上遊戲：正在為好友建立連結（Cloudflare）…"
 
+#. %s: the link (https://...trycloudflare.com)
 #. printf format: keep every %... conversion, in the same order.
-msgctxt "UI_NOTICE_RPT_ONLINE_OFF"
+msgctxt "UI_NOTICE_STREAM_LINK"
 msgid ""
-"Online play goes through Steam Remote Play Together, which is off: %s. Set it up in menu > Game "
-"(docs/remote-play.md)."
-msgstr "線上遊戲透過 Steam 遠端同樂進行，但它已關閉：%s。請在 選單 > 遊戲 中設定（docs/remote-play.md）。"
+"Online play: link copied, send it to your friend: %s. Once they have joined, start a Local Play "
+"game for 2 players."
+msgstr "線上遊戲：連結已複製，傳給你的好友：%s。好友加入後，開始一場 2 人本機遊戲。"
+
+msgctxt "UI_NOTICE_STREAM_JOINED"
+msgid "Your friend joined from their browser as player 2."
+msgstr "你的好友已從瀏覽器以玩家 2 加入。"
+
+msgctxt "UI_NOTICE_STREAM_LEFT"
+msgid "Your friend left the browser stream."
+msgstr "你的好友已離開瀏覽器串流。"
+
+msgctxt "UI_NOTICE_STREAM_FULL"
+msgid "Your friend could not join: player 2 already has a controller. Unplug the second controller."
+msgstr "好友無法加入：玩家 2 已有控制器。請拔下第二個控制器。"
+
+#. %s: why, in English
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_NOTICE_STREAM_FAILED"
+msgid "Online play is not available: %s."
+msgstr "線上遊戲無法使用：%s。"
+
+msgctxt "UI_MENU_GROUP_STREAM"
+msgid "Online play in a browser (Cloudflare)"
+msgstr "瀏覽器線上遊戲（Cloudflare）"
+
+msgctxt "UI_MENU_STREAM_START"
+msgid "Start and copy the link"
+msgstr "開始並複製連結"
+
+msgctxt "UI_MENU_STREAM_START_DESC"
+msgid ""
+"Streams the game to a friend's browser through a Cloudflare link, copied to the clipboard; their "
+"gamepad or keyboard is player 2. The game's Online Play does the same. The first start downloads "
+"cloudflared (55 MB)."
+msgstr ""
+"透過複製到剪貼簿的 Cloudflare 連結，把遊戲串流到好友的瀏覽器；好友的控制器或鍵盤是玩家 2。遊戲本身的線上遊戲也會這樣做。首次開始會下載 cloudflared（55 MB）。"
+
+msgctxt "UI_MENU_STREAM_STOP"
+msgid "Stop"
+msgstr "停止"
+
+msgctxt "UI_MENU_STREAM_STOP_DESC"
+msgid "Ends the stream and its link: your friend is disconnected."
+msgstr "結束串流及其連結：好友會中斷連線。"
+
+msgctxt "UI_MENU_STREAM_OFF"
+msgid "off"
+msgstr "關閉"
+
+msgctxt "UI_MENU_STREAM_STARTING"
+msgid "starting…"
+msgstr "正在開始…"
+
+msgctxt "UI_MENU_STREAM_READY"
+msgid "link ready"
+msgstr "連結已就緒"
+
+msgctxt "UI_MENU_STREAM_PLAYING"
+msgid "friend connected"
+msgstr "好友已連線"
+
+msgctxt "UI_MENU_STREAM_FAILED"
+msgid "failed (see the log)"
+msgstr "失敗（見記錄）"
 
 #. printf format: keep every %... conversion, in the same order.
 msgctxt "UI_MENU_RPT_CHOICE"

@@ -68,9 +68,11 @@ It is off by default and changes nothing until you set it up.
    `input: gamepad ... for player 2 (... a Remote Play guest's)`, then make sure player 2 moves in the game. The log
    lists every controller SDL sees (`input: SDL lists N joysticks`) each time the list changes.
 
-3. **Start the game from Steam, as the App ID's game** (needed for your friends' controllers). Started from its
-   folder, orbitals-together runs as the App ID and invitations work, but Steam does not hand the guests' controllers to it: Steam
-   gives them to a game through its overlay, and only loads that into games it starts. A Non-Steam Game shortcut does
+3. **Set the App ID's game to start orbitals-together** (needed for your friends' controllers). With the launch options
+   below in place, the game can then be started either from its folder or with Play in Steam: the owner played with a
+   friend on 27/11/2026 starting `orbitals-together.exe` from its folder, the friend's controller working. Without them
+   invitations work but the guests' controllers did not reach the game (the earlier reading was that Steam only hands
+   them to a game it starts, through its overlay). A Non-Steam Game shortcut does
    not work either: Steam then runs orbitals-together as the shortcut, which has no Remote Play Together. Instead, let Steam start orbitals-together
    in place of the App ID's own program:
    - install the App ID's game in Steam (RetroArch, free);
@@ -131,6 +133,26 @@ per player.
 - The App ID is read at start: changing it needs a restart of the game.
 - A device loss with "instruction pointer invalid" in the log on NVIDIA cards is the port's known issue #22, with or
   without Steam; `skip_programs` in `orbitals.ini` helps find its cause (CHANGELOG, 0.1.10).
+
+## Online play in a browser
+
+Since 27/11/2026 the game's **Online Play** no longer opens Steam's invite list: it streams the game to a friend's
+browser through Cloudflare (`runtime/stream/`). Steam Remote Play Together, above, stays for **Local Play**.
+
+1. In the game's menu, choose **Online Play** (or F1 > Game > Online play in a browser > **Start and copy the link**).
+   The first time, `cloudflared.exe` (55 MB, Cloudflare's own, checked by sha256) is downloaded next to
+   `orbitals-together.exe`.
+2. A few seconds later a notice says the link is copied: an address `https://<words>.trycloudflare.com`. Send it to
+   your friend (chat, Discord...). Nothing else to set up: no Steam, no port to open.
+3. Your friend opens it in Chrome, Edge or Firefox and presses **Sound: on**. Their gamepad, their keyboard (WASD,
+   J/K/U/I, Q/E, Enter, Backspace) or, on a phone, the touch controls are player 2. Their gamepad follows your F1 > Controls >
+   Button layout: in Automatic an Xbox or PlayStation pad goes by its labels, a Nintendo one by position.
+4. Start a **Local Play** game for 2 players.
+
+Limits: one friend (the game has 2 players; with a second controller plugged in on your side there is no free
+player). Picture 1280 x 720 at up to 30 frames a second, about 4.5 Mb/s of upload. Anyone with the link can join
+while the stream runs: F1 > Game > **Stop** ends it, and quitting the game too. Windows only for now. Tried by the owner with a
+friend on 27/11/2026 (build `2017775`): it works.
 
 ## Tested
 

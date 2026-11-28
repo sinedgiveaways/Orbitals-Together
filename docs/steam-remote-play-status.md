@@ -121,6 +121,20 @@ layer, both players owning the port).
   player, so with two local controllers a guest gets none (the limit of 2).
 - **Confirmed in game (27/11/2026, `2106b33`):** the owner reports both local controllers work when started from Steam.
 
+### Start from the folder (27/11/2026)
+
+- The owner played with a friend starting `orbitals-together.exe` from its folder (not with Play in Steam), the
+  friend's controller working, with RetroArch's launch options set to the exe and `steam_appid = 1118310`. The public
+  READMEs say both starts work, with the launch options required.
+
+### Online Play moved to a browser stream (27/11/2026)
+
+- The owner's decision: Steam Remote Play Together stays for **Local Play** (the controller applet's choice, guests'
+  controllers, F1 > Game rows); the game's **Online Play** now starts the Cloudflare browser stream
+  (`runtime/stream/`, [remote-play.md](remote-play.md#online-play-in-a-browser)) instead of the Steam invite list.
+  `steam_rpt_online` and its two notices were removed. Confirmed in game by the owner with build `2017775`
+  ("everything works"); no log was sent, so latency and bit rate are not measured.
+
 ## What is missing or unknown
 
 1. **No run with Orbitals.** It does not reach a scene yet ([roadmap.md](roadmap.md)), so none of the above is

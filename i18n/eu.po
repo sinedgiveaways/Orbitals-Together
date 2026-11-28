@@ -40,70 +40,6 @@ msgctxt "UI_MENU_TAB_GRAPHICS"
 msgid "Graphics"
 msgstr "Grafikoak"
 
-msgctxt "UI_MENU_TAB_HACKS"
-msgid "Hacks"
-msgstr "Hackak"
-
-msgctxt "UI_MENU_HACKS_WARNING"
-msgid ""
-"Experimental: shortcuts the console does not have, for playing and testing faster. They can "
-"change how the game behaves."
-msgstr ""
-"Esperimentala: kontsolak ez dituen lasterbideak, azkarrago jolasteko eta probatzeko. Jokoaren "
-"portaera alda dezakete."
-
-msgctxt "UI_MENU_TURBO"
-msgid "Turbo"
-msgstr "Turboa"
-
-msgctxt "UI_MENU_TURBO_DESC"
-msgid ""
-"The whole game runs faster: menus, movies, loads and races. Hold or press F2. The screen shows at "
-"most 60 frames a second."
-msgstr ""
-"Joko osoa azkarrago doa: menuak, bideoak, kargak eta lasterketak. Eutsi edo sakatu F2. Pantailak "
-"segundoko 60 fotograma erakusten ditu gehienez."
-
-msgctxt "UI_MENU_TURBO_HOLD"
-msgid "Hold F2"
-msgstr "Eutsi F2"
-
-msgctxt "UI_MENU_TURBO_TOGGLE"
-msgid "F2 on/off"
-msgstr "F2 piztu/itzali"
-
-msgctxt "UI_MENU_TURBO_SPEED"
-msgid "Turbo speed"
-msgstr "Turbo-abiadura"
-
-msgctxt "UI_MENU_TURBO_SPEED_DESC"
-msgid "How many times faster. A slow PC may not reach it."
-msgstr "Zenbat aldiz azkarrago. PC motel batek ezin du lortu."
-
-msgctxt "UI_MENU_SEED"
-msgid "Same randomness every time"
-msgstr "Ausazkotasun bera beti"
-
-msgctxt "UI_MENU_SEED_DESC"
-msgid ""
-"The game draws the same random numbers in every session: the same title course, the same items. "
-"For testing."
-msgstr ""
-"Jokoak ausazko zenbaki berak ateratzen ditu saio guztietan: izenburuko zirkuitu bera, objektu "
-"berak. Probak egiteko."
-
-msgctxt "UI_MENU_FREEZE_KEYS"
-msgid "Freeze keys"
-msgstr "Izozteko teklak"
-
-msgctxt "UI_MENU_FREEZE_KEYS_DESC"
-msgid ""
-"F3 stops the game on the frame on screen and starts it again; F4 moves it on by one frame. To "
-"look at a moment closely."
-msgstr ""
-"F3k jokoa pantailako fotogramaren gainean gelditzen du eta berriro abiarazten du; F4k fotograma "
-"bat aurreratzen du. Une bat hurbiletik begiratzeko."
-
 msgctxt "UI_MENU_ANISO"
 msgid "Texture filtering"
 msgstr "Testura-iragazketa"
@@ -1814,164 +1750,6 @@ msgctxt "UI_LAUNCH_SHORTCUT_FAILED"
 msgid "Could not make the shortcut"
 msgstr "Ezin izan da lasterbidea sortu"
 
-msgctxt "UI_LAUNCH_MODS"
-msgid "Mods"
-msgstr "Modak"
-
-msgctxt "UI_LAUNCH_MODS_EMPTY"
-msgid "No mods yet: import a zip or a folder below"
-msgstr "Oraindik ez dago modik: inportatu zip edo karpeta bat behean"
-
-msgctxt "UI_MOD_IMPORT_ZIP"
-msgid "Import zip..."
-msgstr "Inportatu zip..."
-
-msgctxt "UI_MOD_IMPORT_FOLDER"
-msgid "Import folder..."
-msgstr "Inportatu karpeta..."
-
-msgctxt "UI_MOD_NAME"
-msgid "Name"
-msgstr "Izena"
-
-msgctxt "UI_MOD_IMPORT"
-msgid "Import"
-msgstr "Inportatu"
-
-msgctxt "UI_MOD_DELETE"
-msgid "Delete"
-msgstr "Ezabatu"
-
-#. printf format: keep every %... conversion, in the same order.
-msgctxt "UI_MOD_CONFIRM"
-msgid "Delete %s?"
-msgstr "Ezabatu %s?"
-
-#. printf format: keep every %... conversion, in the same order.
-msgctxt "UI_MOD_ROMFS"
-msgid "%d files"
-msgstr "%d fitxategi"
-
-msgctxt "UI_MOD_ROMFS_1"
-msgid "1 file"
-msgstr "Fitxategi 1"
-
-#. printf format: keep every %... conversion, in the same order.
-msgctxt "UI_MOD_CODE_BUILD"
-msgid "code: built for %s"
-msgstr "kodea: %s(r)ako"
-
-msgctxt "UI_MOD_CODE_PORT"
-msgid "code: needs a ported build"
-msgstr "kodea: portatu behar da"
-
-#. printf format: keep every %... conversion, in the same order.
-msgctxt "UI_MOD_CODE_SWITCHES"
-msgid "code: %d switches"
-msgstr "kodea: %d etengailu"
-
-msgctxt "UI_MOD_CODE_SWITCH_1"
-msgid "code: 1 switch"
-msgstr "kodea: etengailu 1"
-
-msgctxt "UI_MOD_MERGING"
-msgid "Merging mods..."
-msgstr "Modak batzen..."
-
-msgctxt "UI_MOD_CONFLICTS"
-msgid "Conflicts: click the winner to change it"
-msgstr "Gatazkak: egin klik irabazlearen gainean aldatzeko"
-
-msgctxt "UI_MOD_VANILLA"
-msgid "Vanilla"
-msgstr "Jatorrizkoa"
-
-msgctxt "UI_MOD_IMPORTED"
-msgid "Imported %s"
-msgstr "%s inportatu da"
-
-msgctxt "UI_MOD_RESOLVE"
-msgid "Resolve conflicts"
-msgstr "Ebatzi gatazkak"
-
-msgctxt "UI_MOD_OK"
-msgid "OK"
-msgstr "Ados"
-
-msgctxt "UI_MOD_ERR_LAYOUT"
-msgid "Not a mod: no romfs/ or exefs/ inside"
-msgstr "Ez da mod bat: ez dago romfs/ edo exefs/ barruan"
-
-msgctxt "UI_MOD_ERR_NAME"
-msgid "That name is taken or empty"
-msgstr "Izen hori hartuta edo hutsik dago"
-
-msgctxt "UI_MOD_ERR_IO"
-msgid "Could not copy the files"
-msgstr "Ezin izan dira fitxategiak kopiatu"
-
-msgctxt "UI_MOD_ERR_NOPORT"
-msgid "Not ported yet: no code patches for this game"
-msgstr "Oraindik portatu gabe: ez dago joko honetarako kode-adabakirik"
-
-msgctxt "UI_MOD_ERR_NOGAME"
-msgid "Game files not set up: do that on the Files page first"
-msgstr "Joko-fitxategiak falta dira: konfiguratu lehenago Fitxategiak orrian"
-
-#. Above one button per mod found in the archive (its folder inside the archive).
-msgctxt "UI_MOD_VARIANTS"
-msgid "This archive holds several mods: pick the one to import"
-msgstr "Artxibo honek hainbat mod ditu: aukeratu inportatu nahi duzuna"
-
-msgctxt "UI_MOD_ERR_BIG"
-msgid "Too large to be a mod (over 4 GB or 50000 files)"
-msgstr "Handiegia mod bat izateko (4 GB edo 50000 fitxategi baino gehiago)"
-
-msgctxt "UI_MOD_ERR_UNPACK"
-msgid "Cannot open this archive: .rar and .7z need bsdtar (libarchive) installed"
-msgstr "Ezin da artxibo hau ireki: .rar eta .7z fitxategiek bsdtar (libarchive) behar dute"
-
-#. Under an installed mod that replaces the game's graphics settings archive (general_format).
-msgctxt "UI_MOD_WARN_GRAPHICS"
-msgid ""
-"Changes the game's graphics settings: the port's own settings (resolution, quality) go on top, so "
-"this mod may do less than on a console, look worse or misbehave"
-msgstr ""
-"Jokoaren grafiko-ezarpenak aldatzen ditu: portaren ezarpen propioak (bereizmena, kalitatea) "
-"gainean aplikatzen dira, beraz mod honek kontsolan baino gutxiago egin dezake, itsusiago ikusi "
-"edo gaizki ibili"
-
-#. Above every mod install and import.
-msgctxt "UI_MOD_RISK"
-msgid ""
-"Mods are made by other people and are not tested by this project. A mod can crash the game or "
-"damage your save: read its page first, keep a copy of your save, and report a mod's problems to "
-"its author."
-msgstr ""
-"Modak beste pertsona batzuek egiten dituzte eta proiektu honek ez ditu probatzen. Mod batek jokoa "
-"kraskatu dezake edo zure partida gordea hondatu: irakurri aurretik bere orria, gorde zure "
-"partidaren kopia bat eta jakinarazi modaren arazoak bere egileari."
-
-msgctxt "UI_MOD_RISK_ACK"
-msgid "I understand"
-msgstr "Ulertu dut"
-
-#. Under a mod that changes the game's code (its .ips): the game code is built with it.
-msgctxt "UI_MOD_CODE_REBUILD"
-msgid "code: turning it on or off builds the game code again before you play (a few minutes)"
-msgstr ""
-"kodea: aktibatzeak edo desaktibatzeak jokoaren kodea berriro eraikitzen du jokatu aurretik "
-"(minutu batzuk)"
-
-#. Under an installed mod that ships shaders (Shader/ files).
-msgctxt "UI_MOD_WARN_SHADERS"
-msgid ""
-"Replaces shaders: the port translates the game's shaders during the setup, so this mod may not "
-"show, or may break the picture"
-msgstr ""
-"Shaderrak ordezkatzen ditu: portak jokoaren shaderrak itzultzen ditu konfigurazioan, beraz mod "
-"honek ez da ager daiteke edo irudia hondatu dezake"
-
 #. printf format: keep every %... conversion, in the same order.
 msgctxt "UI_LAUNCH_UPDATE"
 msgid "Update to %s (%d MB)"
@@ -1991,10 +1769,6 @@ msgstr "Eguneratzeak huts egin du: %s"
 msgctxt "UI_LAUNCH_UPDATED"
 msgid "Updated to %s: setting up again what it changed"
 msgstr "%s bertsiora eguneratuta: aldatu dena berriro konfiguratzen"
-
-msgctxt "UI_LAUNCH_NO_GAME_DATA"
-msgid "Your own copy of the game · No game data included"
-msgstr "Jokoaren zure kopia propioa · Ez dago jokoaren daturik"
 
 #. printf format: keep every %... conversion, in the same order.
 msgctxt "UI_LAUNCH_LASTRUN_KNOWN"
@@ -2191,22 +1965,85 @@ msgstr ""
 "Steam-en geruza ez da ireki: abiarazi jokoa Steam-etik edo bidali gonbidatu-esteka bat (menua > "
 "Jokoa)."
 
-msgctxt "UI_NOTICE_RPT_ONLINE"
-msgid ""
-"Online play goes through Steam Remote Play Together: invite your friend from the list that just "
-"opened. Once they have joined and pressed a button, start a local game for 2 players."
-msgstr ""
-"Lineako jokoa Steam Remote Play Together bidez doa: gonbidatu zure laguna ireki berri den "
-"zerrendatik. Sartu eta botoi bat sakatu ondoren, hasi 2 jokalarirentzako partida lokal bat."
+msgctxt "UI_NOTICE_STREAM_STARTING"
+msgid "Online play: making a link for your friend (Cloudflare)…"
+msgstr "Lineako jokoa: zure lagunarentzako esteka sortzen (Cloudflare)…"
 
+#. %s: the link (https://...trycloudflare.com)
 #. printf format: keep every %... conversion, in the same order.
-msgctxt "UI_NOTICE_RPT_ONLINE_OFF"
+msgctxt "UI_NOTICE_STREAM_LINK"
 msgid ""
-"Online play goes through Steam Remote Play Together, which is off: %s. Set it up in menu > Game "
-"(docs/remote-play.md)."
+"Online play: link copied, send it to your friend: %s. Once they have joined, start a Local Play "
+"game for 2 players."
 msgstr ""
-"Lineako jokoa Steam Remote Play Together bidez doa, baina desaktibatuta dago: %s. Konfiguratu "
-"menua > Jokoa atalean (docs/remote-play.md)."
+"Lineako jokoa: esteka kopiatuta, bidali zure lagunari: %s. Sartu ondoren, hasi 2 jokalarirentzako "
+"partida lokal bat."
+
+msgctxt "UI_NOTICE_STREAM_JOINED"
+msgid "Your friend joined from their browser as player 2."
+msgstr "Zure laguna nabigatzailetik sartu da 2. jokalari gisa."
+
+msgctxt "UI_NOTICE_STREAM_LEFT"
+msgid "Your friend left the browser stream."
+msgstr "Zure lagunak nabigatzaileko streama utzi du."
+
+msgctxt "UI_NOTICE_STREAM_FULL"
+msgid "Your friend could not join: player 2 already has a controller. Unplug the second controller."
+msgstr ""
+"Zure laguna ezin izan da sartu: 2. jokalariak badu kontrolagailu bat. Deskonektatu bigarren "
+"kontrolagailua."
+
+#. %s: why, in English
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_NOTICE_STREAM_FAILED"
+msgid "Online play is not available: %s."
+msgstr "Lineako jokoa ez dago erabilgarri: %s."
+
+msgctxt "UI_MENU_GROUP_STREAM"
+msgid "Online play in a browser (Cloudflare)"
+msgstr "Lineako jokoa nabigatzailean (Cloudflare)"
+
+msgctxt "UI_MENU_STREAM_START"
+msgid "Start and copy the link"
+msgstr "Hasi eta kopiatu esteka"
+
+msgctxt "UI_MENU_STREAM_START_DESC"
+msgid ""
+"Streams the game to a friend's browser through a Cloudflare link, copied to the clipboard; their "
+"gamepad or keyboard is player 2. The game's Online Play does the same. The first start downloads "
+"cloudflared (55 MB)."
+msgstr ""
+"Jokoa lagun baten nabigatzailera transmititzen du Cloudflare esteka baten bidez, arbelera "
+"kopiatuta; haren kontrolagailua edo teklatua 2. jokalaria da. Jokoaren lineako jokoak gauza bera "
+"egiten du. Lehen abiarazteak cloudflared deskargatzen du (55 MB)."
+
+msgctxt "UI_MENU_STREAM_STOP"
+msgid "Stop"
+msgstr "Gelditu"
+
+msgctxt "UI_MENU_STREAM_STOP_DESC"
+msgid "Ends the stream and its link: your friend is disconnected."
+msgstr "Streama eta bere esteka amaitzen ditu: zure laguna deskonektatzen da."
+
+msgctxt "UI_MENU_STREAM_OFF"
+msgid "off"
+msgstr "desaktibatuta"
+
+msgctxt "UI_MENU_STREAM_STARTING"
+msgid "starting…"
+msgstr "abiarazten…"
+
+msgctxt "UI_MENU_STREAM_READY"
+msgid "link ready"
+msgstr "esteka prest"
+
+msgctxt "UI_MENU_STREAM_PLAYING"
+msgid "friend connected"
+msgstr "laguna konektatuta"
+
+msgctxt "UI_MENU_STREAM_FAILED"
+msgid "failed (see the log)"
+msgstr "huts egin du (ikusi erregistroa)"
 
 #. printf format: keep every %... conversion, in the same order.
 msgctxt "UI_MENU_RPT_CHOICE"

@@ -40,68 +40,6 @@ msgctxt "UI_MENU_TAB_GRAPHICS"
 msgid "Graphics"
 msgstr "Grafik"
 
-msgctxt "UI_MENU_TAB_HACKS"
-msgid "Hacks"
-msgstr "Hileler"
-
-msgctxt "UI_MENU_HACKS_WARNING"
-msgid ""
-"Experimental: shortcuts the console does not have, for playing and testing faster. They can "
-"change how the game behaves."
-msgstr ""
-"Deneysel: konsolda olmayan kısayollar; daha hızlı oynamak ve denemek için. Oyunun davranışını "
-"değiştirebilirler."
-
-msgctxt "UI_MENU_TURBO"
-msgid "Turbo"
-msgstr "Turbo"
-
-msgctxt "UI_MENU_TURBO_DESC"
-msgid ""
-"The whole game runs faster: menus, movies, loads and races. Hold or press F2. The screen shows at "
-"most 60 frames a second."
-msgstr ""
-"Tüm oyun hızlanır: menüler, videolar, yüklemeler ve yarışlar. F2'ye basılı tut veya bas. Ekran "
-"saniyede en fazla 60 kare gösterir."
-
-msgctxt "UI_MENU_TURBO_HOLD"
-msgid "Hold F2"
-msgstr "F2'ye basılı tut"
-
-msgctxt "UI_MENU_TURBO_TOGGLE"
-msgid "F2 on/off"
-msgstr "F2 açık/kapalı"
-
-msgctxt "UI_MENU_TURBO_SPEED"
-msgid "Turbo speed"
-msgstr "Turbo hızı"
-
-msgctxt "UI_MENU_TURBO_SPEED_DESC"
-msgid "How many times faster. A slow PC may not reach it."
-msgstr "Kaç kat daha hızlı. Yavaş bir bilgisayar buna ulaşamayabilir."
-
-msgctxt "UI_MENU_SEED"
-msgid "Same randomness every time"
-msgstr "Hep aynı rastgelelik"
-
-msgctxt "UI_MENU_SEED_DESC"
-msgid ""
-"The game draws the same random numbers in every session: the same title course, the same items. "
-"For testing."
-msgstr "Oyun her oturumda aynı rastgele sayıları çeker: aynı başlık pisti, aynı eşyalar. Test için."
-
-msgctxt "UI_MENU_FREEZE_KEYS"
-msgid "Freeze keys"
-msgstr "Dondurma tuşları"
-
-msgctxt "UI_MENU_FREEZE_KEYS_DESC"
-msgid ""
-"F3 stops the game on the frame on screen and starts it again; F4 moves it on by one frame. To "
-"look at a moment closely."
-msgstr ""
-"F3 oyunu ekrandaki karede durdurur ve yeniden başlatır; F4 onu bir kare ilerletir. Bir anı "
-"yakından incelemek için."
-
 msgctxt "UI_MENU_ANISO"
 msgid "Texture filtering"
 msgstr "Doku filtreleme"
@@ -1796,162 +1734,6 @@ msgctxt "UI_LAUNCH_SHORTCUT_FAILED"
 msgid "Could not make the shortcut"
 msgstr "Kısayol oluşturulamadı"
 
-msgctxt "UI_LAUNCH_MODS"
-msgid "Mods"
-msgstr "Modlar"
-
-msgctxt "UI_LAUNCH_MODS_EMPTY"
-msgid "No mods yet: import a zip or a folder below"
-msgstr "Henüz mod yok: aşağıdan bir zip veya klasör içe aktarın"
-
-msgctxt "UI_MOD_IMPORT_ZIP"
-msgid "Import zip..."
-msgstr "Zip içe aktar..."
-
-msgctxt "UI_MOD_IMPORT_FOLDER"
-msgid "Import folder..."
-msgstr "Klasör içe aktar..."
-
-msgctxt "UI_MOD_NAME"
-msgid "Name"
-msgstr "Ad"
-
-msgctxt "UI_MOD_IMPORT"
-msgid "Import"
-msgstr "İçe aktar"
-
-msgctxt "UI_MOD_DELETE"
-msgid "Delete"
-msgstr "Sil"
-
-#. printf format: keep every %... conversion, in the same order.
-msgctxt "UI_MOD_CONFIRM"
-msgid "Delete %s?"
-msgstr "%s silinsin mi?"
-
-#. printf format: keep every %... conversion, in the same order.
-msgctxt "UI_MOD_ROMFS"
-msgid "%d files"
-msgstr "%d dosya"
-
-msgctxt "UI_MOD_ROMFS_1"
-msgid "1 file"
-msgstr "1 dosya"
-
-#. printf format: keep every %... conversion, in the same order.
-msgctxt "UI_MOD_CODE_BUILD"
-msgid "code: built for %s"
-msgstr "kod: %s için derlenmiş"
-
-msgctxt "UI_MOD_CODE_PORT"
-msgid "code: needs a ported build"
-msgstr "kod: port edilmesi gerekiyor"
-
-#. printf format: keep every %... conversion, in the same order.
-msgctxt "UI_MOD_CODE_SWITCHES"
-msgid "code: %d switches"
-msgstr "kod: %d anahtar"
-
-msgctxt "UI_MOD_CODE_SWITCH_1"
-msgid "code: 1 switch"
-msgstr "kod: 1 anahtar"
-
-msgctxt "UI_MOD_MERGING"
-msgid "Merging mods..."
-msgstr "Modlar birleştiriliyor..."
-
-msgctxt "UI_MOD_CONFLICTS"
-msgid "Conflicts: click the winner to change it"
-msgstr "Çakışmalar: kazananı değiştirmek için tıklayın"
-
-msgctxt "UI_MOD_VANILLA"
-msgid "Vanilla"
-msgstr "Orijinal"
-
-msgctxt "UI_MOD_IMPORTED"
-msgid "Imported %s"
-msgstr "%s içe aktarıldı"
-
-msgctxt "UI_MOD_RESOLVE"
-msgid "Resolve conflicts"
-msgstr "Çakışmaları çöz"
-
-msgctxt "UI_MOD_OK"
-msgid "OK"
-msgstr "Tamam"
-
-msgctxt "UI_MOD_ERR_LAYOUT"
-msgid "Not a mod: no romfs/ or exefs/ inside"
-msgstr "Mod değil: içinde romfs/ veya exefs/ yok"
-
-msgctxt "UI_MOD_ERR_NAME"
-msgid "That name is taken or empty"
-msgstr "Bu ad alınmış veya boş"
-
-msgctxt "UI_MOD_ERR_IO"
-msgid "Could not copy the files"
-msgstr "Dosyalar kopyalanamadı"
-
-msgctxt "UI_MOD_ERR_NOPORT"
-msgid "Not ported yet: no code patches for this game"
-msgstr "Henüz taşınmadı: bu oyun için kod yaması yok"
-
-msgctxt "UI_MOD_ERR_NOGAME"
-msgid "Game files not set up: do that on the Files page first"
-msgstr "Oyun dosyaları ayarlı değil: önce Dosyalar sayfasından ayarlayın"
-
-#. Above one button per mod found in the archive (its folder inside the archive).
-msgctxt "UI_MOD_VARIANTS"
-msgid "This archive holds several mods: pick the one to import"
-msgstr "Bu arşivde birden fazla mod var: içe aktarılacak olanı seçin"
-
-msgctxt "UI_MOD_ERR_BIG"
-msgid "Too large to be a mod (over 4 GB or 50000 files)"
-msgstr "Bir mod için çok büyük (4 GB veya 50000 dosyadan fazla)"
-
-msgctxt "UI_MOD_ERR_UNPACK"
-msgid "Cannot open this archive: .rar and .7z need bsdtar (libarchive) installed"
-msgstr "Bu arşiv açılamıyor: .rar ve .7z için bsdtar (libarchive) kurulu olmalı"
-
-#. Under an installed mod that replaces the game's graphics settings archive (general_format).
-msgctxt "UI_MOD_WARN_GRAPHICS"
-msgid ""
-"Changes the game's graphics settings: the port's own settings (resolution, quality) go on top, so "
-"this mod may do less than on a console, look worse or misbehave"
-msgstr ""
-"Oyunun grafik ayarlarını değiştirir: portun kendi ayarları (çözünürlük, kalite) bunun üstüne "
-"uygulanır, bu yüzden bu mod konsoldakinden daha az etki edebilir, daha kötü görünebilir veya "
-"hatalı çalışabilir"
-
-#. Above every mod install and import.
-msgctxt "UI_MOD_RISK"
-msgid ""
-"Mods are made by other people and are not tested by this project. A mod can crash the game or "
-"damage your save: read its page first, keep a copy of your save, and report a mod's problems to "
-"its author."
-msgstr ""
-"Modları başkaları yapar ve bu proje onları test etmez. Bir mod oyunu çökertebilir veya kayıt "
-"dosyanıza zarar verebilir: önce sayfasını okuyun, kaydınızın bir kopyasını saklayın ve modun "
-"sorunlarını yazarına bildirin."
-
-msgctxt "UI_MOD_RISK_ACK"
-msgid "I understand"
-msgstr "Anladım"
-
-#. Under a mod that changes the game's code (its .ips): the game code is built with it.
-msgctxt "UI_MOD_CODE_REBUILD"
-msgid "code: turning it on or off builds the game code again before you play (a few minutes)"
-msgstr "kod: açıp kapatmak, oynamadan önce oyun kodunu yeniden derler (birkaç dakika)"
-
-#. Under an installed mod that ships shaders (Shader/ files).
-msgctxt "UI_MOD_WARN_SHADERS"
-msgid ""
-"Replaces shaders: the port translates the game's shaders during the setup, so this mod may not "
-"show, or may break the picture"
-msgstr ""
-"Gölgelendiricileri değiştirir: port, kurulum sırasında oyunun gölgelendiricilerini çevirir, bu "
-"yüzden bu mod görünmeyebilir veya görüntüyü bozabilir"
-
 #. printf format: keep every %... conversion, in the same order.
 msgctxt "UI_LAUNCH_UPDATE"
 msgid "Update to %s (%d MB)"
@@ -1971,10 +1753,6 @@ msgstr "Güncelleme başarısız: %s"
 msgctxt "UI_LAUNCH_UPDATED"
 msgid "Updated to %s: setting up again what it changed"
 msgstr "%s sürümüne güncellendi: değişenler yeniden kuruluyor"
-
-msgctxt "UI_LAUNCH_NO_GAME_DATA"
-msgid "Your own copy of the game · No game data included"
-msgstr "Oyunun kendi kopyanız · Oyun verisi içermez"
 
 #. printf format: keep every %... conversion, in the same order.
 msgctxt "UI_LAUNCH_LASTRUN_KNOWN"
@@ -2168,22 +1946,83 @@ msgid ""
 msgstr ""
 "Steam arayüzü açılmadı: oyunu Steam'den başlat veya bir misafir bağlantısı gönder (menü > Oyun)."
 
-msgctxt "UI_NOTICE_RPT_ONLINE"
-msgid ""
-"Online play goes through Steam Remote Play Together: invite your friend from the list that just "
-"opened. Once they have joined and pressed a button, start a local game for 2 players."
-msgstr ""
-"Çevrimiçi oyun Steam Remote Play Together üzerinden olur: arkadaşınızı az önce açılan listeden "
-"davet edin. Katılıp bir tuşa bastığında 2 oyunculu yerel bir oyun başlatın."
+msgctxt "UI_NOTICE_STREAM_STARTING"
+msgid "Online play: making a link for your friend (Cloudflare)…"
+msgstr "Çevrimiçi oyun: arkadaşın için bağlantı oluşturuluyor (Cloudflare)…"
 
+#. %s: the link (https://...trycloudflare.com)
 #. printf format: keep every %... conversion, in the same order.
-msgctxt "UI_NOTICE_RPT_ONLINE_OFF"
+msgctxt "UI_NOTICE_STREAM_LINK"
 msgid ""
-"Online play goes through Steam Remote Play Together, which is off: %s. Set it up in menu > Game "
-"(docs/remote-play.md)."
+"Online play: link copied, send it to your friend: %s. Once they have joined, start a Local Play "
+"game for 2 players."
 msgstr ""
-"Çevrimiçi oyun Steam Remote Play Together üzerinden olur, ancak kapalı: %s. Menü > Oyun "
-"bölümünden ayarlayın (docs/remote-play.md)."
+"Çevrimiçi oyun: bağlantı kopyalandı, arkadaşına gönder: %s. Katıldığında 2 oyunculu yerel bir "
+"oyun başlat."
+
+msgctxt "UI_NOTICE_STREAM_JOINED"
+msgid "Your friend joined from their browser as player 2."
+msgstr "Arkadaşın tarayıcısından 2. oyuncu olarak katıldı."
+
+msgctxt "UI_NOTICE_STREAM_LEFT"
+msgid "Your friend left the browser stream."
+msgstr "Arkadaşın tarayıcı yayınından ayrıldı."
+
+msgctxt "UI_NOTICE_STREAM_FULL"
+msgid "Your friend could not join: player 2 already has a controller. Unplug the second controller."
+msgstr "Arkadaşın katılamadı: 2. oyuncunun zaten bir kumandası var. İkinci kumandayı çıkar."
+
+#. %s: why, in English
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_NOTICE_STREAM_FAILED"
+msgid "Online play is not available: %s."
+msgstr "Çevrimiçi oyun kullanılamıyor: %s."
+
+msgctxt "UI_MENU_GROUP_STREAM"
+msgid "Online play in a browser (Cloudflare)"
+msgstr "Tarayıcıda çevrimiçi oyun (Cloudflare)"
+
+msgctxt "UI_MENU_STREAM_START"
+msgid "Start and copy the link"
+msgstr "Başlat ve bağlantıyı kopyala"
+
+msgctxt "UI_MENU_STREAM_START_DESC"
+msgid ""
+"Streams the game to a friend's browser through a Cloudflare link, copied to the clipboard; their "
+"gamepad or keyboard is player 2. The game's Online Play does the same. The first start downloads "
+"cloudflared (55 MB)."
+msgstr ""
+"Oyunu, panoya kopyalanan bir Cloudflare bağlantısıyla bir arkadaşının tarayıcısına aktarır; onun "
+"kumandası veya klavyesi 2. oyuncudur. Oyunun çevrimiçi oyunu da aynısını yapar. İlk başlatma "
+"cloudflared'ı indirir (55 MB)."
+
+msgctxt "UI_MENU_STREAM_STOP"
+msgid "Stop"
+msgstr "Durdur"
+
+msgctxt "UI_MENU_STREAM_STOP_DESC"
+msgid "Ends the stream and its link: your friend is disconnected."
+msgstr "Yayını ve bağlantısını sonlandırır: arkadaşının bağlantısı kesilir."
+
+msgctxt "UI_MENU_STREAM_OFF"
+msgid "off"
+msgstr "kapalı"
+
+msgctxt "UI_MENU_STREAM_STARTING"
+msgid "starting…"
+msgstr "başlatılıyor…"
+
+msgctxt "UI_MENU_STREAM_READY"
+msgid "link ready"
+msgstr "bağlantı hazır"
+
+msgctxt "UI_MENU_STREAM_PLAYING"
+msgid "friend connected"
+msgstr "arkadaş bağlandı"
+
+msgctxt "UI_MENU_STREAM_FAILED"
+msgid "failed (see the log)"
+msgstr "başarısız (günlüğe bak)"
 
 #. printf format: keep every %... conversion, in the same order.
 msgctxt "UI_MENU_RPT_CHOICE"

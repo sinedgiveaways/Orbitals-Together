@@ -40,64 +40,6 @@ msgctxt "UI_MENU_TAB_GRAPHICS"
 msgid "Graphics"
 msgstr "กราฟิก"
 
-msgctxt "UI_MENU_TAB_HACKS"
-msgid "Hacks"
-msgstr "แฮ็ก"
-
-msgctxt "UI_MENU_HACKS_WARNING"
-msgid ""
-"Experimental: shortcuts the console does not have, for playing and testing faster. They can "
-"change how the game behaves."
-msgstr "ทดลอง: ทางลัดที่เครื่องคอนโซลไม่มี ไว้เล่นและทดสอบให้เร็วขึ้น อาจเปลี่ยนการทำงานของเกม"
-
-msgctxt "UI_MENU_TURBO"
-msgid "Turbo"
-msgstr "เทอร์โบ"
-
-msgctxt "UI_MENU_TURBO_DESC"
-msgid ""
-"The whole game runs faster: menus, movies, loads and races. Hold or press F2. The screen shows at "
-"most 60 frames a second."
-msgstr ""
-"ทั้งเกมทำงานเร็วขึ้น: เมนู ภาพยนตร์ การโหลด และการแข่ง กดค้างหรือกด F2 หน้าจอแสดงสูงสุด 60 "
-"เฟรมต่อวินาที"
-
-msgctxt "UI_MENU_TURBO_HOLD"
-msgid "Hold F2"
-msgstr "กดค้าง F2"
-
-msgctxt "UI_MENU_TURBO_TOGGLE"
-msgid "F2 on/off"
-msgstr "F2 เปิด/ปิด"
-
-msgctxt "UI_MENU_TURBO_SPEED"
-msgid "Turbo speed"
-msgstr "ความเร็วเทอร์โบ"
-
-msgctxt "UI_MENU_TURBO_SPEED_DESC"
-msgid "How many times faster. A slow PC may not reach it."
-msgstr "เร็วขึ้นกี่เท่า พีซีที่ช้าอาจไปไม่ถึง"
-
-msgctxt "UI_MENU_SEED"
-msgid "Same randomness every time"
-msgstr "สุ่มเหมือนเดิมทุกครั้ง"
-
-msgctxt "UI_MENU_SEED_DESC"
-msgid ""
-"The game draws the same random numbers in every session: the same title course, the same items. "
-"For testing."
-msgstr "เกมสุ่มตัวเลขชุดเดิมในทุกเซสชัน: สนามหน้าไตเติลเดิม ไอเทมเดิม สำหรับการทดสอบ"
-
-msgctxt "UI_MENU_FREEZE_KEYS"
-msgid "Freeze keys"
-msgstr "ปุ่มหยุดภาพ"
-
-msgctxt "UI_MENU_FREEZE_KEYS_DESC"
-msgid ""
-"F3 stops the game on the frame on screen and starts it again; F4 moves it on by one frame. To "
-"look at a moment closely."
-msgstr "F3 หยุดเกมที่เฟรมบนหน้าจอและเล่นต่อ F4 เดินหน้าทีละหนึ่งเฟรม ไว้ดูช่วงเวลาใกล้ ๆ"
-
 msgctxt "UI_MENU_ANISO"
 msgid "Texture filtering"
 msgstr "การกรองพื้นผิว"
@@ -1778,158 +1720,6 @@ msgctxt "UI_LAUNCH_SHORTCUT_FAILED"
 msgid "Could not make the shortcut"
 msgstr "สร้างทางลัดไม่ได้"
 
-msgctxt "UI_LAUNCH_MODS"
-msgid "Mods"
-msgstr "ม็อด"
-
-msgctxt "UI_LAUNCH_MODS_EMPTY"
-msgid "No mods yet: import a zip or a folder below"
-msgstr "ยังไม่มีม็อด: นำเข้าไฟล์ zip หรือโฟลเดอร์ด้านล่าง"
-
-msgctxt "UI_MOD_IMPORT_ZIP"
-msgid "Import zip..."
-msgstr "นำเข้า zip..."
-
-msgctxt "UI_MOD_IMPORT_FOLDER"
-msgid "Import folder..."
-msgstr "นำเข้าโฟลเดอร์..."
-
-msgctxt "UI_MOD_NAME"
-msgid "Name"
-msgstr "ชื่อ"
-
-msgctxt "UI_MOD_IMPORT"
-msgid "Import"
-msgstr "นำเข้า"
-
-msgctxt "UI_MOD_DELETE"
-msgid "Delete"
-msgstr "ลบ"
-
-#. printf format: keep every %... conversion, in the same order.
-msgctxt "UI_MOD_CONFIRM"
-msgid "Delete %s?"
-msgstr "ลบ %s ไหม?"
-
-#. printf format: keep every %... conversion, in the same order.
-msgctxt "UI_MOD_ROMFS"
-msgid "%d files"
-msgstr "%d ไฟล์"
-
-msgctxt "UI_MOD_ROMFS_1"
-msgid "1 file"
-msgstr "1 ไฟล์"
-
-#. printf format: keep every %... conversion, in the same order.
-msgctxt "UI_MOD_CODE_BUILD"
-msgid "code: built for %s"
-msgstr "โค้ด: สร้างสำหรับ %s"
-
-msgctxt "UI_MOD_CODE_PORT"
-msgid "code: needs a ported build"
-msgstr "โค้ด: ต้องใช้บิลด์ที่พอร์ตแล้ว"
-
-#. printf format: keep every %... conversion, in the same order.
-msgctxt "UI_MOD_CODE_SWITCHES"
-msgid "code: %d switches"
-msgstr "โค้ด: %d สวิตช์"
-
-msgctxt "UI_MOD_CODE_SWITCH_1"
-msgid "code: 1 switch"
-msgstr "โค้ด: 1 สวิตช์"
-
-msgctxt "UI_MOD_MERGING"
-msgid "Merging mods..."
-msgstr "กำลังรวมม็อด..."
-
-msgctxt "UI_MOD_CONFLICTS"
-msgid "Conflicts: click the winner to change it"
-msgstr "ขัดแย้งกัน: คลิกตัวที่ชนะเพื่อเปลี่ยน"
-
-msgctxt "UI_MOD_VANILLA"
-msgid "Vanilla"
-msgstr "ต้นฉบับ"
-
-msgctxt "UI_MOD_IMPORTED"
-msgid "Imported %s"
-msgstr "นำเข้า %s แล้ว"
-
-msgctxt "UI_MOD_RESOLVE"
-msgid "Resolve conflicts"
-msgstr "แก้ไขความขัดแย้ง"
-
-msgctxt "UI_MOD_OK"
-msgid "OK"
-msgstr "ตกลง"
-
-msgctxt "UI_MOD_ERR_LAYOUT"
-msgid "Not a mod: no romfs/ or exefs/ inside"
-msgstr "ไม่ใช่ม็อด: ไม่มี romfs/ หรือ exefs/ ข้างใน"
-
-msgctxt "UI_MOD_ERR_NAME"
-msgid "That name is taken or empty"
-msgstr "ชื่อนี้ถูกใช้แล้วหรือว่างเปล่า"
-
-msgctxt "UI_MOD_ERR_IO"
-msgid "Could not copy the files"
-msgstr "คัดลอกไฟล์ไม่ได้"
-
-msgctxt "UI_MOD_ERR_NOPORT"
-msgid "Not ported yet: no code patches for this game"
-msgstr "ยังไม่ได้พอร์ต: ไม่มีแพตช์โค้ดสำหรับเกมนี้"
-
-msgctxt "UI_MOD_ERR_NOGAME"
-msgid "Game files not set up: do that on the Files page first"
-msgstr "ยังไม่ได้ตั้งค่าไฟล์เกม: ทำในหน้าไฟล์เกมก่อน"
-
-#. Above one button per mod found in the archive (its folder inside the archive).
-msgctxt "UI_MOD_VARIANTS"
-msgid "This archive holds several mods: pick the one to import"
-msgstr "ไฟล์นี้มีหลายม็อด: เลือกม็อดที่จะนำเข้า"
-
-msgctxt "UI_MOD_ERR_BIG"
-msgid "Too large to be a mod (over 4 GB or 50000 files)"
-msgstr "ใหญ่เกินกว่าจะเป็นม็อด (เกิน 4 GB หรือ 50000 ไฟล์)"
-
-msgctxt "UI_MOD_ERR_UNPACK"
-msgid "Cannot open this archive: .rar and .7z need bsdtar (libarchive) installed"
-msgstr "เปิดไฟล์นี้ไม่ได้: .rar และ .7z ต้องติดตั้ง bsdtar (libarchive)"
-
-#. Under an installed mod that replaces the game's graphics settings archive (general_format).
-msgctxt "UI_MOD_WARN_GRAPHICS"
-msgid ""
-"Changes the game's graphics settings: the port's own settings (resolution, quality) go on top, so "
-"this mod may do less than on a console, look worse or misbehave"
-msgstr ""
-"เปลี่ยนการตั้งค่ากราฟิกของเกม: การตั้งค่าของพอร์ตเอง (ความละเอียด คุณภาพ) จะทับอยู่ด้านบน "
-"ม็อดนี้จึงอาจทำได้น้อยกว่าบนคอนโซล ดูแย่ลง หรือทำงานผิดปกติ"
-
-#. Above every mod install and import.
-msgctxt "UI_MOD_RISK"
-msgid ""
-"Mods are made by other people and are not tested by this project. A mod can crash the game or "
-"damage your save: read its page first, keep a copy of your save, and report a mod's problems to "
-"its author."
-msgstr ""
-"ม็อดสร้างโดยผู้อื่นและโปรเจกต์นี้ไม่ได้ทดสอบ ม็อดอาจทำให้เกมแครชหรือไฟล์เซฟเสียหาย: "
-"อ่านหน้าของม็อดก่อน สำรองไฟล์เซฟไว้ และแจ้งปัญหาของม็อดกับผู้เขียน"
-
-msgctxt "UI_MOD_RISK_ACK"
-msgid "I understand"
-msgstr "เข้าใจแล้ว"
-
-#. Under a mod that changes the game's code (its .ips): the game code is built with it.
-msgctxt "UI_MOD_CODE_REBUILD"
-msgid "code: turning it on or off builds the game code again before you play (a few minutes)"
-msgstr "โค้ด: การเปิดหรือปิดจะสร้างโค้ดของเกมใหม่ก่อนเล่น (ไม่กี่นาที)"
-
-#. Under an installed mod that ships shaders (Shader/ files).
-msgctxt "UI_MOD_WARN_SHADERS"
-msgid ""
-"Replaces shaders: the port translates the game's shaders during the setup, so this mod may not "
-"show, or may break the picture"
-msgstr "แทนที่เชเดอร์: พอร์ตแปลเชเดอร์ของเกมระหว่างการตั้งค่า ม็อดนี้จึงอาจไม่แสดงหรือทำให้ภาพเสีย"
-
 #. printf format: keep every %... conversion, in the same order.
 msgctxt "UI_LAUNCH_UPDATE"
 msgid "Update to %s (%d MB)"
@@ -1949,10 +1739,6 @@ msgstr "อัปเดตไม่สำเร็จ: %s"
 msgctxt "UI_LAUNCH_UPDATED"
 msgid "Updated to %s: setting up again what it changed"
 msgstr "อัปเดตเป็น %s แล้ว: กำลังตั้งค่าส่วนที่เปลี่ยนอีกครั้ง"
-
-msgctxt "UI_LAUNCH_NO_GAME_DATA"
-msgid "Your own copy of the game · No game data included"
-msgstr "สำเนาเกมของคุณเอง · ไม่มีข้อมูลเกมแนบมา"
 
 #. printf format: keep every %... conversion, in the same order.
 msgctxt "UI_LAUNCH_LASTRUN_KNOWN"
@@ -2139,22 +1925,83 @@ msgid ""
 "The Steam overlay did not open: start the game from Steam, or send a guest link (menu > Game)."
 msgstr "โอเวอร์เลย์ Steam ไม่เปิด: เริ่มเกมจาก Steam หรือส่งลิงก์ผู้เยี่ยมชม (เมนู > เกม)"
 
-msgctxt "UI_NOTICE_RPT_ONLINE"
-msgid ""
-"Online play goes through Steam Remote Play Together: invite your friend from the list that just "
-"opened. Once they have joined and pressed a button, start a local game for 2 players."
-msgstr ""
-"การเล่นออนไลน์ใช้ Steam Remote Play Together: เชิญเพื่อนจากรายการที่เพิ่งเปิดขึ้น "
-"เมื่อเพื่อนเข้าร่วมและกดปุ่มแล้ว ให้เริ่มเกมแบบเล่นในเครื่อง 2 คน"
+msgctxt "UI_NOTICE_STREAM_STARTING"
+msgid "Online play: making a link for your friend (Cloudflare)…"
+msgstr "เล่นออนไลน์: กำลังสร้างลิงก์ให้เพื่อน (Cloudflare)…"
 
+#. %s: the link (https://...trycloudflare.com)
 #. printf format: keep every %... conversion, in the same order.
-msgctxt "UI_NOTICE_RPT_ONLINE_OFF"
+msgctxt "UI_NOTICE_STREAM_LINK"
 msgid ""
-"Online play goes through Steam Remote Play Together, which is off: %s. Set it up in menu > Game "
-"(docs/remote-play.md)."
+"Online play: link copied, send it to your friend: %s. Once they have joined, start a Local Play "
+"game for 2 players."
 msgstr ""
-"การเล่นออนไลน์ใช้ Steam Remote Play Together แต่ปิดอยู่: %s ตั้งค่าได้ที่ เมนู > เกม "
-"(docs/remote-play.md)"
+"เล่นออนไลน์: คัดลอกลิงก์แล้ว ส่งให้เพื่อน: %s เมื่อเพื่อนเข้าร่วมแล้ว "
+"ให้เริ่มเกมเล่นในเครื่องสำหรับ 2 คน"
+
+msgctxt "UI_NOTICE_STREAM_JOINED"
+msgid "Your friend joined from their browser as player 2."
+msgstr "เพื่อนของคุณเข้าร่วมจากเบราว์เซอร์เป็นผู้เล่น 2"
+
+msgctxt "UI_NOTICE_STREAM_LEFT"
+msgid "Your friend left the browser stream."
+msgstr "เพื่อนของคุณออกจากสตรีมในเบราว์เซอร์แล้ว"
+
+msgctxt "UI_NOTICE_STREAM_FULL"
+msgid "Your friend could not join: player 2 already has a controller. Unplug the second controller."
+msgstr "เพื่อนเข้าร่วมไม่ได้: ผู้เล่น 2 มีคอนโทรลเลอร์อยู่แล้ว ถอดคอนโทรลเลอร์ตัวที่สองออก"
+
+#. %s: why, in English
+#. printf format: keep every %... conversion, in the same order.
+msgctxt "UI_NOTICE_STREAM_FAILED"
+msgid "Online play is not available: %s."
+msgstr "เล่นออนไลน์ไม่ได้: %s"
+
+msgctxt "UI_MENU_GROUP_STREAM"
+msgid "Online play in a browser (Cloudflare)"
+msgstr "เล่นออนไลน์ในเบราว์เซอร์ (Cloudflare)"
+
+msgctxt "UI_MENU_STREAM_START"
+msgid "Start and copy the link"
+msgstr "เริ่มและคัดลอกลิงก์"
+
+msgctxt "UI_MENU_STREAM_START_DESC"
+msgid ""
+"Streams the game to a friend's browser through a Cloudflare link, copied to the clipboard; their "
+"gamepad or keyboard is player 2. The game's Online Play does the same. The first start downloads "
+"cloudflared (55 MB)."
+msgstr ""
+"สตรีมเกมไปยังเบราว์เซอร์ของเพื่อนผ่านลิงก์ Cloudflare ที่คัดลอกไว้ในคลิปบอร์ด "
+"คอนโทรลเลอร์หรือคีย์บอร์ดของเพื่อนคือผู้เล่น 2 การเล่นออนไลน์ของเกมก็ทำเช่นเดียวกัน "
+"การเริ่มครั้งแรกจะดาวน์โหลด cloudflared (55 MB)"
+
+msgctxt "UI_MENU_STREAM_STOP"
+msgid "Stop"
+msgstr "หยุด"
+
+msgctxt "UI_MENU_STREAM_STOP_DESC"
+msgid "Ends the stream and its link: your friend is disconnected."
+msgstr "หยุดสตรีมและลิงก์: เพื่อนจะถูกตัดการเชื่อมต่อ"
+
+msgctxt "UI_MENU_STREAM_OFF"
+msgid "off"
+msgstr "ปิด"
+
+msgctxt "UI_MENU_STREAM_STARTING"
+msgid "starting…"
+msgstr "กำลังเริ่ม…"
+
+msgctxt "UI_MENU_STREAM_READY"
+msgid "link ready"
+msgstr "ลิงก์พร้อมแล้ว"
+
+msgctxt "UI_MENU_STREAM_PLAYING"
+msgid "friend connected"
+msgstr "เพื่อนเชื่อมต่อแล้ว"
+
+msgctxt "UI_MENU_STREAM_FAILED"
+msgid "failed (see the log)"
+msgstr "ล้มเหลว (ดูบันทึก)"
 
 #. printf format: keep every %... conversion, in the same order.
 msgctxt "UI_MENU_RPT_CHOICE"

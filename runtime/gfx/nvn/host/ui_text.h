@@ -43,12 +43,6 @@ typedef enum {
     UI_MENU_DETAIL_LOW, UI_MENU_DETAIL_MEDIUM, UI_MENU_DETAIL_CONSOLE,
     UI_MENU_DETAIL_HIGH, UI_MENU_DETAIL_ULTRA,
 
-    // Hacks
-    UI_MENU_TAB_HACKS, UI_MENU_HACKS_WARNING,
-    UI_MENU_TURBO, UI_MENU_TURBO_DESC, UI_MENU_TURBO_HOLD, UI_MENU_TURBO_TOGGLE, UI_MENU_TURBO_SPEED,
-    UI_MENU_TURBO_SPEED_DESC, UI_MENU_SEED, UI_MENU_SEED_DESC,
-    UI_MENU_FREEZE_KEYS, UI_MENU_FREEZE_KEYS_DESC,
-
     // Game
     UI_MENU_GAME_LANG, UI_MENU_GAME_LANG_DESC, UI_MENU_GAME_LANG_AUTO,
     UI_MENU_OPERATION_MODE, UI_MENU_OPERATION_MODE_DESC, UI_MENU_MODE_DOCKED, UI_MENU_MODE_HANDHELD,
@@ -187,17 +181,9 @@ typedef enum {
     UI_LAUNCH_STEP_CHECK, UI_LAUNCH_STEP_EXEFS, UI_LAUNCH_STEP_ROMFS, UI_LAUNCH_STEP_GENERATE, UI_LAUNCH_STEP_COMPILE,
     UI_LAUNCH_STEP_SHADERS, UI_LAUNCH_STEP_WARM, UI_LAUNCH_STEP_CLEANUP, UI_LAUNCH_STEP_KEPT,
     UI_LAUNCH_SHORTCUT, UI_LAUNCH_SHORTCUT_DONE, UI_LAUNCH_SHORTCUT_FAILED,   // DONE: "... %s" (the shortcut's path)
-    // the Mods page (ui/launcher/mods.cpp): CONFIRM and CODE_BUILD take %s (the mod's name, the build id)
-    UI_LAUNCH_MODS, UI_LAUNCH_MODS_EMPTY, UI_MOD_IMPORT_ZIP, UI_MOD_IMPORT_FOLDER, UI_MOD_NAME, UI_MOD_IMPORT,
-    UI_MOD_DELETE, UI_MOD_CONFIRM, UI_MOD_ROMFS, UI_MOD_ROMFS_1, UI_MOD_CODE_BUILD,
-    UI_MOD_CODE_PORT, UI_MOD_CODE_SWITCHES, UI_MOD_CODE_SWITCH_1, UI_MOD_MERGING, UI_MOD_CONFLICTS, UI_MOD_VANILLA, UI_MOD_IMPORTED, UI_MOD_RESOLVE, UI_MOD_OK,
-    UI_MOD_ERR_LAYOUT, UI_MOD_ERR_NAME, UI_MOD_ERR_IO, UI_MOD_ERR_NOPORT, UI_MOD_ERR_NOGAME,
-    UI_MOD_VARIANTS, UI_MOD_ERR_BIG, UI_MOD_ERR_UNPACK,
-    UI_MOD_WARN_GRAPHICS, UI_MOD_WARN_SHADERS, UI_MOD_CODE_REBUILD, UI_MOD_RISK, UI_MOD_RISK_ACK,
     // the update (ui/launcher/launcher_update.cpp): UPDATE "... %s ... %d MB" (tag, size), FETCHING "... %s" (tag),
     // FAILED "... %s" (why), UPDATED "... %s" (tag); the Menu tab's switch
     UI_LAUNCH_UPDATE, UI_LAUNCH_UPDATE_FETCHING, UI_LAUNCH_UPDATE_FAILED, UI_LAUNCH_UPDATED,
-    UI_LAUNCH_NO_GAME_DATA,   // the start screen's lower right: the player brings the game, the port ships none
     // the last run's end (ui/launcher/launcher_lastrun.cpp): KNOWN "... #%d ..." (issue), FIXED "... %s ..." (tag),
     // OPEN "... #%d" (issue): the buttons open the issue or the bug form
     UI_LAUNCH_LASTRUN_KNOWN, UI_LAUNCH_LASTRUN_FIXED, UI_LAUNCH_LASTRUN_CRASH, UI_LAUNCH_LASTRUN_OPEN,
@@ -219,9 +205,12 @@ typedef enum {
     // local multiplayer with too few controllers and Steam ready: INVITE "%d ... %d" (players, controllers) as
     // UI_NOTICE_PADS_MISSING, saying the invite list opened; NO_OVERLAY when the overlay could not open
     UI_NOTICE_RPT_INVITE, UI_NOTICE_RPT_NO_OVERLAY,
-    // the game asked for online play (steam_rpt_online): ONLINE with Steam ready, the invite list opened;
-    // ONLINE_OFF "%s" (why Remote Play Together is off)
-    UI_NOTICE_RPT_ONLINE, UI_NOTICE_RPT_ONLINE_OFF,
+    // online play in a browser (stream/stream_win.c): LINK "%s" (the address, copied), FAILED "%s" (why, English)
+    UI_NOTICE_STREAM_STARTING, UI_NOTICE_STREAM_LINK, UI_NOTICE_STREAM_JOINED, UI_NOTICE_STREAM_LEFT,
+    UI_NOTICE_STREAM_FULL, UI_NOTICE_STREAM_FAILED,
+    // its rows in the Game tab: the group, Start / copy the link with its state, Stop
+    UI_MENU_GROUP_STREAM, UI_MENU_STREAM_START, UI_MENU_STREAM_START_DESC, UI_MENU_STREAM_STOP, UI_MENU_STREAM_STOP_DESC,
+    UI_MENU_STREAM_OFF, UI_MENU_STREAM_STARTING, UI_MENU_STREAM_READY, UI_MENU_STREAM_PLAYING, UI_MENU_STREAM_FAILED,
     // local multiplayer with too few controllers and Steam ready (steam_invite = ask, menu_choice): the question
     // CHOICE "%d ... %d" (players, controllers) and its two buttons
     UI_MENU_RPT_CHOICE, UI_MENU_RPT_CHOICE_LOCAL, UI_MENU_RPT_CHOICE_STEAM,

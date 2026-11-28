@@ -2,18 +2,18 @@
 
 **English** · [Français](README.fr.md)
 
-**Orbitals Deluxe Edition on PC, for two players: side by side, or remotely with Steam Remote Play Together.**
+**Orbitals Deluxe Edition on PC, for two players: side by side, with Steam Remote Play Together, or online in a friend's browser.**
 
 Orbitals Together is a static recompilation of Orbitals Deluxe Edition (Nintendo Switch 2) for Windows: the game's
 code is recompiled for the PC from **your own copy of the game**, and it renders through Vulkan. There is no emulator
 and no game file in this repository.
 
-- Current version: **0.3.0**
+- Current version: **0.4.0**
 - Supported game: **Orbitals Deluxe Edition 1.0.5**
 - System: Windows 10 or 11, 64-bit
 
 This repository holds the builds considered final and the full source code of each version: anyone can fork it to
-make it better (see part 7). Day-to-day development and test builds happen on
+make it better (see part 8). Day-to-day development and test builds happen on
 [sinedgiveaways/pmocer-latibro](https://github.com/sinedgiveaways/pmocer-latibro).
 
 ---
@@ -24,9 +24,10 @@ make it better (see part 7). Day-to-day development and test builds happen on
 2. [Download the build](#2-download-the-build)
 3. [Install and recompile the game](#3-install-and-recompile-the-game)
 4. [Play two players locally](#4-play-two-players-locally)
-5. [Play remotely with Steam Remote Play Together](#5-play-remotely-with-steam-remote-play-together)
-6. [If something goes wrong](#6-if-something-goes-wrong)
-7. [Fork and improve the project](#7-fork-and-improve-the-project)
+5. [Local play with a remote friend: Steam Remote Play Together](#5-local-play-with-a-remote-friend-steam-remote-play-together)
+6. [Online play in a browser](#6-online-play-in-a-browser)
+7. [If something goes wrong](#7-if-something-goes-wrong)
+8. [Fork and improve the project](#8-fork-and-improve-the-project)
 
 ---
 
@@ -42,12 +43,13 @@ make it better (see part 7). Day-to-day development and test builds happen on
   The game is not included and never will be: you must own it and dump it yourself.
 - An internet connection during the setup (NVIDIA tools, about 130 MB, are downloaded to translate the game's
   shaders).
-- To play remotely: **Steam** installed and signed in (see part 5).
+- To play with a remote friend through Steam: **Steam** installed and signed in (see part 5). Online play in a
+  browser needs nothing more (see part 6).
 
 ## 2. Download the build
 
 1. Open the releases page: **[Releases](https://github.com/sinedgiveaways/Orbitals-Together/releases/latest)**.
-2. Download **`orbitals-together-0.3.0-windows-x64.zip`**.
+2. Download **`orbitals-together-0.4.0-windows-x64.zip`**.
 3. Unzip it, for example into `C:\Users\<you>\Downloads\`. The zip creates an **`orbitals-together`** folder, which
    becomes the game folder. Avoid `C:\Program Files`: the program writes its files into its own folder.
 
@@ -89,7 +91,7 @@ sound, controls, language).
 
 The game is for 2 players at most.
 
-## 5. Play remotely with Steam Remote Play Together
+## 5. Local play with a remote friend: Steam Remote Play Together
 
 Steam streams the game's picture and sound to your friend, and their controller (or keyboard) becomes player 2.
 **Your friend does not need the game**, only Steam (or the Steam Link app, or a browser with a guest link).
@@ -123,7 +125,8 @@ thinks it starts RetroArch, but Orbitals Together starts instead. Your friends t
 1. Start the game, from its folder (`orbitals-together.exe`) or with RetroArch's **Play** button in Steam. Steam
    must be running, and RetroArch's launch options (step 2 of the setup) must be in place: without them, your friend's
    controller does not reach the game.
-2. In the game's menu, choose **Online play**. Steam's invite list opens: **invite your friend**. (You can also use
+2. In the game's menu, choose **Local play** with your single controller: the game asks how the other players join;
+   pick **Steam Remote Play Together (invite friends)** and **invite your friend** from Steam's list. (You can also use
    the F1 menu > Game > **Invite friends**, or **Copy guest link** for a friend without Steam.)
 3. Once your friend has joined and pressed a button on their controller, start a **Local play** game for 2 players:
    your friend is player 2.
@@ -133,10 +136,29 @@ thinks it starts RetroArch, but Orbitals Together starts instead. Your friends t
 **One controller plugged in on your side.** The game is limited to 2 players: with two controllers plugged into your
 PC, there is no room left for your friend. Unplug the second one before inviting them.
 
-**With a single controller in Local play**, the game also offers a choice between "Local players" and "Steam Remote
-Play Together (invite friends)".
+## 6. Online play in a browser
 
-## 6. If something goes wrong
+The game's **Online play** streams the game to your friend's browser through a Cloudflare link. **Your friend needs
+only a browser** (Chrome, Edge or Firefox; also on a phone), not Steam nor the game. Nothing to set up on your side:
+no Steam, no port to open.
+
+1. In the game's menu, choose **Online play** (or F1 > Game > Online play in a browser > **Start and copy the link**).
+   The first time, `cloudflared.exe` (55 MB, Cloudflare's own program, checked) is downloaded next to
+   `orbitals-together.exe`.
+2. A few seconds later a message says the link is copied: an address `https://<words>.trycloudflare.com`. **Send it
+   to your friend** (Discord, chat...).
+3. Your friend opens it and presses **Sound: on**. Their gamepad, their keyboard (WASD to move, J/K/U/I = A/B/Y/X,
+   Q/E = L/R, Enter = +) or, on a phone, the touch controls are player 2. A message tells you when they are in.
+4. Start a **Local play** game for 2 players.
+
+- **One friend**: with two controllers plugged into your PC there is no free player; unplug the second one.
+- Picture 1280 x 720, up to 30 frames a second, about 4.5 Mb/s of upload from your PC.
+- **The link is the key**: anyone who has it can join while the stream runs. F1 > Game > **Stop** ends it, and so
+  does quitting the game.
+- Your friend's gamepad follows your F1 > Controls > **Button layout**: in Automatic, an Xbox or PlayStation pad goes
+  by its labels. For Xbox button icons on both halves of the screen, set F1 > Controls > **Button icons** to Xbox.
+
+## 7. If something goes wrong
 
 Open an [issue](https://github.com/sinedgiveaways/pmocer-latibro/issues) and attach the logs from the game folder:
 
@@ -145,7 +167,7 @@ Open an [issue](https://github.com/sinedgiveaways/pmocer-latibro/issues) and att
 
 Say what you were doing, and add a screenshot or a video if you can.
 
-## 7. Fork and improve the project
+## 8. Fork and improve the project
 
 Anyone can **fork** this repository (the **Fork** button at the top of the page), change the code and publish their
 own version, under the terms of the GPL-3.0.
@@ -157,7 +179,7 @@ own version, under the terms of the GPL-3.0.
   compiles `orbitals-together.exe` (cross-compiled from Linux with llvm-mingw) and gives the full package as an
   artifact. Locally, on Linux: `uv run tools/build/windeps.py`, then
   `uv run tools/build/build.py --target windows --dist --runtime-only`, `uv run tools/build/dist.py --target windows`
-  and `uv run tools/build/release.py --target windows --version 0.3.0`.
+  and `uv run tools/build/release.py --target windows --version 0.4.0`.
 - **Before changing anything**, read [AGENTS.md](AGENTS.md) and [CONTRIBUTING.md](CONTRIBUTING.md): no emulation (no
   CPU interpreter, no GPU emulation), **no game file in git**, GPL-3.0-compatible licenses only, the console's
   behaviour by default. [DEVELOPMENT.md](DEVELOPMENT.md) describes how the code is organized and
@@ -172,8 +194,8 @@ own version, under the terms of the GPL-3.0.
 ## License
 
 Orbitals Together is free software under the **GNU GPL version 3 or later** (see [LICENSE](LICENSE)). The source
-code of each version is in this repository, at the tag of the same name (for example `v0.3.0`), and on
-[sinedgiveaways/pmocer-latibro](https://github.com/sinedgiveaways/pmocer-latibro/tree/v0.3.0).
+code of each version is in this repository, at the tag of the same name (for example `v0.4.0`), and on
+[sinedgiveaways/pmocer-latibro](https://github.com/sinedgiveaways/pmocer-latibro/tree/v0.4.0).
 
 Orbitals belongs to its rights holders. This project is not affiliated with or endorsed by them, nor by Nintendo,
 Valve or NVIDIA. No game data is distributed: you must own the game.
